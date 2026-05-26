@@ -1,0 +1,335 @@
+<!DOCTYPE html><html class="dark" lang="it" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#363a3b",
+                      "on-tertiary-container": "#9362ff",
+                      "on-secondary-fixed-variant": "#004e60",
+                      "on-secondary-fixed": "#001f28",
+                      "inverse-surface": "#e0e3e5",
+                      "surface": "#101415",
+                      "primary-fixed-dim": "#b9c7e4",
+                      "on-secondary-container": "#00566a",
+                      "tertiary-container": "#200055",
+                      "primary-fixed": "#d6e3ff",
+                      "on-primary": "#233148",
+                      "surface-container-high": "#272a2c",
+                      "surface-tint": "#b9c7e4",
+                      "on-tertiary": "#3c0090",
+                      "on-surface-variant": "#c5c6cd",
+                      "secondary-fixed-dim": "#47d6ff",
+                      "on-error-container": "#ffdad6",
+                      "surface-container-highest": "#323537",
+                      "surface-container-low": "#191c1e",
+                      "primary-container": "#0a192f",
+                      "on-background": "#e0e3e5",
+                      "on-primary-container": "#74829d",
+                      "on-error": "#690005",
+                      "secondary-fixed": "#b6ebff",
+                      "inverse-on-surface": "#2d3133",
+                      "on-tertiary-fixed": "#23005b",
+                      "outline-variant": "#44474d",
+                      "error-container": "#93000a",
+                      "tertiary-fixed": "#e9ddff",
+                      "secondary": "#a5e7ff",
+                      "on-secondary": "#003543",
+                      "on-primary-fixed-variant": "#39475f",
+                      "on-surface": "#e0e3e5",
+                      "outline": "#8f9097",
+                      "tertiary": "#d1bcff",
+                      "background": "#101415",
+                      "inverse-primary": "#515f78",
+                      "on-tertiary-fixed-variant": "#5700c9",
+                      "on-primary-fixed": "#0d1c32",
+                      "primary": "#b9c7e4",
+                      "surface-container-lowest": "#0b0f10",
+                      "error": "#ffb4ab",
+                      "surface-dim": "#101415",
+                      "surface-variant": "#323537",
+                      "secondary-container": "#00d2ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xs": "4px",
+                      "margin-desktop": "64px",
+                      "lg": "48px",
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "md": "24px",
+                      "gutter": "24px",
+                      "sm": "12px",
+                      "xl": "80px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Outfit"],
+                      "label-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-md": ["Outfit"],
+                      "body-md": ["Inter"],
+                      "headline-lg": ["Outfit"],
+                      "caption": ["Inter"],
+                      "display-lg": ["Outfit"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #101415;
+            color: #e0e3e5;
+            overflow-x: hidden;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-primary {
+            background: linear-gradient(135deg, #b9c7e4 0%, #d1bcff 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #b9c7e4 0%, #47d6ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop py-base max-w-full mx-auto bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-white/10 dark:border-white/10 shadow-sm">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface">FounDreams</div>
+<div class="hidden md:flex gap-md items-center">
+<a class="text-primary dark:text-primary font-bold border-b-2 border-primary font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Servizi</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Contattaci</a>
+<button class="bg-primary text-on-primary px-md py-sm rounded-full font-label-md text-label-md scale-95 active:scale-90 transition-transform">Inizia Progetto</button>
+</div>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-xl overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-primary-container/20 to-background"></div>
+<div class="absolute top-1/4 -right-1/4 w-[600px] h-[600px] bg-secondary/10 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-tertiary/10 blur-[120px] rounded-full"></div>
+</div>
+<div class="relative z-10 container mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="space-y-md">
+<h1 class="font-display-lg text-[48px] md:text-display-lg leading-tight tracking-tight">
+                    Fonda la tua presenza online, <span class="text-gradient">realizza i tuoi sogni</span> in sicurezza
+                </h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-xl"><p data-start="1242" data-end="1392" class="">Ogni progetto nasce da un’idea grezza e prende forma attraverso creatività, identità visiva e soluzioni digitali costruite con precisione e carattere.</p></p>
+<div class="flex flex-wrap gap-md pt-sm">
+<button class="gradient-primary text-on-primary px-lg py-md rounded-xl font-label-md text-label-md shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+                        Contattaci
+                    </button>
+<button class="border border-outline-variant bg-surface/50 backdrop-blur-sm text-on-surface px-lg py-md rounded-xl font-label-md text-label-md hover:bg-surface-variant transition-colors">
+                        Scopri i Servizi
+                    </button>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<div class="glass rounded-3xl p-base overflow-hidden aspect-square flex items-center justify-center">
+<img alt="Cybersecurity and Innovation" class="w-full h-full object-cover rounded-2xl opacity-80" data-alt="A high-tech digital interface displaying complex data streams and shield symbols in a deep navy and electric blue palette. The visual style is sleek and corporate-modern with glowing neon light trails representing secure data movement. Cinematic lighting creates depth and a sense of advanced technological innovation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfEB-bT-6tKI-icy7rHwYY0Gs26EAqvRwKZFRP1hDmIkeVWOn6KQXkW1JvXwrhSFh88sdeWAfIAD_5E9VV_MhXwgPPE1VoPqvLy9oBn2k-8whHB2rK48xWRJYuBMbuxd_cX8c8zamUulxcE_tsjDQpUbTaChNaY-jFaDbrTgXdxfBv1vfXowWGbI4WmXFeQhIE4YL5JGgsUvwSuDL3GnU3kAYw2xnyVNhz-VaKP_SJ66Bq3Ux6kEfsZ733ebOtxOha0iN1S0YUojoD">
+</div>
+</div>
+</div>
+</header>
+<!-- Chi Siamo Section -->
+<section class="py-xl bg-surface-container-low transition-all duration-700 opacity-100 translate-y-0">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="max-w-4xl mx-auto text-center space-y-md">
+<span class="text-primary font-label-md text-label-md tracking-widest uppercase">La Nostra Visione</span>
+<h2 class="font-headline-lg text-headline-lg">L'incontro tra Creatività e Sicurezza</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    FounDreams nasce dalla sinergia di due giovani ragzzi con una missione comune: democratizzare l'eccellenza tecnica. Uniamo l'anima creativa del design alla precisione chirurgica della cybersecurity. Crediamo che ogni sogno digitale meriti una base solida e sicura per crescere senza limiti. La nostra filosofia è semplice: innovare proteggendo ciò che ami di più.
+                </p>
+<div class="grid grid-cols-3 gap-md pt-lg">
+<div class="p-md text-center">
+<div class="text-primary text-headline-md font-bold">100%</div>
+<div class="text-caption font-caption text-on-surface-variant">Creatività</div>
+</div>
+<div class="p-md text-center">
+<div class="text-secondary text-headline-md font-bold">IMMEDIATA</div>
+<div class="text-caption font-caption text-on-surface-variant">Consulenza</div>
+</div>
+<div class="p-md text-center">
+<div class="text-tertiary text-headline-md font-bold">Veloce</div>
+<div class="text-caption font-caption text-on-surface-variant">Innovazione</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Servizi Section -->
+<section class="py-xl transition-all duration-700 opacity-100 translate-y-0">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop space-y-xl">
+<!-- Siti Web -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+<div class="order-2 lg:order-1 space-y-md">
+<span class="material-symbols-outlined text-primary text-[40px]">language</span>
+<h3 class="font-headline-md text-headline-md">Siti Web ad Alte Prestazioni</h3>
+<p class="text-on-surface-variant">Realizziamo piattaforme web che non sono solo belle, ma veloci e ottimizzate. Ogni linea di codice è scritta pensando alla scalabilità e all'esperienza utente finale.</p>
+<button class="flex items-center gap-xs text-primary font-label-md text-label-md hover:underline transition-all">
+                        Più informazioni <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="order-1 lg:order-2 glass rounded-2xl h-[300px] md:h-[400px] overflow-hidden">
+<img alt="Web Development" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A clean, minimalist workspace featuring a high-resolution laptop screen showing a sophisticated web interface design. The aesthetic is professional and corporate with soft ambient lighting and a shallow depth of field. The color palette is dominated by dark grays and bright accents of electric blue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMS5g9A9kYAm80WD3e64M8uOo3M_RSjah5u8egtGT06hTvJq8FnMG1yhCgpHJHoCRk6bUEThoN50SLhSwTo3IIGRBhQi1r4In06ILyMxElolWVsuG2EfLFJE3cPVmsc2DRpNyqRJk5G0_z89FCD2WaU9uPjAcsG5TY464D5IiDohsZh6EbX2bD0sDeWEtc6xxYQ2RrTGRJdte5GRwxnU8wkoeNpwgM_dQVYEAH_b83BkVAu7gyZDPqjd7G150LqQ8QKIB5xyeNGznh">
+</div>
+</div>
+<!-- Social Media -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+<div class="glass rounded-2xl h-[300px] md:h-[400px] overflow-hidden">
+<img alt="Social Media Management" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="An abstract visualization of digital social connections using glowing purple and blue nodes connected by thin fiber-optic-like light lines. The scene is set against a deep black background, evoking a sense of vibrant digital energy and community growth. The lighting is dramatic with neon highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0kE_ncur3VnhJ6ID12sJ0HGPl7iXFET49jXO3hbelXdkGnMnMg-MtLn-V9O4KLTNMtLp98ZUVkbkK-KQHdyKT0QliZd5Uv4nQwcoqZUAvDCT2zsdzhPvly2Ba0HOehS7Mq5eDHmkEjMh_bpBRaIuZOSCFbHHEOOOe14PBHV0X2q61hucS6Jm3JNslxh6TS8KNVyVEZaRKcQ2AJsW-sUBWMWb5VIgz13Z0UqYtpzAioHg7WQxWXZemfL2lR4QwquXDdzwBkmYUH9Iq">
+</div>
+<div class="space-y-md">
+<span class="material-symbols-outlined text-tertiary text-[40px]">share</span>
+<h3 class="font-headline-md text-headline-md">Social Media Strategy</h3>
+<p class="text-on-surface-variant">Gestiamo la tua voce digitale. Dalla creazione di contenuti visivi alla strategia di crescita organica, portiamo il tuo brand dove si trovano i tuoi clienti.</p>
+<button class="flex items-center gap-xs text-tertiary font-label-md text-label-md hover:underline transition-all">
+                        Più informazioni <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Sicurezza -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+<div class="order-2 lg:order-1 space-y-md">
+<span class="material-symbols-outlined text-secondary text-[40px]">security</span>
+<h3 class="font-headline-md text-headline-md">Cybersecurity &amp; Protezione</h3>
+<p class="text-on-surface-variant">La sicurezza non è un optional. Proteggiamo i tuoi dati e quelli dei tuoi clienti con i più avanzati protocolli di sicurezza e monitoraggio costante.</p>
+<button class="flex items-center gap-xs text-secondary font-label-md text-label-md hover:underline transition-all">
+                        Più informazioni <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="order-1 lg:order-2 glass rounded-2xl h-[300px] md:h-[400px] overflow-hidden">
+<img alt="Cybersecurity Systems" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A close-up shot of server room indicators and glowing blue status lights on a networking panel. The atmosphere is cold and technical, highlighting precision and 24/7 monitoring. The color theme is dark navy with sharp cyan and white luminescence, suggesting a state-of-the-art secure facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa26GKBbGI6oVQyLcixuRDtRX40YFDnZ70NZfxVQavDHYAbzur8CulHb-yzKdQcL7L9rMH9OnT4eXpmycbaqD3fuwCEOBgPOJ98XTsM54uviQAP7cGmsYFQCwXsnulxcTzJNuLfO-hDKd-8VU_xQQbm3umaKIAvndZSUbQxsIUeIl1q340eAd8sSyu6YMnzvu3ZVhxWnxezm5VNjqhucgkAqZm8ZSwRyHYx1goU2Ci6QPWulnfjbhkhJhEspA7ZoIFh0CWMhyrfYeS">
+</div>
+</div>
+</div>
+</section>
+<!-- Sezione Pacchetti/Combo -->
+<section class="py-xl bg-surface-container transition-all duration-700 opacity-100 translate-y-0">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg mb-sm">Soluzioni su Misura</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Scegli la combinazione perfetta per le tue esigenze o costruisci un pacchetto personalizzato con il nostro team.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Startup Bundle -->
+<div class="glass p-lg rounded-3xl flex flex-col hover:border-primary/50 transition-colors">
+<div class="flex justify-between items-start mb-md">
+<div class="p-sm bg-primary/10 rounded-xl text-primary">
+<span class="material-symbols-outlined">rocket_launch</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md mb-xs">Startup Bundle</h4>
+<p class="text-caption font-caption text-on-surface-variant mb-md">L'essenziale per partire subito forti.</p>
+<ul class="space-y-sm mb-lg flex-grow">
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Sito Web On-page</li>
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Configurazione Social</li>
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Certificato SSL &amp; Security</li>
+</ul>
+<button class="w-full py-md border border-outline-variant rounded-xl font-label-md text-label-md hover:bg-surface-variant transition-colors">Seleziona</button>
+</div>
+<!-- Business Evolution -->
+<div class="glass p-lg rounded-3xl flex flex-col relative border-primary shadow-2xl shadow-primary/10 scale-105 z-10 bg-surface-bright">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-md py-xs rounded-full text-[12px] font-bold uppercase tracking-widest">Più Popolare</div>
+<div class="flex justify-between items-start mb-md">
+<div class="p-sm bg-primary/20 rounded-xl text-primary">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md mb-xs">Business Evolution</h4>
+<p class="text-caption font-caption text-on-surface-variant mb-md">Per chi vuole scalare il mercato.</p>
+<ul class="space-y-sm mb-lg flex-grow">
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Sito E-commerce Pro</li>
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Gestione Social Mensile</li>
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Pentesting Semestrale</li>
+</ul>
+<button class="w-full py-md gradient-primary text-on-primary rounded-xl font-label-md text-label-md shadow-lg shadow-primary/20 hover:scale-105 transition-transform">Inizia Ora</button>
+</div>
+<!-- Enterprise Safe -->
+<div class="glass p-lg rounded-3xl flex flex-col hover:border-primary/50 transition-colors">
+<div class="flex justify-between items-start mb-md">
+<div class="p-sm bg-secondary/10 rounded-xl text-secondary">
+<span class="material-symbols-outlined">shield_with_heart</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md mb-xs">Enterprise Safe</h4>
+<p class="text-caption font-caption text-on-surface-variant mb-md">Massima sicurezza e personalizzazione.</p>
+<ul class="space-y-sm mb-lg flex-grow">
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Infrastruttura Cloud Dedicata</li>
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Monitoraggio SOC 24/7</li>
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Strategia Multicanale</li>
+</ul>
+<button class="w-full py-md border border-outline-variant rounded-xl font-label-md text-label-md hover:bg-surface-variant transition-colors">Contattaci</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-lg flex flex-col md:flex-row justify-between items-center gap-gutter bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant mt-xl">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface">
+            FounDreams
+        </div>
+<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">
+            © 2024 FounDreams. Eccellenza tecnica e innovazione visionaria.
+        </p>
+<div class="flex gap-md items-center"><a href="#" class="text-on-surface-variant hover:text-secondary transition-all duration-300 transform hover:scale-110"><img src="https://lh3.googleusercontent.com/aida/ADBb0ugm5O72juReyrfkQBsikwg5goxxY-FM68y0LD_bXLnqJpX_KBv7iDOjVAguLum2fXj_Dj4S39k7ULvLEKVTJfZ8a9eVWaKHYJClkTu9o86PN5Or4Cj3qh9IkdMlNxCG6jzk-eo1flKe8R6oYvirc_V1wiARkEKMfyazO1E4UbV0_Zt3hBheCyCDET2mDVLFYY4GuVbzUc7vi0OZrV0sIRH4_-_Q-LE8mbmN6gxHR-hh39Cifv9sBEP-WY2q" alt="Instagram" class="w-6 h-6"></a><a href="#" class="text-on-surface-variant hover:text-secondary transition-all duration-300 transform hover:scale-110"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook w-6 h-6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a></div><div class="flex gap-md">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Termini di Servizio</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Lavora con noi</a>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal effect for sections
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+
+
+</body></html>
