@@ -7,7 +7,7 @@ import { Contattaci } from './pages/Contattaci';
 
 const App: React.FC = () => {
   return (
-    <Router basenam="/pagina-web">
+    <Router basename="/pagina-web">
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
