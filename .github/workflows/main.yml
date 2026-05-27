@@ -23,10 +23,10 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: apt install
+        run: npm install
 
       - name: Build
-        run: apt run build
+        run: npm run build
 
       - name: Add .nojekyll
         run: touch ./dist/.nojekyll
