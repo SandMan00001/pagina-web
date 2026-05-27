@@ -1,7 +1,102 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export const Home: React.FC = () => {
+  const [selectedBundle, setSelectedBundle] = useState<string | null>(null);
+  const [modalForm, setModalForm] = useState({ nome: '', email: '', oggetto: '', messaggio: '' });
+  const [modalStatus, setModalStatus] = useState<'idle' | 'sending' | 'success'>('idle');
+
+  const bundleDetails: Record<string, {
+    icon: string;
+    iconColor: string;
+    bgColor: string;
+    description: string;
+    color: 'primary' | 'secondary';
+    cardFeatures: string[];
+    modalFeatures: string[];
+    tag?: string;
+  }> = {
+    "Startup Bundle": {
+      icon: "rocket_launch",
+      iconColor: "text-primary",
+      bgColor: "bg-primary/10",
+      description: "L'essenziale per partire subito forti.",
+      color: "primary",
+      cardFeatures: [
+        "Sito Web On-page",
+        "Configurazione Social",
+        "Certificato SSL & Security"
+      ],
+      modalFeatures: [
+        "Gestione social base: gestione instagram e facebook",
+        "Infrastuttura & IT Governance: server & dominio",
+        "Sviluppo web & SEO: creazione landing page e indicizzazione SEO base",
+        "Cybersecurity base: utilizzo certificati SSL(HTTPS) + Resilienza dati"
+      ]
+    },
+    "Business Evolution": {
+      icon: "trending_up",
+      iconColor: "text-primary",
+      bgColor: "bg-primary/20",
+      description: "Per chi vuole scalare il mercato.",
+      color: "primary",
+      cardFeatures: [
+        "Sito E-commerce Pro",
+        "Gestione Social Mensile",
+        "Pentesting Semestrale"
+      ],
+      modalFeatures: [
+        "Gestione social intermedia (+1): gestione instagram e facebook (+ un social a scelta) e maggiore frequenza nella pubblicazione ",
+        "Consulenza informatica: 1 ora al mese per analizzare andamento sito e social e pianificazione business evolutivi",
+        "Sviluppo web & SEO: sito web completo fino a 5 pagine + SEO avanzata",
+        "Cybersecurity avanzata: implementazione WAF"
+      ],
+      tag: "Più Popolare"
+    },
+    "Enterprise Safe": {
+      icon: "shield_with_heart",
+      iconColor: "text-secondary",
+      bgColor: "bg-secondary/10",
+      description: "Massima sicurezza e personalizzazione.",
+      color: "secondary",
+      cardFeatures: [
+        "Infrastruttura Cloud Dedicata",
+        "Monitoraggio SOC 24/7",
+        "Strategia Multicanale"
+      ],
+      modalFeatures: [
+        "Gestione social ominichanel: compertura su tutti i canali social e strategie marketing avanzate",
+        "Sviluppo web avanzato: sviluppo e progettazione siti web complessi su misura (e-commerce/web app)",
+        "SEO Full-Continuty: scrittura costante di articoli e posizionamento organico a lungo termine",
+        "Consulenza strategica IT: consulenza strategica per innovazione e trasformazione digitale(cloud & on-premise)",
+        "Formazione specialistica IT: consulenza tecnica specialistica e formazione per il personale interno (IT & Marketing)"
+      ]
+    }
+  };
+
+  const openModal = (bundleName: string) => {
+    setSelectedBundle(bundleName);
+    setModalForm({
+      nome: '',
+      email: '',
+      oggetto: `Richiesta preventivo per ${bundleName}`,
+      messaggio: `Ciao! Sono interessato al pacchetto ${bundleName}. Vorrei ricevere maggiori informazioni.`
+    });
+    setModalStatus('idle');
+  };
+
+  const handleModalSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setModalStatus('sending');
+    setTimeout(() => {
+      setModalStatus('success');
+      setTimeout(() => {
+        setSelectedBundle(null);
+        setModalStatus('idle');
+      }, 2500);
+    }, 1500);
+  };
+
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1
@@ -78,7 +173,7 @@ export const Home: React.FC = () => {
             <span className="text-primary font-label-md text-label-md tracking-widest uppercase">La Nostra Visione</span>
             <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface">L'incontro tra Creatività e Sicurezza</h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              FounDreams nasce dalla sinergia di due giovani ragzzi con una missione comune: democratizzare l'eccellenza tecnica. Uniamo l'anima creativa del design alla precisione chirurgica della cybersecurity. Crediamo che ogni sogno digitale meriti una base solida e sicura per crescere senza limiti. La nostra filosofia è semplice: innovare proteggendo ciò che ami di più.
+              <strong>FounDreams</strong> nasce dall'intesa di due giovani programmatori e marketer con un obiettivo comune: trasformare le idee in realtà sicure. Uniamo il lato visivo del design alla precisione della <strong>sicurezza informatica</strong>, perché ogni sogno digitale ha bisogno di una struttura solida per svilupparsi senza confini. Innoviamo ogni giorno per proteggere ciò che ami di più.
             </p>
             <div className="grid grid-cols-3 gap-md pt-lg">
               <div className="p-md text-center">
@@ -107,7 +202,7 @@ export const Home: React.FC = () => {
               <span className="material-symbols-outlined text-primary text-[40px]">language</span>
               <h3 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface">Siti Web ad Alte Prestazioni</h3>
               <p className="text-on-surface-variant">Realizziamo piattaforme web che non sono solo belle, ma veloci e ottimizzate. Ogni linea di codice è scritta pensando alla scalabilità e all'esperienza utente finale.</p>
-              <Link to="/servizi" style={{ textDecoration: 'none' }}>
+              <Link to="/servizi#siti-web" style={{ textDecoration: 'none' }}>
                 <button className="flex items-center gap-xs text-primary font-label-md text-label-md hover:underline transition-all">
                   Più informazioni <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
                 </button>
@@ -134,8 +229,8 @@ export const Home: React.FC = () => {
             <div className="space-y-md">
               <span className="material-symbols-outlined text-tertiary text-[40px]">share</span>
               <h3 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface">Social Media Strategy</h3>
-              <p className="text-on-surface-variant">Gestiamo la tua voce digitale. Dalla creazione di contenuti visivi alla strategia di crescita organica, portiamo il tuo brand dove si trovano i tuoi clienti.</p>
-              <Link to="/servizi" style={{ textDecoration: 'none' }}>
+              <p className="text-on-surface-variant">Gestiamo la tua voce digitale. Dalla creazione di contenuti visivi alla strategia di crescita organica, portiamo il tuo brand dove si trovanho i tuoi clienti.</p>
+              <Link to="/servizi#pagine-social" style={{ textDecoration: 'none' }}>
                 <button className="flex items-center gap-xs text-tertiary font-label-md text-label-md hover:underline transition-all">
                   Più informazioni <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
                 </button>
@@ -147,9 +242,9 @@ export const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
             <div className="order-2 lg:order-1 space-y-md">
               <span className="material-symbols-outlined text-secondary text-[40px]">security</span>
-              <h3 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface">Cybersecurity &amp; Protezione</h3>
-              <p className="text-on-surface-variant">La sicurezza non è un optional. Proteggiamo i tuoi dati e quelli dei tuoi clienti con i più avanzati protocolli di sicurezza e monitoraggio costante.</p>
-              <Link to="/servizi" style={{ textDecoration: 'none' }}>
+              <h3 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface">Consulenza &amp; Protezione</h3>
+              <p className="text-on-surface-variant">Trasformiamo il tuo IT in un vantaggio competitivo. Progettiamo, automatizziamo e proteggiamo infrastrutture cloud e ibride per azzerare i disservizi e ridurre i costi. Ci occupiamo noi di stabilità e sicurezza, così puoi concentrarti solo sulla crescita del tuo business.</p>
+              <Link to="/servizi#consulenza-informatica" style={{ textDecoration: 'none' }}>
                 <button className="flex items-center gap-xs text-secondary font-label-md text-label-md hover:underline transition-all">
                   Più informazioni <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
                 </button>
@@ -171,11 +266,11 @@ export const Home: React.FC = () => {
         <div className="container mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="text-center mb-xl">
             <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface mb-sm">Soluzioni su Misura</h2>
-            <p className="text-on-surface-variant max-w-2xl mx-auto">Scegli la combinazione perfetta per le deine esigenze o costruisci un pacchetto personalizzato con il nostro team.</p>
+            <p className="text-on-surface-variant max-w-2xl mx-auto">Scegli la combinazione perfetta per le tue esigenze o costruisci un pacchetto personalizzato con il nostro team.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter items-stretch">
             {/* Startup Bundle */}
-            <div className="glass p-lg rounded-3xl flex flex-col hover:border-primary/50 transition-colors">
+            <div className="package-card glass p-lg rounded-3xl flex flex-col hover:border-primary/50 cursor-default">
               <div className="flex justify-between items-start mb-md">
                 <div className="p-sm bg-primary/10 rounded-xl text-primary">
                   <span className="material-symbols-outlined">rocket_launch</span>
@@ -185,24 +280,25 @@ export const Home: React.FC = () => {
               <p className="text-caption font-caption text-on-surface-variant mb-md">L'essenziale per partire subito forti.</p>
               <ul className="space-y-sm mb-lg flex-grow">
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
-                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Sito Web On-page
+                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Sito Web landinpage
                 </li>
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
                   <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Configurazione Social
                 </li>
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
-                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Certificato SSL &amp; Security
+                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Certificato SSL
                 </li>
               </ul>
-              <Link to="/contattaci" style={{ textDecoration: 'none' }}>
-                <button className="w-full py-md border border-outline-variant rounded-xl font-label-md text-label-md hover:bg-surface-variant transition-colors text-on-surface dark:text-on-surface">
-                  Seleziona
-                </button>
-              </Link>
+              <button 
+                onClick={() => openModal("Startup Bundle")}
+                className="w-full py-md border border-outline-variant rounded-xl font-label-md text-label-md hover:bg-surface-variant transition-colors text-on-surface dark:text-on-surface mt-auto"
+              >
+                Scopri di Più
+              </button>
             </div>
 
             {/* Business Evolution */}
-            <div className="glass p-lg rounded-3xl flex flex-col relative border-primary shadow-2xl shadow-primary/10 scale-105 z-10 bg-surface-bright">
+            <div className="package-card glass p-lg rounded-3xl flex flex-col relative border-primary shadow-2xl shadow-primary/10 scale-105 z-10 bg-surface-bright cursor-default">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-md py-xs rounded-full text-[12px] font-bold uppercase tracking-widest">Più Popolare</div>
               <div className="flex justify-between items-start mb-md">
                 <div className="p-sm bg-primary/20 rounded-xl text-primary">
@@ -213,24 +309,25 @@ export const Home: React.FC = () => {
               <p className="text-caption font-caption text-on-surface-variant mb-md">Per chi vuole scalare il mercato.</p>
               <ul className="space-y-sm mb-lg flex-grow">
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
-                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Sito E-commerce Pro
+                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Sito web
                 </li>
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
-                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Gestione Social Mensile
+                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Gestione Social intermedio
                 </li>
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
-                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Pentesting Semestrale
+                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Implementazione WAF
                 </li>
               </ul>
-              <Link to="/contattaci" style={{ textDecoration: 'none' }}>
-                <button className="w-full py-md gradient-primary text-on-primary rounded-xl font-label-md text-label-md shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
-                  Inizia Ora
-                </button>
-              </Link>
+              <button 
+                onClick={() => openModal("Business Evolution")}
+                className="w-full py-md gradient-primary text-on-primary rounded-xl font-label-md text-label-md shadow-lg shadow-primary/20 hover:scale-105 transition-transform mt-auto"
+              >
+                Scopri di Più
+              </button>
             </div>
 
             {/* Enterprise Safe */}
-            <div className="glass p-lg rounded-3xl flex flex-col hover:border-primary/50 transition-colors">
+            <div className="package-card glass p-lg rounded-3xl flex flex-col hover:border-primary/50 cursor-default">
               <div className="flex justify-between items-start mb-md">
                 <div className="p-sm bg-secondary/10 rounded-xl text-secondary">
                   <span className="material-symbols-outlined">shield_with_heart</span>
@@ -240,24 +337,134 @@ export const Home: React.FC = () => {
               <p className="text-caption font-caption text-on-surface-variant mb-md">Massima sicurezza e personalizzazione.</p>
               <ul className="space-y-sm mb-lg flex-grow">
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
-                  <span className="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Infrastruttura Cloud Dedicata
+                  <span className="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Sito Web 100% personalizzato
                 </li>
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
-                  <span className="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Monitoraggio SOC 24/7
+                  <span className="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Gestione Social Completa
                 </li>
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
-                  <span className="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Strategia Multicanale
+                  <span className="material-symbols-outlined text-secondary text-[18px]">check_circle</span> consulenza strategica e formazione
                 </li>
               </ul>
-              <Link to="/contattaci" style={{ textDecoration: 'none' }}>
-                <button className="w-full py-md border border-outline-variant rounded-xl font-label-md text-label-md hover:bg-surface-variant transition-colors text-on-surface dark:text-on-surface">
-                  Contattaci
-                </button>
-              </Link>
+              <button 
+                onClick={() => openModal("Enterprise Safe")}
+                className="w-full py-md border border-outline-variant rounded-xl font-label-md text-label-md hover:bg-surface-variant transition-colors text-on-surface dark:text-on-surface mt-auto"
+              >
+                Scopri di Più
+              </button>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Modal Popup overlay */}
+      {selectedBundle && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-start justify-center p-margin-mobile md:p-lg pt-12 pb-12 bg-background/80 backdrop-blur-md overflow-y-auto"
+          onClick={() => setSelectedBundle(null)}
+        >
+          {/* Modal Card container */}
+          <div 
+            className="modal-content glass w-full max-w-2xl rounded-3xl relative p-lg md:p-xl shadow-2xl flex flex-col gap-md my-8"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button 'X' */}
+            <button 
+              onClick={() => setSelectedBundle(null)}
+              className="absolute top-4 right-4 text-on-surface/70 hover:text-primary transition-colors focus:outline-none z-50"
+              aria-label="Chiudi"
+            >
+              <span className="material-symbols-outlined text-[28px]">close</span>
+            </button>
+
+            <div className="space-y-lg text-left">
+              {/* Header info */}
+              <div className="space-y-sm text-left">
+                <h2 className={`font-headline-lg text-headline-lg text-left ${bundleDetails[selectedBundle].color === 'primary' ? 'text-primary' : 'text-secondary'}`}>
+                  {selectedBundle}
+                </h2>
+              </div>
+
+              <div className="border-t border-white/10 pt-lg text-left">
+                <h3 className="font-headline-md text-headline-md mb-md text-left text-on-surface">Caratteristiche Incluse:</h3>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-md text-left">
+                  {bundleDetails[selectedBundle].modalFeatures.map((feature, index) => (
+                    <li key={index} className="flex items-start gap-sm text-left">
+                      <span className={`material-symbols-outlined ${bundleDetails[selectedBundle].color === 'primary' ? 'text-primary' : 'text-secondary'} pt-1`}>check_circle</span>
+                      <span className="text-body-md text-on-surface text-left">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="border-t border-white/10 pt-lg text-left">
+                {modalStatus === 'success' ? (
+                  <div className="text-center py-lg space-y-sm">
+                    <span className="material-symbols-outlined text-secondary text-[48px] animate-bounce">check_circle</span>
+                    <h4 className="font-headline-md text-headline-md text-on-surface">Richiesta Ricevuta!</h4>
+                    <p className="text-on-surface-variant">Ti risponderemo entro 24 ore. Preparati a realizzare il tuo sogno digitale.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleModalSubmit} className="space-y-md text-left">
+                    <h3 className="font-headline-md text-headline-md text-on-surface text-left mb-sm">Richiedi Informazioni</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-md text-left">
+                      <div className="space-y-xs text-left">
+                        <label className="font-label-md text-label-md text-on-surface-variant text-left">Nome</label>
+                        <input 
+                          type="text" 
+                          required
+                          value={modalForm.nome}
+                          onChange={(e) => setModalForm({...modalForm, nome: e.target.value})}
+                          placeholder="Mario Rossi"
+                          className="w-full bg-[#000d11] border border-primary/30 rounded-lg p-sm text-on-surface placeholder:text-on-surface-variant/40 focus:border-primary focus:outline-none"
+                        />
+                      </div>
+                      <div className="space-y-xs text-left">
+                        <label className="font-label-md text-label-md text-on-surface-variant text-left">Email</label>
+                        <input 
+                          type="email" 
+                          required
+                          value={modalForm.email}
+                          onChange={(e) => setModalForm({...modalForm, email: e.target.value})}
+                          placeholder="mario@esempio.it"
+                          className="w-full bg-[#000d11] border border-primary/30 rounded-lg p-sm text-on-surface placeholder:text-on-surface-variant/40 focus:border-primary focus:outline-none"
+                        />
+                      </div>
+                    </div>
+                    <div className="space-y-xs text-left">
+                      <label className="font-label-md text-label-md text-on-surface-variant text-left">Oggetto</label>
+                      <input 
+                        type="text" 
+                        required
+                        value={modalForm.oggetto}
+                        onChange={(e) => setModalForm({...modalForm, oggetto: e.target.value})}
+                        className="w-full bg-[#000d11] border border-primary/30 rounded-lg p-sm text-on-surface focus:border-primary focus:outline-none"
+                      />
+                    </div>
+                    <div className="space-y-xs text-left">
+                      <label className="font-label-md text-label-md text-on-surface-variant text-left">Messaggio</label>
+                      <textarea 
+                        rows={3}
+                        required
+                        value={modalForm.messaggio}
+                        onChange={(e) => setModalForm({...modalForm, messaggio: e.target.value})}
+                        className="w-full bg-[#000d11] border border-primary/30 rounded-lg p-sm text-on-surface focus:border-primary focus:outline-none resize-none"
+                      />
+                    </div>
+                    <button 
+                      type="submit"
+                      disabled={modalStatus === 'sending'}
+                      className="w-full py-md gradient-primary text-on-primary rounded-xl font-label-md text-label-md shadow-lg shadow-primary/20 hover:scale-[1.01] active:scale-95 transition-transform"
+                    >
+                      {modalStatus === 'sending' ? 'Invio in corso...' : 'Invia Messaggio'}
+                    </button>
+                  </form>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

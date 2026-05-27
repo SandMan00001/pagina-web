@@ -1,0 +1,363 @@
+<!DOCTYPE html><html class="dark" lang="it" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .glass-panel {
+            background: rgba(29, 32, 34, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .cta-gradient {
+            background: linear-gradient(135deg, #b9c7e4 0%, #9362ff 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .cta-gradient:hover {
+            box-shadow: 0 0 20px rgba(185, 199, 228, 0.4);
+            transform: translateY(-2px);
+        }
+        .hero-glow {
+            position: absolute;
+            width: 40vw;
+            height: 40vw;
+            background: radial-gradient(circle, rgba(147, 98, 255, 0.1) 0%, rgba(16, 20, 21, 0) 70%);
+            z-index: -1;
+            filter: blur(60px);
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-primary {
+            background: linear-gradient(135deg, #b9c7e4 0%, #d1bcff 100%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#363a3b",
+                      "on-tertiary-container": "#9362ff",
+                      "on-secondary-fixed-variant": "#004e60",
+                      "on-secondary-fixed": "#001f28",
+                      "inverse-surface": "#e0e3e5",
+                      "surface": "#101415",
+                      "primary-fixed-dim": "#b9c7e4",
+                      "on-secondary-container": "#00566a",
+                      "tertiary-container": "#200055",
+                      "primary-fixed": "#d6e3ff",
+                      "on-primary": "#233148",
+                      "surface-container-high": "#272a2c",
+                      "surface-tint": "#b9c7e4",
+                      "on-tertiary": "#3c0090",
+                      "on-surface-variant": "#c5c6cd",
+                      "secondary-fixed-dim": "#47d6ff",
+                      "on-error-container": "#ffdad6",
+                      "surface-container-highest": "#323537",
+                      "surface-container-low": "#191c1e",
+                      "primary-container": "#0a192f",
+                      "on-background": "#e0e3e5",
+                      "on-primary-container": "#74829d",
+                      "on-error": "#690005",
+                      "secondary-fixed": "#b6ebff",
+                      "inverse-on-surface": "#2d3133",
+                      "on-tertiary-fixed": "#23005b",
+                      "outline-variant": "#44474d",
+                      "error-container": "#93000a",
+                      "tertiary-fixed": "#e9ddff",
+                      "secondary": "#a5e7ff",
+                      "on-secondary": "#003543",
+                      "on-primary-fixed-variant": "#39475f",
+                      "on-surface": "#e0e3e5",
+                      "outline": "#8f9097",
+                      "tertiary": "#d1bcff",
+                      "background": "#101415",
+                      "inverse-primary": "#515f78",
+                      "on-tertiary-fixed-variant": "#5700c9",
+                      "on-primary-fixed": "#0d1c32",
+                      "primary": "#b9c7e4",
+                      "surface-container-lowest": "#0b0f10",
+                      "error": "#ffb4ab",
+                      "surface-dim": "#101415",
+                      "surface-variant": "#323537",
+                      "secondary-container": "#00d2ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xs": "4px",
+                      "margin-desktop": "64px",
+                      "lg": "48px",
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "md": "24px",
+                      "gutter": "24px",
+                      "sm": "12px",
+                      "xl": "80px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Outfit"],
+                      "label-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-md": ["Outfit"],
+                      "body-md": ["Inter"],
+                      "headline-lg": ["Outfit"],
+                      "caption": ["Inter"],
+                      "display-lg": ["Outfit"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-fixed-dim selection:text-on-primary-fixed font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop py-base max-w-full mx-auto bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-white/10 dark:border-white/10 shadow-sm">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface">FounDreams</div>
+<div class="hidden md:flex items-center gap-xl">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-label-md text-label-md text-primary dark:text-primary font-bold border-b-2 border-primary" href="#">Servizi</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-200" href="#">Contattaci</a>
+</div>
+<button class="cta-gradient px-md py-sm rounded-full font-label-md text-label-md text-on-primary scale-95 active:scale-90 transition-transform">
+        Inizia Progetto
+    </button>
+</nav>
+<main class="relative pt-[120px]">
+<!-- Hero Header -->
+<section class="px-margin-desktop mb-xl text-center max-w-4xl mx-auto relative transition-all duration-700 opacity-100 translate-y-0">
+<div class="hero-glow top-0 left-1/2 -translate-x-1/2"></div>
+<h1 class="font-display-lg text-display-lg mb-md leading-tight">Soluzioni Digitali di <span class="text-primary">Eccellenza</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Trasformiamo visioni ambiziose in realtà tecnologiche sicure, performanti e di impatto globale. Dalla difesa dei dati alla narrazione social.</p>
+</section>
+<!-- Section 1: Realizzazione Siti Web -->
+<section class="py-xl bg-surface transition-all duration-700 opacity-100 translate-y-0">
+<div class="px-margin-desktop max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+<div class="flex flex-col gap-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="web">web</span>
+<h2 class="font-headline-lg text-headline-lg">Realizzazione Siti Web</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Sviluppiamo ecosistemi digitali che fondono design d'avanguardia e architetture scalabili. Non creiamo solo siti, ma strumenti di business ottimizzati per le performance (SEO), accessibili e responsive. Ogni riga di codice è scritta con precisione chirurgica per garantire velocità di caricamento fulminee e un'esperienza utente memorabile che converte i visitatori in clienti fedeli.
+                </p>
+<div class="grid grid-cols-2 gap-sm mb-base">
+<div class="flex items-center gap-xs text-on-surface-variant font-caption">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="check_circle">check_circle</span> Next.js &amp; React
+                    </div>
+<div class="flex items-center gap-xs text-on-surface-variant font-caption">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="check_circle">check_circle</span> E-commerce Headless
+                    </div>
+<div class="flex items-center gap-xs text-on-surface-variant font-caption">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="check_circle">check_circle</span> UI/UX Strategica
+                    </div>
+<div class="flex items-center gap-xs text-on-surface-variant font-caption">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="check_circle">check_circle</span> Core Web Vitals
+                    </div>
+</div>
+<a class="cta-gradient inline-flex items-center justify-center gap-base px-lg py-md rounded-full font-label-md text-label-md text-on-primary w-fit" href="#">
+                    Contattaci <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="rounded-3xl overflow-hidden glass border border-white/5 aspect-video md:aspect-square">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A high-tech digital workspace featuring multiple sleek monitors displaying lines of clean code and minimalist web design prototypes. The lighting is low-key with deep navy tones and electric blue highlights, creating a professional and innovative atmosphere. The aesthetic is clean and corporate, emphasizing technical excellence and modern software development." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALJeuoylIbFXdsUdTIp3Sy4m4kysgiPCZ9epiCb7o4-nj_awXIfUqOBWcZnw6G72eVMtREknwmQ6FeFOzCBVxvKgaWy-Ok-sm1ULULR7WlUqVcDtlw-aYykfHvXe1dTevKVl7i9hIYTlJXp8t9abysorBVrnnm6wqo0D1z7WCX_IBORTJ_OAgrTjY0O_2z2H6Y576J93iOAR3ldDJRuZZIoNHJUXysoQxHJJv6iRM4sIc_ul5Ey7hmL3n4AXuFXGHwSFf_2Rs8lqBG">
+</div>
+</div>
+</section>
+<!-- Section 2: Gestione Pagine Social -->
+<section class="py-xl bg-surface-container-low transition-all duration-700 opacity-100 translate-y-0">
+<div class="px-margin-desktop max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+<div class="order-2 md:order-1 rounded-3xl overflow-hidden glass border border-white/5 aspect-video md:aspect-square">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="An abstract visualization of digital social connections using glowing purple and blue nodes connected by thin fiber-optic-like light lines. The scene is set against a deep black background, evoking a sense of vibrant digital energy and community growth. The lighting is dramatic with neon highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0kE_ncur3VnhJ6ID12sJ0HGPl7iXFET49jXO3hbelXdkGnMnMg-MtLn-V9O4KLTNMtLp98ZUVkbkK-KQHdyKT0QliZd5Uv4nQwcoqZUAvDCT2zsdzhPvly2Ba0HOehS7Mq5eDHmkEjMh_bpBRaIuZOSCFbHHEOOOe14PBHV0X2q61hucS6Jm3JNslxh6TS8KNVyVEZaRKcQ2AJsW-sUBWMWb5VIgz13Z0UqYtpzAioHg7WQxWXZemfL2lR4QwquXDdzwBkmYUH9Iq">
+</div>
+<div class="flex flex-col gap-md order-1 md:order-2">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-tertiary-container text-4xl" data-icon="share">share</span>
+<h2 class="font-headline-lg text-headline-lg">Gestione Pagine Social</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Eleviamo la presenza del tuo brand attraverso una narrazione visiva coerente e data-driven. Analizziamo i trend, studiamo l'algoritmo e creiamo contenuti che generano engagement reale. La nostra gestione social è una fusione tra creatività visionaria e analisi tecnica, pensata per costruire community solide e autorevoli.
+                </p>
+<div class="flex flex-wrap gap-sm mb-base">
+<span class="bg-tertiary-container/30 px-md py-xs rounded-full text-on-tertiary-container font-caption text-[11px] uppercase tracking-widest border border-on-tertiary-container/20">Strategy</span>
+<span class="bg-tertiary-container/30 px-md py-xs rounded-full text-on-tertiary-container font-caption text-[11px] uppercase tracking-widest border border-on-tertiary-container/20">Content</span>
+<span class="bg-tertiary-container/30 px-md py-xs rounded-full text-on-tertiary-container font-caption text-[11px] uppercase tracking-widest border border-on-tertiary-container/20">Analytics</span>
+</div>
+<a class="cta-gradient inline-flex items-center justify-center gap-base px-lg py-md rounded-full font-label-md text-label-md text-on-primary w-fit" href="#">
+                    Contattaci <span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+</a>
+<div class="mt-base bg-surface-container-high rounded-xl p-md flex items-center justify-between group cursor-pointer hover:bg-surface-container-highest transition-colors">
+<div>
+<p class="font-label-md text-label-md text-primary">Obiettivo</p>
+<h3 class="font-headline-md text-headline-md">Successo Social&nbsp;</h3>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-2 transition-transform" data-icon="north_east">north_east</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Sicurezza Informatica -->
+<section class="py-xl bg-surface transition-all duration-700 opacity-100 translate-y-0">
+<div class="px-margin-desktop max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+<div class="flex flex-col gap-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-error text-4xl" data-icon="lock">lock</span>
+<h2 class="font-headline-lg text-headline-lg">Consulenza Informatica</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"><span style="color: oklab(0.952693 0.000792831 -0.00253612); font-family: &quot;gg sans&quot;, &quot;Noto Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; white-space: break-spaces; background-color: oklab(0.678923 0.00325415 -0.0111644 / 0.0784314);" class="">Aiutamo le aziende a trasformare l’IT in un vantaggio competitivo: progetto, automatizziamo e gestiamo infrastrutture cloud, on-premise e ibride, con un approccio DevOps che punta a ridurre downtime, contenere i costi e aumentare la velocità di rilascio. Mettiamo al centro sicurezza, monitoraggio e automazione, così il tuo team può concentrarsi sul business mentre l’infrastruttura resta stabile, scalabile e sotto controllo.</span></p>
+<div class="flex flex-wrap gap-md mb-base">
+<div class="flex flex-col gap-xs">
+<span class="text-error font-bold font-headline-md text-headline-md">99.9%</span>
+<span class="text-on-surface-variant font-caption">Resilienza Attacchi</span>
+</div>
+<div class="w-px h-12 bg-outline-variant hidden sm:block"></div>
+<div class="flex flex-col gap-xs">
+<span class="text-error font-bold font-headline-md text-headline-md">IMMEDIATA</span>
+<span class="text-on-surface-variant font-caption">Consulenza</span>
+</div>
+</div>
+<a class="cta-gradient inline-flex items-center justify-center gap-base px-lg py-md rounded-full font-label-md text-label-md text-on-primary w-fit" href="#">
+                    Contattaci <span class="material-symbols-outlined" data-icon="security">security</span>
+</a>
+</div>
+<div class="rounded-3xl overflow-hidden glass border border-white/5 aspect-video md:aspect-square">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A sophisticated data center server room viewed through a semi-transparent glass partition with glowing digital overlays of security lock icons and binary code streams. The color palette is dominated by deep charcoal and electric blue neon lights, symbolizing high-level encryption and robust cyber defense. The mood is silent, intense, and highly secure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAgNZKCiwje8yEHFx642msY3-fWD1GPIYIL2efJag8X-e24L6Eqps1792xmhJl0_6Gm19iaPeQ_Md_1fRoh62FdfC1Fm8TIt6quafiYZwr_aCUVjAp5jLhAKxGY6LHKKsWB_Z99EUII59AaZP3xX7T2s-aJorzO_8JFpa6xyu39Ftzbvi81EO-Ow3VmvmiLw_GWMIy7eTCXVbLaTZUM14AvTz2SwPrnQHJo_9NmaxnjLBXqvCAcapmegju_IDYAe95ULO7PbJ835M5">
+</div>
+</div>
+</section>
+<!-- Pacchetti / Combo Section -->
+<section class="py-xl bg-surface-container transition-all duration-700 opacity-100 translate-y-0">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg mb-sm">Soluzioni su Misura</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Scegli la combinazione perfetta per le tue esigenze o costruisci un pacchetto personalizzato con il nostro team.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-stretch">
+<!-- Startup Bundle -->
+<div class="glass p-lg rounded-3xl flex flex-col hover:border-primary/50 transition-colors">
+<div class="flex justify-between items-start mb-md">
+<div class="p-sm bg-primary/10 rounded-xl text-primary">
+<span class="material-symbols-outlined">rocket_launch</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md mb-xs">Startup Bundle</h4>
+<p class="text-caption font-caption text-on-surface-variant mb-md">L'essenziale per partire subito forti.</p>
+<ul class="space-y-sm mb-lg flex-grow">
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Sito Web On-page</li>
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Configurazione Social</li>
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Certificato SSL &amp; Security</li>
+</ul>
+<button class="w-full py-md border border-outline-variant rounded-xl font-label-md text-label-md hover:bg-surface-variant transition-colors">Seleziona</button>
+</div>
+<!-- Business Evolution -->
+<div class="glass p-lg rounded-3xl flex flex-col relative border-primary shadow-2xl shadow-primary/10 scale-105 z-10 bg-surface-bright">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-md py-xs rounded-full text-[12px] font-bold uppercase tracking-widest">Più Popolare</div>
+<div class="flex justify-between items-start mb-md">
+<div class="p-sm bg-primary/20 rounded-xl text-primary">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md mb-xs">Business Evolution</h4>
+<p class="text-caption font-caption text-on-surface-variant mb-md">Per chi vuole scalare il mercato.</p>
+<ul class="space-y-sm mb-lg flex-grow">
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Sito E-commerce Pro</li>
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Gestione Social Mensile</li>
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Pentesting Semestrale</li>
+</ul>
+<button class="w-full py-md gradient-primary text-on-primary rounded-xl font-label-md text-label-md shadow-lg shadow-primary/20 hover:scale-105 transition-transform">Seleziona</button>
+</div>
+<!-- Enterprise Safe -->
+<div class="glass p-lg rounded-3xl flex flex-col hover:border-primary/50 transition-colors">
+<div class="flex justify-between items-start mb-md">
+<div class="p-sm bg-secondary/10 rounded-xl text-secondary">
+<span class="material-symbols-outlined">shield_with_heart</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md mb-xs">Enterprise Safe</h4>
+<p class="text-caption font-caption text-on-surface-variant mb-md">Massima sicurezza e personalizzazione.</p>
+<ul class="space-y-sm mb-lg flex-grow">
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Infrastruttura Cloud Dedicata</li>
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Monitoraggio SOC 24/7</li>
+<li class="flex items-center gap-sm text-body-md"><span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Strategia Multicanale</li>
+</ul>
+<button class="w-full py-md border border-outline-variant rounded-xl font-label-md text-label-md hover:bg-surface-variant transition-colors">Seleziona</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Final Section -->
+<section class="px-margin-desktop py-xl text-center bg-surface-container-lowest transition-all duration-700 opacity-100 translate-y-0">
+<h2 class="font-headline-lg text-headline-lg mb-base">Pronto a trasformare la tua visione?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg max-w-2xl mx-auto">Unisciti alle aziende che hanno già scelto l'innovazione di FounDreams. Il futuro digitale inizia qui.</p>
+<div class="flex flex-col sm:flex-row gap-md justify-center">
+<button class="cta-gradient px-xl py-md rounded-full font-label-md text-label-md text-on-primary">
+                Prenota una Consulenza
+            </button>
+
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-lg flex flex-col md:flex-row justify-between items-center gap-gutter bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant mt-xl">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface">
+            FounDreams
+        </div>
+<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">
+            © 2024 FounDreams. Eccellenza tecnica e innovazione visionaria.
+        </p>
+<div class="flex gap-md items-center"><a href="#" class="text-on-surface-variant hover:text-secondary transition-all duration-300 transform hover:scale-110"><img src="https://lh3.googleusercontent.com/aida/ADBb0ugm5O72juReyrfkQBsikwg5goxxY-FM68y0LD_bXLnqJpX_KBv7iDOjVAguLum2fXj_Dj4S39k7ULvLEKVTJfZ8a9eVWaKHYJClkTu9o86PN5Or4Cj3qh9IkdMlNxCG6jzk-eo1flKe8R6oYvirc_V1wiARkEKMfyazO1E4UbV0_Zt3hBheCyCDET2mDVLFYY4GuVbzUc7vi0OZrV0sIRH4_-_Q-LE8mbmN6gxHR-hh39Cifv9sBEP-WY2q" alt="Instagram" class="w-6 h-6"></a><a href="#" class="text-on-surface-variant hover:text-secondary transition-all duration-300 transform hover:scale-110"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook w-6 h-6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a></div><div class="flex gap-md">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Termini di Servizio</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Lavora con noi</a>
+</div>
+</footer>
+<script>
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+        observer.observe(section);
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+</body></html>

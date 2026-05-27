@@ -68,7 +68,7 @@ export const MainLayout: React.FC = () => {
           FounDreams
         </div>
         <p className="font-body-md text-body-md text-on-surface-variant text-center md:text-left">
-          © 2024 FounDreams. Eccellenza tecnica e innovazione visionaria.
+          © 2026 FounDreams. Eccellenza tecnica e innovazione visionaria.
         </p>
         <div className="flex gap-md items-center">
           <a href="#" className="text-on-surface-variant hover:text-secondary transition-all duration-300 transform hover:scale-110">
