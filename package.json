@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "homepage": "https://SandMan00001.github.io/pagina-web/",
+  "homepage": "https://www.italiasaija.it",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
