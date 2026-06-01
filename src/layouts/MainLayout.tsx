@@ -25,6 +25,7 @@ export const MainLayout: React.FC = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex gap-md items-center">
           <Link className={getLinkClass('/')} to="/">Home</Link>
+          <Link className={getLinkClass('/chi-siamo')} to="/chi-siamo">Chi Siamo</Link>
           <Link className={getLinkClass('/servizi')} to="/servizi">Servizi</Link>
           <Link className={getLinkClass('/contattaci')} to="/contattaci">Contattaci</Link>
           <Link to="/contattaci" style={{ textDecoration: 'none' }}>
@@ -46,6 +47,7 @@ export const MainLayout: React.FC = () => {
         {mobileMenuOpen && (
           <div className="absolute top-[57px] left-0 w-full bg-surface border-b border-white/10 flex flex-col p-md gap-md md:hidden z-40">
             <Link className={getLinkClass('/')} to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+            <Link className={getLinkClass('/chi-siamo')} to="/chi-siamo" onClick={() => setMobileMenuOpen(false)}>Chi Siamo</Link>
             <Link className={getLinkClass('/servizi')} to="/servizi" onClick={() => setMobileMenuOpen(false)}>Servizi</Link>
             <Link className={getLinkClass('/contattaci')} to="/contattaci" onClick={() => setMobileMenuOpen(false)}>Contattaci</Link>
             <Link to="/contattaci" style={{ textDecoration: 'none' }} onClick={() => setMobileMenuOpen(false)}>
@@ -75,7 +77,7 @@ export const MainLayout: React.FC = () => {
             <img src="https://lh3.googleusercontent.com/aida/ADBb0ugm5O72juReyrfkQBsikwg5goxxY-FM68y0LD_bXLnqJpX_KBv7iDOjVAguLum2fXj_Dj4S39k7ULvLEKVTJfZ8a9eVWaKHYJClkTu9o86PN5Or4Cj3qh9IkdMlNxCG6jzk-eo1flKe8R6oYvirc_V1wiARkEKMfyazO1E4UbV0_Zt3hBheCyCDET2mDVLFYY4GuVbzUc7vi0OZrV0sIRH4_-_Q-LE8mbmN6gxHR-hh39Cifv9sBEP-WY2q" alt="Instagram" className="w-6 h-6" />
           </a>
           <a href="#" className="text-on-surface-variant hover:text-secondary transition-all duration-300 transform hover:scale-110">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-facebook w-6 h-6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-facebook w-6 h-6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
           </a>
         </div>
         <div className="flex gap-md">

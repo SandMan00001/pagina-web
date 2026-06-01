@@ -266,3 +266,21 @@ input:focus, textarea:focus {
   border-color: var(--color-secondary) !important;
   box-shadow: 0 0 8px rgba(165, 231, 255, 0.3) !important;
 }
+
+/* Timeline/Process styles for Chi Siamo page */
+.timeline-dot::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 0%;
+  background: linear-gradient(to bottom, var(--color-secondary), transparent);
+  left: 50%;
+  top: 24px;
+  transform: translateX(-50%);
+  z-index: -1;
+  transition: height 1s ease-in-out;
+}
+
+.timeline-step.active .timeline-dot::after {
+  height: 100%;
+}
