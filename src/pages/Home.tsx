@@ -175,7 +175,7 @@ export const Home: React.FC = () => {
             <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
               <strong>FounDreams</strong> nasce dall'intesa di due giovani programmatori e marketer con un obiettivo comune: trasformare le idee in realtà sicure. Uniamo il lato visivo del design alla precisione della <strong>sicurezza informatica</strong>, perché ogni sogno digitale ha bisogno di una struttura solida per svilupparsi senza confini. Innoviamo ogni giorno per proteggere ciò che ami di più.
             </p>
-            <div className="grid grid-cols-3 gap-md pt-lg">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-md pt-lg">
               <div className="p-md text-center">
                 <div className="text-primary text-headline-md font-bold">100%</div>
                 <div className="text-caption font-caption text-on-surface-variant">Creatività</div>

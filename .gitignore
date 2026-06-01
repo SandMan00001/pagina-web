@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+SPIEGAZIONE/*
+vite.config.ts
+package-lock.json
