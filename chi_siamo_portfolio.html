@@ -1,0 +1,453 @@
+<!DOCTYPE html><html class="dark" lang="it" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Chi Siamo | Visione Digitale</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed": "#e9ddff",
+                        "surface-bright": "#363a3b",
+                        "surface-tint": "#b9c7e4",
+                        "on-surface-variant": "#c5c6cd",
+                        "on-secondary-fixed": "#001f28",
+                        "surface-container-low": "#191c1e",
+                        "surface-dim": "#101415",
+                        "outline-variant": "#44474d",
+                        "secondary-fixed": "#b6ebff",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#323537",
+                        "secondary-container": "#00d2ff",
+                        "on-error": "#690005",
+                        "on-secondary": "#003543",
+                        "tertiary-container": "#200055",
+                        "on-tertiary-container": "#9362ff",
+                        "surface": "#101415",
+                        "on-surface": "#e0e3e5",
+                        "surface-container-highest": "#323537",
+                        "surface-container-high": "#272a2c",
+                        "error-container": "#93000a",
+                        "tertiary": "#d1bcff",
+                        "primary-fixed": "#d6e3ff",
+                        "secondary": "#a5e7ff",
+                        "on-primary-fixed": "#0d1c32",
+                        "surface-container": "#1d2022",
+                        "inverse-on-surface": "#2d3133",
+                        "on-secondary-container": "#00566a",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "on-tertiary-fixed-variant": "#5700c9",
+                        "secondary-fixed-dim": "#47d6ff",
+                        "on-primary-fixed-variant": "#39475f",
+                        "on-secondary-fixed-variant": "#004e60",
+                        "background": "#101415",
+                        "on-tertiary-fixed": "#23005b",
+                        "primary": "#b9c7e4",
+                        "inverse-primary": "#515f78",
+                        "tertiary-fixed-dim": "#d1bcff",
+                        "on-primary-container": "#74829d",
+                        "inverse-surface": "#e0e3e5",
+                        "on-primary": "#233148",
+                        "outline": "#8f9097",
+                        "on-tertiary": "#3c0090",
+                        "on-background": "#e0e3e5",
+                        "primary-container": "#0a192f",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#0b0f10"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Outfit", "sans-serif"],
+                        "display": ["Outfit", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+                            '50%': { opacity: '0.7', transform: 'scale(1.1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(25, 28, 30, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(143, 144, 151, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #a5e7ff 0%, #d1bcff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 10px 40px rgba(165, 231, 255, 0.15);
+            transform: translateY(-8px);
+            border-color: rgba(165, 231, 255, 0.3);
+        }
+        .timeline-dot::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 0%;
+            background: linear-gradient(to bottom, #a5e7ff, transparent);
+            left: 50%;
+            top: 24px;
+            transform: translateX(-50%);
+            z-index: -1;
+            transition: height 1s ease-in-out;
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .timeline-step.active .timeline-dot::after {
+            height: 100%;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal-on-scroll,
+            .glow-hover,
+            .timeline-dot::after,
+            .animate-float,
+            .animate-pulse-glow {
+                transition: none !important;
+                animation: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary/30 overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md shadow-sm border-b border-outline-variant/20 h-20">
+<div class="flex justify-between items-center h-full px-8 max-w-7xl mx-auto">
+<div class="text-2xl font-headline font-bold text-primary">Visione Digitale</div>
+<div class="hidden md:flex items-center space-x-8 font-headline text-label-md">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Home</a>
+<a class="text-secondary border-b-2 border-secondary pb-1" href="#">Chi Siamo</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Servizi</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Academy</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contatti</a>
+</div>
+<button class="cta-gradient px-md py-sm rounded-full font-label-md text-label-md text-on-primary scale-95 active:scale-90 transition-transform">
+        Inizia Progetto
+    </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden px-6">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/20 blur-[120px] rounded-full animate-pulse-glow"></div>
+<div class="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-secondary/20 blur-[120px] rounded-full animate-pulse-glow" style="animation-delay: -2s;"></div>
+</div>
+<div class="max-w-4xl mx-auto text-center z-10 reveal-on-scroll active">
+<h1 class="font-display text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
+                Dove le <span class="gradient-text">idee</span> diventano <span class="text-primary">realtà</span>.
+            </h1>
+<p class="text-lg md:text-xl text-on-surface-variant mb-10 max-w-2xl mx-auto leading-relaxed">
+                Visione Digitale è uno studio digitale boutique dove l'intuizione del marketing, la tecnologia all'avanguardia e la cybersicurezza si fondono per forgiare il vostro futuro digitale.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto px-8 py-4 bg-secondary text-on-secondary rounded-xl font-headline font-bold hover:brightness-110 transition-all shadow-lg shadow-secondary/20 hover:scale-105 active:scale-95">
+                    Parliamo
+                </button>
+<button class="w-full sm:w-auto px-8 py-4 border border-outline-variant text-on-surface rounded-xl font-headline font-bold hover:bg-surface-bright/20 transition-all hover:scale-105 active:scale-95">
+                    Scopri la nostra storia
+                </button>
+</div>
+</div>
+</section>
+<!-- Why We Started -->
+<section class="py-24 max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-6 reveal-on-scroll active">
+<span class="text-secondary font-headline font-bold tracking-widest uppercase text-sm">La Nostra Genesi</span>
+<h2 class="font-display text-4xl font-semibold leading-tight">Il Concetto di FounDreams</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed"></p><p class="" data-end="1025" data-start="819">Il nostro nome deriva da <em data-end="257" data-start="241">Foundry Dreams</em> ("fucina dei sogni"), un concetto che rappresenta ciò che vogliamo essere: un luogo in cui idee, ambizioni e progetti vengono sviluppati, rafforzati e trasformati in opportunità reali.</p>
+<p class="" data-end="1291" data-start="1027"></p><div class="qMYqUG_convSearchResultHighlightRoot"><div class="" data-is-intersecting="true" data-turn-id-container="request-WEB:9b994291-4e1e-4e90-bc86-1577cd849919-12"><section class="text-token-text-primary w-full focus:outline-none has-data-writing-block:pointer-events-none [&amp;:has([data-writing-block])&gt;*]:pointer-events-auto R6Vx5W_threadScrollVars scroll-mb-[calc(var(--scroll-root-safe-area-inset-bottom,0px)+var(--thread-response-height))] scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]" data-scroll-anchor="false" data-testid="conversation-turn-14" data-turn="assistant" data-turn-id="request-WEB:9b994291-4e1e-4e90-bc86-1577cd849919-12" data-turn-id-container="request-WEB:9b994291-4e1e-4e90-bc86-1577cd849919-12" dir="auto"><div class="text-base my-auto mx-auto pb-10 [--thread-content-margin:var(--thread-content-margin-xs,calc(var(--spacing)*4))] @w-sm/main:[--thread-content-margin:var(--thread-content-margin-sm,calc(var(--spacing)*6))] @w-lg/main:[--thread-content-margin:var(--thread-content-margin-lg,calc(var(--spacing)*16))] px-(--thread-content-margin)"><div class="[--thread-content-max-width:40rem] @w-lg/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"><div class="flex max-w-full flex-col gap-4 grow"><div class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal outline-none keyboard-focused:focus-ring [.text-message+&amp;]:mt-1" data-message-author-role="assistant" data-message-id="10f97d0e-95aa-4d43-940b-d3b60fd22937" data-message-model-slug="gpt-5-5" data-turn-start-message="true" dir="auto" tabindex="0"><div class="flex w-full flex-col gap-1 empty:hidden"><div class="markdown prose dark:prose-invert wrap-break-word w-full light markdown-new-styling"><p class="" data-end="700" data-is-last-node="" data-is-only-node="" data-start="444">Unendo marketing, crescita digitale, sviluppo, consulenza informatica e sicurezza, adottiamo un approccio che mette al centro non solo la visibilità e la crescita del business, ma anche la qualità, l'affidabilità e la protezione delle soluzioni realizzate.</p></div></div></div></div><div class="z-0 flex min-h-[46px] justify-start"></div><div class="mt-3 w-full empty:hidden"><div class="text-center"></div></div></div></div></section></div></div><div aria-hidden="true" class="pointer-events-none -mt-px h-px translate-y-[calc(var(--scroll-root-safe-area-inset-bottom)-14*var(--spacing))]"></div><p class=""></p><p class=""></p>
+</div>
+<div class="relative h-[400px] rounded-2xl overflow-hidden glass-card p-2 reveal-on-scroll animate-float active">
+<div class="w-full h-full rounded-xl bg-surface-container relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-container/40 to-transparent z-10"></div>
+<img alt="Incontro strategico" class="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL0GZXzBhVOgvRsp5fU9jYTgGVPzfMJCUsmj-rY4ORyMbbWiZSO4yG42o8f_LFGzzQ5oqLvolzX38kz124Gp1v4BYSBdvp6ahd6Q6hff7_Tu2PCMc2vUOojUZXHKsyNAKAYvam0n1bzCg3DyxB1REOmR-n4MlR8AQoYeONjFXvizmrtSMrLFS7_meN3rghiSbeiDywhNomwvUnQMQ8P-Eww7jn17xKL5YPVzU7g92hHLpR6HRAOgA_G2dV4VBA0e-eI2eQgJUYiXF9">
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision -->
+<section class="py-24 bg-surface-container-lowest/50">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="glass-card p-10 rounded-2xl glow-hover reveal-on-scroll active">
+<div class="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-6 transition-transform group-hover:rotate-12">
+<span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+</div>
+<h3 class="font-display text-2xl font-bold mb-4">La nostra Missione</h3>
+<p class="text-on-surface-variant leading-relaxed"></p><p class="" data-end="2506" data-start="2363" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;"></p><p class="" data-path-to-node="5,1">Il nostro lavoro quotidiano in <b data-index-in-node="31" data-path-to-node="5,1">FounDreams</b> consiste nel fornire ad aziende e privati le competenze e gli strumenti necessari per l'evoluzione del loro business. Lo facciamo attraverso tre azioni concrete:</p><ul data-path-to-node="5,2"><li class=""><p class="" data-path-to-node="5,2,0,0"><b data-index-in-node="0" data-path-to-node="5,2,0,0">- Sviluppare con intelligenza:</b> Progettiamo ecosistemi digitali ottimizzati tramite <b data-index-in-node="81" data-path-to-node="5,2,0,0">automazioni avanzate</b> e protetti da una <b data-index-in-node="120" data-path-to-node="5,2,0,0">sicurezza informatica</b> nativa, eliminando i rischi e ottimizzando i tempi di gestione.</p></li><li class=""><p class="" data-path-to-node="5,2,1,0"><b data-index-in-node="0" data-path-to-node="5,2,1,0">- Massimizzare il valore:</b> Applichiamo strategie di <b data-index-in-node="49" data-path-to-node="5,2,1,0">marketing d'impatto</b>, sfruttando ogni piattaforma e servizio disponibile sul mercato per posizionare il tuo prodotto al massimo del suo valore commerciale.</p></li><li class=""><p class="" data-path-to-node="5,2,2,0"><b data-index-in-node="0" data-path-to-node="5,2,2,0">- Coltivare il talento, non i manuali:</b> Diamo ascolto e priorità all'elasticità mentale e all'intuizione dei singoli. Crediamo nel valore delle persone curiose e colte, capaci di trovare soluzioni flessibili dove il rigido nozionismo si ferma.</p></li><li class=""><p class="" data-path-to-node="5,2,2,0"><br></p></li></ul><p class="" data-path-to-node="5,3">Non ci limitiamo a consegnare un progetto finito: <b data-index-in-node="50" data-path-to-node="5,3">affianchiamo i nostri clienti per insegnare la messa in atto pratica delle soluzioni create</b>, formando team e persone consapevoli, creative e autonome.</p><p></p><p class="" data-end="2762" data-start="2508" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;"><br></p><p class=""></p>
+</div>
+<div class="glass-card p-10 rounded-2xl glow-hover reveal-on-scroll active">
+<div class="w-16 h-16 bg-tertiary/20 rounded-xl flex items-center justify-center mb-6 transition-transform group-hover:rotate-12">
+<span class="material-symbols-outlined text-tertiary text-3xl">visibility</span>
+</div>
+<h3 class="font-display text-2xl font-bold mb-4">La nostra Visione</h3>
+<p class="text-on-surface-variant leading-relaxed"></p><p class="" data-path-to-node="13,1">Ogni grande innovazione nasce da un sogno, ma sopravvive solo grazie alla struttura. In <b data-index-in-node="88" data-path-to-node="13,1">FounDreams</b> aiutiamo aziende e privati a realizzare progetti unici, unendo l'efficienza delle <b data-index-in-node="181" data-path-to-node="13,1">automazioni</b> alla solidità della <b data-index-in-node="213" data-path-to-node="13,1">sicurezza informatica</b>.</p><p class="" data-path-to-node="13,2">Eleviamo il potenziale di ogni prodotto grazie a un <b data-index-in-node="52" data-path-to-node="13,2">marketing strategico e totale</b>, stringendo partnership con i migliori servizi sul mercato per garantire un ritorno sull'investimento senza precedenti.</p><p class="" data-path-to-node="13,3">Lavoriamo con chi sa guardare oltre: valorizziamo l'intelligenza critica e l'elasticità mentale rispetto al nozionismo teorico. Il nostro scopo è <b data-index-in-node="146" data-path-to-node="13,3">insegnare la pratica dell'innovazione</b>, accendendo la scintilla in persone creative, consapevoli e animate dalla passione. Diamo gambe alle tue idee, ti diamo lo scudo per proteggerle e la mappa per farle crescere.</p><p></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Values -->
+<section class="py-24 max-w-7xl mx-auto px-8">
+<div class="text-center mb-16 reveal-on-scroll active">
+<h2 class="font-display text-4xl font-semibold mb-4">I Pilastri di FounDreams</h2>
+<div class="h-1 w-24 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Value 1 -->
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group reveal-on-scroll glow-hover active">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 transition-transform">group</span>
+<h4 class="font-display text-xl font-bold mb-3">Collaborazione</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Lavoriamo come un'estensione del vostro team, assicurando che la vostra voce sia ascoltata in ogni fase del processo produttivo.</p>
+</div>
+<!-- Value 2 -->
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group reveal-on-scroll glow-hover active" style="transition-delay: 0.1s">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 transition-transform">auto_awesome</span>
+<h4 class="font-display text-xl font-bold mb-3">Innovazione</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Non seguiamo le tendenze; le studiamo per costruire il "prossimo" prima che diventi l'attuale.</p>
+</div>
+<!-- Value 3 -->
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group reveal-on-scroll glow-hover active" style="transition-delay: 0.2s">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 transition-transform">shield</span>
+<h4 class="font-display text-xl font-bold mb-3">Sicurezza e Affidabilità</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">La sicurezza non è un optional; è il nucleo. Costruiamo fortezze digitali che resistono alla prova del tempo.</p>
+</div>
+<!-- Value 4 -->
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group reveal-on-scroll glow-hover active" style="transition-delay: 0.3s">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 transition-transform">verified</span>
+<h4 class="font-display text-xl font-bold mb-3">Trasparenza</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Report chiari, scadenze oneste e nessun gergo tecnico. Saprete sempre a che punto siamo.</p>
+</div>
+</div>
+</section>
+<!-- Meet the Team -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16 reveal-on-scroll active">
+<h2 class="font-display text-4xl font-semibold mb-4">Conosci il team</h2>
+</div>
+<div class="space-y-20">
+<!-- Profile 1 -->
+<div class="flex flex-col md:flex-row items-center gap-12 lg:gap-24">
+<div class="w-full md:w-1/2 space-y-6 order-2 md:order-1 reveal-on-scroll active">
+<h3 class="font-display text-3xl font-bold">Acquaotta Mykol</h3>
+<p class="text-secondary font-headline font-semibold text-lg uppercase tracking-wider">Digital marketer</p>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Esperto nel creare narrazioni digitali ad alto impatto che risuonano con il pubblico target. Combinando approfondimenti basati sui dati con lo storytelling creativo, assicura che ogni progetto ottenga la massima visibilità e conversione.
+                        </p>
+<div class="flex gap-4"><a class="text-primary font-medium hover:underline flex items-center gap-1 group transition-all" href="#">Visualizza portfolio <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a></div>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2 reveal-on-scroll active">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<img alt="Specialista Marketing" class="w-full h-auto rounded-2xl relative grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA5m0WFFJfxLeukAVAs6Th4bqCdRgxc-GqJLbkolW1gE4UcL4G-SD0qzMsVNNtaU4v3sK71LdPW983UFROmiK5fJfMi9AePcFOlNsJKVCwt45YophwgTZLLd8f_jiGrB5j8rCq5uaFC6KBap-IgaNLb1nhUOrq2ViBiXHiVSrCMHuj2VWtCE9caETwbmeIpCZrp_OkNs4f_FGLI4R9w6POQkqP7L9f2je_dOr-tC5HRyk2riV8RE6nK6en-TwTfTWSNTxXcTQELUwK">
+</div>
+</div>
+</div>
+<!-- Profile 2 -->
+<div class="flex flex-col md:flex-row items-center gap-12 lg:gap-24">
+<div class="w-full md:w-1/2 reveal-on-scroll active">
+<div class="relative group">
+<div class="absolute -inset-4 bg-tertiary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<img alt="Ingegnere della Sicurezza" class="w-full h-auto rounded-2xl relative grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvQ_uQWg2lz9e12VClzZxPhYUD7bQRfAlOvi0BrplCB5w0hh4mwLLKPgfiOFlSb4xxE0T6gvy3lhSABmEPVMFZCV1w2MKz3wL3vypbrTWLeNv2j-N1zgBy716QQ54ZKX0d0nsNz6PfTxBU3OcWlDVFx0fzLjX3sx-ygokSGQGB1JEGO08rkzsEhYMv1jDTP1xaNhkWnyskIp4IniOxlkH8-p5QeIrcPnHOsgXkKfZdyIuf9yfGlyyxgDmSDmou2RSiS69G4xunOKR4">
+</div>
+</div>
+<div class="w-full md:w-1/2 space-y-6 reveal-on-scroll active">
+<h3 class="font-display text-3xl font-bold">Saija Grabriele</h3>
+<p class="text-tertiary font-headline font-semibold text-lg uppercase tracking-wider">cloud administrator &amp; security engineer&nbsp;</p>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Una maestra dell'architettura digitale e della sicurezza difensiva. Progetta infrastrutture cloud resilienti in grado di gestire traffico elevato mantenendo una postura di sicurezza zero-trust, proteggendo i sogni che costruiamo da ogni minaccia.
+                        </p>
+<div class="flex gap-4"><a class="text-primary font-medium hover:underline flex items-center gap-1 group transition-all" href="#">Visualizza portfolio <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Approach -->
+<section class="py-24 max-w-7xl mx-auto px-8 overflow-hidden">
+<div class="text-center mb-20 reveal-on-scroll active">
+<h2 class="font-display text-4xl font-semibold mb-4">Il Processo di FounDreams</h2>
+<p class="text-on-surface-variant">Il nostro approccio sistematico verso l'eccellenza.</p>
+</div>
+<div class="relative grid grid-cols-1 md:grid-cols-5 gap-8">
+<!-- Step 1 -->
+<div class="relative text-center md:text-left timeline-step reveal-on-scroll active">
+<div class="w-12 h-12 bg-surface-container-highest border border-secondary text-secondary rounded-full flex items-center justify-center font-bold mb-6 mx-auto md:mx-0 timeline-dot relative z-10">1</div>
+<h5 class="font-display text-lg font-bold mb-2">Strategia</h5>
+<p class="text-sm text-on-surface-variant">Analisi approfondita e pianificazione dei vostri obiettivi digitali.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative text-center md:text-left timeline-step reveal-on-scroll active" style="transition-delay: 0.1s">
+<div class="w-12 h-12 bg-surface-container-highest border border-secondary text-secondary rounded-full flex items-center justify-center font-bold mb-6 mx-auto md:mx-0 timeline-dot relative z-10">2</div>
+<h5 class="font-display text-lg font-bold mb-2">Marketing</h5>
+<p class="text-sm text-on-surface-variant">Definire la vostra voce e raggiungere il vostro pubblico principale.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative text-center md:text-left timeline-step reveal-on-scroll active" style="transition-delay: 0.2s">
+<div class="w-12 h-12 bg-surface-container-highest border border-secondary text-secondary rounded-full flex items-center justify-center font-bold mb-6 mx-auto md:mx-0 timeline-dot relative z-10">3</div>
+<h5 class="font-display text-lg font-bold mb-2">Design</h5>
+<p class="text-sm text-on-surface-variant">Forgiare interfacce moderne, intuitive e pronte alla conversione.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative text-center md:text-left timeline-step reveal-on-scroll active" style="transition-delay: 0.3s">
+<div class="w-12 h-12 bg-surface-container-highest border border-secondary text-secondary rounded-full flex items-center justify-center font-bold mb-6 mx-auto md:mx-0 timeline-dot relative z-10">4</div>
+<h5 class="font-display text-lg font-bold mb-2">Sicurezza</h5>
+<p class="text-sm text-on-surface-variant">Rafforzare l'infrastruttura con protezioni avanzate.</p>
+</div>
+<!-- Step 5 -->
+<div class="relative text-center md:text-left timeline-step reveal-on-scroll active" style="transition-delay: 0.4s">
+<div class="w-12 h-12 bg-surface-container-highest border border-secondary text-secondary rounded-full flex items-center justify-center font-bold mb-6 mx-auto md:mx-0 timeline-dot relative z-10">5</div>
+<h5 class="font-display text-lg font-bold mb-2">Crescita</h5>
+<p class="text-sm text-on-surface-variant">Ottimizzazione continua e scalabilità del vostro successo.</p>
+</div>
+</div>
+</section>
+<!-- Education & Knowledge Sharing -->
+<section class="py-24 bg-primary-container/30 border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative order-2 lg:order-1 reveal-on-scroll animate-float active">
+<div class="aspect-video rounded-2xl overflow-hidden glass-card p-4">
+<div class="w-full h-full bg-surface-container rounded-xl flex items-center justify-center text-on-surface-variant overflow-hidden">
+<img alt="Sessione educativa" class="w-full h-full object-cover opacity-60 mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Nw-K55zYy8hBNAo0Rn9bUHPmr0inkBWIoFd0lM_omO8frrtC-gBsBGfLsYsP1CeKGBeB6W_KjWGNVf5Zh9SyIp_0SjyMu4ciVexYlb967UM3eYk9YvvW1-S_rgG5xySz83eAXy9nitHSf9dfjsFpeSCKqFeekIzphAv-gFuG67JZGy_TXlrKJ9C5FnATF1u-E3t4ELVrm7_1Alhhhu9A5OA62ePGSqvOzV1jd7pXSWz65nwWq0YseeJ--VX9OauMunPeUUeSbrPl">
+</div>
+</div>
+</div>
+<div class="space-y-6 order-1 lg:order-2 reveal-on-scroll active">
+<span class="text-tertiary font-headline font-bold uppercase text-sm">Academy</span>
+<h2 class="font-display text-4xl font-semibold">Crescere attraverso la Conoscenza</h2>
+<p class="text-on-surface-variant text-lg">
+                    Non costruiamo solo soluzioni; vi insegniamo come padroneggiarle. I nostri programmi di consulenza e formazione sono progettati per colmare il divario di competenze digitali, assicurando che il vostro team sia attrezzato per mantenere e far crescere i vostri asset digitali con fiducia.
+                </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-on-surface group transition-transform hover:translate-x-2">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+                        Formazione sulla consapevolezza della cybersicurezza
+                    </li>
+<li class="flex items-center gap-3 text-on-surface group transition-transform hover:translate-x-2">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+                        Workshop di perfezionamento del Marketing Digitale
+                    </li>
+<li class="flex items-center gap-3 text-on-surface group transition-transform hover:translate-x-2">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+                        Consulenza tecnica personalizzata
+                    </li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 px-8">
+<div class="max-w-7xl mx-auto bg-gradient-to-br from-primary-container to-surface-container-highest rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden reveal-on-scroll active">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full animate-pulse-glow"></div>
+<div class="relative z-10">
+<h2 class="font-display text-4xl md:text-5xl font-bold mb-6">Pronto a costruire qualcosa di significativo?</h2>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto mb-10"><span class="" style="font-family: Inter; font-size: 18px; background-color: rgba(1, 18, 48, 0.6);">Raccontaci i tuoi obiettivi e scopriamo insieme come trasformarli in una soluzione digitale efficace. Siamo pronti a dare forma alle tue idee.</span></p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="w-full sm:w-auto px-10 py-5 bg-secondary text-on-secondary rounded-2xl font-headline font-bold hover:scale-105 transition-all shadow-xl shadow-secondary/20">
+                        Contattaci
+                    </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-lg flex flex-col md:flex-row justify-between items-center gap-gutter bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant mt-xl">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface">FounDreams</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">
+            © 2024 FounDreams. Eccellenza tecnica e innovazione visionaria.
+        </p>
+<div class="flex gap-md items-center"><a class="text-on-surface-variant hover:text-secondary transition-all duration-300 transform hover:scale-110" href="#"><img alt="Instagram" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida/ADBb0ugm5O72juReyrfkQBsikwg5goxxY-FM68y0LD_bXLnqJpX_KBv7iDOjVAguLum2fXj_Dj4S39k7ULvLEKVTJfZ8a9eVWaKHYJClkTu9o86PN5Or4Cj3qh9IkdMlNxCG6jzk-eo1flKe8R6oYvirc_V1wiARkEKMfyazO1E4UbV0_Zt3hBheCyCDET2mDVLFYY4GuVbzUc7vi0OZrV0sIRH4_-_Q-LE8mbmN6gxHR-hh39Cifv9sBEP-WY2q"></a><a class="text-on-surface-variant hover:text-secondary transition-all duration-300 transform hover:scale-110" href="#"><svg class="lucide lucide-facebook w-6 h-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a></div><div class="flex gap-md">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Termini di Servizio</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Lavora con noi</a>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Optimized Scroll Reveal
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Stop observing after it's revealed for performance
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Sequential Timeline Animation
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const steps = entry.target.querySelectorAll('.timeline-step');
+                    steps.forEach((step, index) => {
+                        setTimeout(() => {
+                            step.classList.add('active');
+                        }, index * 200);
+                    });
+                    timelineObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const timelineContainer = document.querySelector('.grid-cols-1.md\\:grid-cols-5');
+        if (timelineContainer) {
+            timelineObserver.observe(timelineContainer);
+        }
+    });
+</script>
+
+
+</body></html>

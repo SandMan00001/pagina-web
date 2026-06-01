@@ -1,0 +1,493 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About Us | Visione Digitale</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed": "#e9ddff",
+                        "surface-bright": "#363a3b",
+                        "surface-tint": "#b9c7e4",
+                        "on-surface-variant": "#c5c6cd",
+                        "on-secondary-fixed": "#001f28",
+                        "surface-container-low": "#191c1e",
+                        "surface-dim": "#101415",
+                        "outline-variant": "#44474d",
+                        "secondary-fixed": "#b6ebff",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#323537",
+                        "secondary-container": "#00d2ff",
+                        "on-error": "#690005",
+                        "on-secondary": "#003543",
+                        "tertiary-container": "#200055",
+                        "on-tertiary-container": "#9362ff",
+                        "surface": "#101415",
+                        "on-surface": "#e0e3e5",
+                        "surface-container-highest": "#323537",
+                        "surface-container-high": "#272a2c",
+                        "error-container": "#93000a",
+                        "tertiary": "#d1bcff",
+                        "primary-fixed": "#d6e3ff",
+                        "secondary": "#a5e7ff",
+                        "on-primary-fixed": "#0d1c32",
+                        "surface-container": "#1d2022",
+                        "inverse-on-surface": "#2d3133",
+                        "on-secondary-container": "#00566a",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "on-tertiary-fixed-variant": "#5700c9",
+                        "secondary-fixed-dim": "#47d6ff",
+                        "on-primary-fixed-variant": "#39475f",
+                        "on-secondary-fixed-variant": "#004e60",
+                        "background": "#101415",
+                        "on-tertiary-fixed": "#23005b",
+                        "primary": "#b9c7e4",
+                        "inverse-primary": "#515f78",
+                        "tertiary-fixed-dim": "#d1bcff",
+                        "on-primary-container": "#74829d",
+                        "inverse-surface": "#e0e3e5",
+                        "on-primary": "#233148",
+                        "outline": "#8f9097",
+                        "on-tertiary": "#3c0090",
+                        "on-background": "#e0e3e5",
+                        "primary-container": "#0a192f",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#0b0f10"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Outfit", "sans-serif"],
+                        "display": ["Outfit", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+                            '50%': { opacity: '0.7', transform: 'scale(1.1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(25, 28, 30, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(143, 144, 151, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #a5e7ff 0%, #d1bcff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 10px 40px rgba(165, 231, 255, 0.15);
+            transform: translateY(-8px);
+            border-color: rgba(165, 231, 255, 0.3);
+        }
+        .timeline-dot::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 0%;
+            background: linear-gradient(to bottom, #a5e7ff, transparent);
+            left: 50%;
+            top: 24px;
+            transform: translateX(-50%);
+            z-index: -1;
+            transition: height 1s ease-in-out;
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .timeline-step.active .timeline-dot::after {
+            height: 100%;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal-on-scroll,
+            .glow-hover,
+            .timeline-dot::after,
+            .animate-float,
+            .animate-pulse-glow {
+                transition: none !important;
+                animation: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary/30 overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md shadow-sm border-b border-outline-variant/20 h-20">
+<div class="flex justify-between items-center h-full px-8 max-w-7xl mx-auto">
+<div class="text-2xl font-headline font-bold text-primary">Visione Digitale</div>
+<div class="hidden md:flex items-center space-x-8 font-headline text-label-md">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Home</a>
+<a class="text-secondary border-b-2 border-secondary pb-1" href="#">About Us</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Academy</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-headline font-semibold hover:opacity-90 transition-all transform hover:scale-105">
+            Get Started
+        </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden px-6">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/20 blur-[120px] rounded-full animate-pulse-glow"></div>
+<div class="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-secondary/20 blur-[120px] rounded-full animate-pulse-glow" style="animation-delay: -2s;"></div>
+</div>
+<div class="max-w-4xl mx-auto text-center z-10 reveal-on-scroll">
+<h1 class="font-display text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
+                Where <span class="gradient-text">ideas</span> become <span class="text-primary">reality</span>.
+            </h1>
+<p class="text-lg md:text-xl text-on-surface-variant mb-10 max-w-2xl mx-auto leading-relaxed">
+                FounDreams is a boutique digital studio where marketing intuition, cutting-edge technology, and fortress-level cybersecurity converge to forge your digital future.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto px-8 py-4 bg-secondary text-on-secondary rounded-xl font-headline font-bold hover:brightness-110 transition-all shadow-lg shadow-secondary/20 hover:scale-105 active:scale-95">
+                    Let's Talk
+                </button>
+<button class="w-full sm:w-auto px-8 py-4 border border-outline-variant text-on-surface rounded-xl font-headline font-bold hover:bg-surface-bright/20 transition-all hover:scale-105 active:scale-95">
+                    Discover Our Story
+                </button>
+</div>
+</div>
+</section>
+<!-- Why We Started -->
+<section class="py-24 max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-6 reveal-on-scroll">
+<span class="text-secondary font-headline font-bold tracking-widest uppercase text-sm">Our Genesis</span>
+<h2 class="font-display text-4xl font-semibold leading-tight">The Foundry Dreams Concept</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                    FounDreams was born from a simple yet powerful observation: the gap between a visionary digital idea and its secure, profitable execution is often too wide. Most agencies specialize in only one piece of the puzzle. 
+                </p>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                    We envisioned a "foundry"—a place of intense heat, precision, and craftsmanship—where raw creative dreams are tempered with rigorous technical engineering and protected by advanced cybersecurity protocols.
+                </p>
+</div>
+<div class="relative h-[400px] rounded-2xl overflow-hidden glass-card p-2 reveal-on-scroll animate-float">
+<div class="w-full h-full rounded-xl bg-surface-container relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-container/40 to-transparent z-10"></div>
+<img alt="Strategic meeting" class="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL0GZXzBhVOgvRsp5fU9jYTgGVPzfMJCUsmj-rY4ORyMbbWiZSO4yG42o8f_LFGzzQ5oqLvolzX38kz124Gp1v4BYSBdvp6ahd6Q6hff7_Tu2PCMc2vUOojUZXHKsyNAKAYvam0n1bzCg3DyxB1REOmR-n4MlR8AQoYeONjFXvizmrtSMrLFS7_meN3rghiSbeiDywhNomwvUnQMQ8P-Eww7jn17xKL5YPVzU7g92hHLpR6HRAOgA_G2dV4VBA0e-eI2eQgJUYiXF9">
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision -->
+<section class="py-24 bg-surface-container-lowest/50">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="glass-card p-10 rounded-2xl glow-hover reveal-on-scroll">
+<div class="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-6 transition-transform group-hover:rotate-12">
+<span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+</div>
+<h3 class="font-display text-2xl font-bold mb-4">Our Mission</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                        To empower businesses by building high-performance digital ecosystems that don't just exist, but thrive. We transform complex technology into seamless growth engines through strategic marketing and uncompromising security.
+                    </p>
+</div>
+<div class="glass-card p-10 rounded-2xl glow-hover reveal-on-scroll">
+<div class="w-16 h-16 bg-tertiary/20 rounded-xl flex items-center justify-center mb-6 transition-transform group-hover:rotate-12">
+<span class="material-symbols-outlined text-tertiary text-3xl">visibility</span>
+</div>
+<h3 class="font-display text-2xl font-bold mb-4">Our Vision</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                        To become the definitive standard for digital transformation, where every business idea is given the technical integrity and creative spark it needs to lead its industry in a secure and connected world.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Values -->
+<section class="py-24 max-w-7xl mx-auto px-8">
+<div class="text-center mb-16 reveal-on-scroll">
+<h2 class="font-display text-4xl font-semibold mb-4">The Pillars of FounDreams</h2>
+<div class="h-1 w-24 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Value 1 -->
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group reveal-on-scroll glow-hover">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 transition-transform">group</span>
+<h4 class="font-display text-xl font-bold mb-3">Collaboration</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">We work as an extension of your team, ensuring your voice is heard at every stage of the foundry process.</p>
+</div>
+<!-- Value 2 -->
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group reveal-on-scroll glow-hover" style="transition-delay: 0.1s">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 transition-transform">auto_awesome</span>
+<h4 class="font-display text-xl font-bold mb-3">Innovation</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">We don't follow trends; we study them to build the "next" before it becomes the "now."</p>
+</div>
+<!-- Value 3 -->
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group reveal-on-scroll glow-hover" style="transition-delay: 0.2s">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 transition-transform">shield</span>
+<h4 class="font-display text-xl font-bold mb-3">Security &amp; Reliability</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Safety isn't an add-on; it's the core. We build digital fortresses that stand the test of time.</p>
+</div>
+<!-- Value 4 -->
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group reveal-on-scroll glow-hover" style="transition-delay: 0.3s">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 transition-transform">verified</span>
+<h4 class="font-display text-xl font-bold mb-3">Transparency</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Clear reporting, honest timelines, and no technical jargon. You always know where we stand.</p>
+</div>
+</div>
+</section>
+<!-- Meet the Team -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16 reveal-on-scroll">
+<h2 class="font-display text-4xl font-semibold mb-4">The Architects of Your Success</h2>
+</div>
+<div class="space-y-20">
+<!-- Profile 1 -->
+<div class="flex flex-col md:flex-row items-center gap-12 lg:gap-24">
+<div class="w-full md:w-1/2 space-y-6 order-2 md:order-1 reveal-on-scroll">
+<h3 class="font-display text-3xl font-bold">Your Name</h3>
+<p class="text-secondary font-headline font-semibold text-lg uppercase tracking-wider">Digital Marketing Specialist</p>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Expert in crafting high-impact digital narratives that resonate with target audiences. Combining data-driven insights with creative storytelling, he ensures every project at FounDreams achieves maximum visibility and conversion.
+                        </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all hover:scale-110" href="#"><span class="material-symbols-outlined text-sm">link</span></a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all hover:scale-110" href="#"><span class="material-symbols-outlined text-sm">mail</span></a>
+</div>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2 reveal-on-scroll">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<img alt="Male Marketing Specialist" class="w-full h-auto rounded-2xl relative grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0ujw1dRhmyUkhuBS1lbiJDRDkXemSCLWEClTKBwQhaFDjIe329TAIoVYiIlzgdw2UCkK0ZygXtgIIO-F7dCic_q0vs4d3u838chINi-jnKbBhkuEO6LpnUsVapigumXg-hP0Xkhwu9i7meIZx7T22AAnu-45rJGf6xaXDPRhEy6b0WijnCHiCUcO9t6Se64u0-cfWYol0woDQJfB1O9ybP8g9VvGxb0pal-kjTfJ8uX2T2Y6U5IFzZFEC-k">
+</div>
+</div>
+</div>
+<!-- Profile 2 -->
+<div class="flex flex-col md:flex-row items-center gap-12 lg:gap-24">
+<div class="w-full md:w-1/2 reveal-on-scroll">
+<div class="relative group">
+<div class="absolute -inset-4 bg-tertiary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<img alt="Female Security Engineer" class="w-full h-auto rounded-2xl relative grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0uhvq9hC3SSAnZ4zi7Wg3hJkd1DT64rt0FLkgN057Jw0-AHFbOjmYiFrL5YJ4KPX5koDfyCs5Up-fzcX-Vr1i9mX2AaJJ_gLcRGh3G4OJpo1teEZHi7zSxkbQGMc9j6DpNYo69nlKLZxb4Mw-CRrvmXH7EGUAFVN8mzXSrk0V_TNKhHQhqt8BSkpWTfdS9W11uz27Ga7gfgeDZUNiUuFK32X8UEO1FvbYLrVdVpb3Hz5B8YIbuGtdhiUtwjr">
+</div>
+</div>
+<div class="w-full md:w-1/2 space-y-6 reveal-on-scroll">
+<h3 class="font-display text-3xl font-bold">Colleague Name</h3>
+<p class="text-tertiary font-headline font-semibold text-lg uppercase tracking-wider">Cloud Administration &amp; Security Engineer</p>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            A master of digital architecture and defensive security. She designs resilient cloud infrastructures that handle heavy traffic while maintaining a zero-trust security posture, protecting the dreams we build from any threat.
+                        </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-tertiary hover:text-on-tertiary transition-all hover:scale-110" href="#"><span class="material-symbols-outlined text-sm">link</span></a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-tertiary hover:text-on-tertiary transition-all hover:scale-110" href="#"><span class="material-symbols-outlined text-sm">mail</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Approach -->
+<section class="py-24 max-w-7xl mx-auto px-8 overflow-hidden">
+<div class="text-center mb-20 reveal-on-scroll">
+<h2 class="font-display text-4xl font-semibold mb-4">The Foundry Process</h2>
+<p class="text-on-surface-variant">Our systematic approach to excellence.</p>
+</div>
+<div class="relative grid grid-cols-1 md:grid-cols-5 gap-8">
+<!-- Step 1 -->
+<div class="relative text-center md:text-left timeline-step reveal-on-scroll">
+<div class="w-12 h-12 bg-surface-container-highest border border-secondary text-secondary rounded-full flex items-center justify-center font-bold mb-6 mx-auto md:mx-0 timeline-dot relative z-10">1</div>
+<h5 class="font-display text-lg font-bold mb-2">Strategy</h5>
+<p class="text-sm text-on-surface-variant">Deep audit and blueprinting of your digital goals.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative text-center md:text-left timeline-step reveal-on-scroll" style="transition-delay: 0.1s">
+<div class="w-12 h-12 bg-surface-container-highest border border-secondary text-secondary rounded-full flex items-center justify-center font-bold mb-6 mx-auto md:mx-0 timeline-dot relative z-10">2</div>
+<h5 class="font-display text-lg font-bold mb-2">Marketing</h5>
+<p class="text-sm text-on-surface-variant">Defining your voice and reaching your core audience.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative text-center md:text-left timeline-step reveal-on-scroll" style="transition-delay: 0.2s">
+<div class="w-12 h-12 bg-surface-container-highest border border-secondary text-secondary rounded-full flex items-center justify-center font-bold mb-6 mx-auto md:mx-0 timeline-dot relative z-10">3</div>
+<h5 class="font-display text-lg font-bold mb-2">Design</h5>
+<p class="text-sm text-on-surface-variant">Forging modern, intuitive, and conversion-ready interfaces.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative text-center md:text-left timeline-step reveal-on-scroll" style="transition-delay: 0.3s">
+<div class="w-12 h-12 bg-surface-container-highest border border-secondary text-secondary rounded-full flex items-center justify-center font-bold mb-6 mx-auto md:mx-0 timeline-dot relative z-10">4</div>
+<h5 class="font-display text-lg font-bold mb-2">Security</h5>
+<p class="text-sm text-on-surface-variant">Hardening the infrastructure with advanced protection.</p>
+</div>
+<!-- Step 5 -->
+<div class="relative text-center md:text-left timeline-step reveal-on-scroll" style="transition-delay: 0.4s">
+<div class="w-12 h-12 bg-surface-container-highest border border-secondary text-secondary rounded-full flex items-center justify-center font-bold mb-6 mx-auto md:mx-0 relative z-10">5</div>
+<h5 class="font-display text-lg font-bold mb-2">Growth</h5>
+<p class="text-sm text-on-surface-variant">Continuous optimization and scaling your success.</p>
+</div>
+</div>
+</section>
+<!-- Education & Knowledge Sharing -->
+<section class="py-24 bg-primary-container/30 border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative order-2 lg:order-1 reveal-on-scroll animate-float">
+<div class="aspect-video rounded-2xl overflow-hidden glass-card p-4">
+<div class="w-full h-full bg-surface-container rounded-xl flex items-center justify-center text-on-surface-variant overflow-hidden">
+<img alt="Education session" class="w-full h-full object-cover opacity-60 mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Nw-K55zYy8hBNAo0Rn9bUHPmr0inkBWIoFd0lM_omO8frrtC-gBsBGfLsYsP1CeKGBeB6W_KjWGNVf5Zh9SyIp_0SjyMu4ciVexYlb967UM3eYk9YvvW1-S_rgG5xySz83eAXy9nitHSf9dfjsFpeSCKqFeekIzphAv-gFuG67JZGy_TXlrKJ9C5FnATF1u-E3t4ELVrm7_1Alhhhu9A5OA62ePGSqvOzV1jd7pXSWz65nwWq0YseeJ--VX9OauMunPeUUeSbrPl">
+</div>
+</div>
+</div>
+<div class="space-y-6 order-1 lg:order-2 reveal-on-scroll">
+<span class="text-tertiary font-headline font-bold uppercase text-sm">Academy</span>
+<h2 class="font-display text-4xl font-semibold">Empowering Through Knowledge</h2>
+<p class="text-on-surface-variant text-lg">
+                    We don't just build solutions; we teach you how to master them. Our consulting and training programs are designed to bridge the digital skills gap, ensuring your team is equipped to maintain and grow your digital assets with confidence.
+                </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-on-surface group transition-transform hover:translate-x-2">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+                        Cybersecurity Awareness Training
+                    </li>
+<li class="flex items-center gap-3 text-on-surface group transition-transform hover:translate-x-2">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+                        Digital Marketing Mastery Workshops
+                    </li>
+<li class="flex items-center gap-3 text-on-surface group transition-transform hover:translate-x-2">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+                        Custom Technical Consulting
+                    </li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 px-8">
+<div class="max-w-7xl mx-auto bg-gradient-to-br from-primary-container to-surface-container-highest rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden reveal-on-scroll">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full animate-pulse-glow"></div>
+<div class="relative z-10">
+<h2 class="font-display text-4xl md:text-5xl font-bold mb-6">Ready to Build Something Meaningful?</h2>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto mb-10">
+                    Join the dozens of businesses that have transformed their digital presence in the foundry. Let's discuss your next breakthrough.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="w-full sm:w-auto px-10 py-5 bg-secondary text-on-secondary rounded-2xl font-headline font-bold hover:scale-105 transition-all shadow-xl shadow-secondary/20">
+                        Contact Us
+                    </button>
+<button class="w-full sm:w-auto px-10 py-5 border border-outline-variant text-on-surface rounded-2xl font-headline font-bold hover:bg-surface-bright/30 transition-all hover:scale-105">
+                        Schedule a Consultation
+                    </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-12 border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<div class="text-xl font-headline font-semibold text-on-surface mb-4">Visione Digitale</div>
+<p class="text-caption text-on-surface-variant leading-relaxed">
+                Empowering digital dreams through security and creativity.
+            </p>
+</div>
+<div>
+<h6 class="font-headline font-bold text-primary mb-6 text-sm uppercase">Quick Links</h6>
+<ul class="space-y-4 text-caption text-on-surface-variant">
+<li><a class="hover:text-tertiary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-tertiary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-headline font-bold text-primary mb-6 text-sm uppercase">Support</h6>
+<ul class="space-y-4 text-caption text-on-surface-variant">
+<li><a class="hover:text-tertiary transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="hover:text-tertiary transition-colors" href="#">Security Audit</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-headline font-bold text-primary mb-6 text-sm uppercase">Newsletter</h6>
+<div class="flex gap-2">
+<input class="bg-surface-container border border-outline-variant rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-secondary transition-all" placeholder="Email address" type="email">
+<button class="bg-secondary text-on-secondary p-2 rounded-lg hover:scale-110 transition-all"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-outline-variant/10 text-center">
+<p class="text-caption text-on-surface-variant">© 2024 Visione Digitale. Empowering digital dreams through security and creativity.</p>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Optimized Scroll Reveal
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Stop observing after it's revealed for performance
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Sequential Timeline Animation
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const steps = entry.target.querySelectorAll('.timeline-step');
+                    steps.forEach((step, index) => {
+                        setTimeout(() => {
+                            step.classList.add('active');
+                        }, index * 200);
+                    });
+                    timelineObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const timelineContainer = document.querySelector('.grid-cols-1.md\\:grid-cols-5');
+        if (timelineContainer) {
+            timelineObserver.observe(timelineContainer);
+        }
+    });
+</script>
+</body></html>

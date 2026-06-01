@@ -1,0 +1,388 @@
+<!DOCTYPE html><html class="dark" lang="it" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Chi Siamo | Italia Saija Digital Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Outfit:wght@500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#011230",
+                        "on-error": "#690005",
+                        "on-secondary-container": "#caa4ff",
+                        "inverse-on-surface": "#20304f",
+                        "on-secondary": "#411478",
+                        "background": "#011230",
+                        "tertiary-container": "#181a17",
+                        "inverse-surface": "#d8e2ff",
+                        "primary": "#b9c7e4",
+                        "surface-container-high": "#192a48",
+                        "on-primary-fixed": "#0d1c32",
+                        "primary-container": "#0a192f",
+                        "inverse-primary": "#515f78",
+                        "surface-container-highest": "#253453",
+                        "on-background": "#d8e2ff",
+                        "surface-tint": "#b9c7e4",
+                        "outline": "#8f9097",
+                        "surface-container": "#0e1f3d",
+                        "on-tertiary-fixed": "#1a1c19",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#74829d",
+                        "surface-variant": "#253453",
+                        "on-tertiary-container": "#81837e",
+                        "secondary": "#d7baff",
+                        "primary-fixed": "#d6e3ff",
+                        "surface-bright": "#293958",
+                        "on-surface": "#d8e2ff",
+                        "surface": "#011230",
+                        "secondary-fixed": "#eddcff",
+                        "outline-variant": "#44474d",
+                        "on-tertiary": "#2f312d",
+                        "tertiary-fixed-dim": "#c6c7c1",
+                        "on-secondary-fixed-variant": "#593090",
+                        "tertiary": "#c6c7c1",
+                        "secondary-container": "#593090",
+                        "on-primary": "#233148",
+                        "on-surface-variant": "#c5c6cd",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "tertiary-fixed": "#e3e3dd",
+                        "on-tertiary-fixed-variant": "#464743",
+                        "surface-container-low": "#091b39",
+                        "secondary-fixed-dim": "#d7baff",
+                        "on-secondary-fixed": "#290055",
+                        "surface-container-lowest": "#000d27",
+                        "on-primary-fixed-variant": "#39475f",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Outfit"],
+                        "headline-lg": ["Outfit"],
+                        "display-xl": ["Outfit"],
+                        "headline-lg-mobile": ["Outfit"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "display-xl": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-surface {
+            background-color: rgba(1, 18, 48, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-surface:hover {
+            border-color: rgba(215, 186, 255, 0.3);
+            transition: all 0.3s ease-out;
+        }
+        .glow-soft:hover {
+            box-shadow: 0 0 30px rgba(215, 186, 255, 0.15);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-surface/60 dark:bg-surface/60 backdrop-blur-xl docked full-width top-0 sticky border-b border-white/10 z-50">
+<div class="flex justify-between items-center px-margin-desktop w-full max-w-container-max mx-auto h-20">
+<div class="font-headline-md text-headline-md font-medium tracking-tight text-on-surface dark:text-on-surface">
+                Italia Saija
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md text-on-surface/80 dark:text-on-surface/80 hover:text-secondary transition-colors duration-200" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface/80 dark:text-on-surface/80 hover:text-secondary transition-colors duration-200" href="#">Servizi</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary font-medium" href="#">Chi Siamo</a>
+<a class="font-body-md text-body-md text-on-surface/80 dark:text-on-surface/80 hover:text-secondary transition-colors duration-200" href="#">Contatti</a>
+<button class="ml-4 bg-secondary text-on-secondary px-6 py-2 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-opacity">
+                    Inizia Progetto
+                </button>
+</div>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Section 1: Hero -->
+<section class="relative min-h-[90vh] flex items-center pt-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-6 z-10 py-12">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6 leading-tight"><p data-start="682" data-end="761"><strong data-start="682" data-end="761">FounDreams: la fucina in cui idee, competenze e ambizioni diventano realtà.</strong></p></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                        Italia Saija nasce dall'unione di competenze complementari nel design, sviluppo e strategia digitale. Aiutiamo aziende e professionisti a costruire una presenza online efficace, moderna e orientata alla crescita.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary text-on-secondary px-10 py-4 rounded-xl font-label-sm text-label-sm hover:opacity-90 transition-all transform hover:-translate-y-1">
+                            Parliamo del tuo progetto
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-6 relative">
+<div class="aspect-square rounded-2xl overflow-hidden glass-surface p-2" style="--mouse-x: 477px; --mouse-y: 82.89999961853027px;">
+<img alt="" class="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjtUltm-MUAwvPDipx5qT1QV0M-hizI7ALNbKypjfgZZU9QxLBh3kz2EqHDN3XDpgABtQDrdqSMFOcDpzTAhGnr0hMrXXWSNp-l8WAdUiYIbR7FSPF8g-W3nz3ttU8ar1ypPzOApfJUtOn5Hcz_8pD5_p-A2w_fy2IO3_BgeLffRJACKp7jX8qknst52ozqDTjNcW5fuak3W2vfclQ4889a9CqIsmJD6ou3suFTMuLXL7k2-FJJS43Vt7k2t2ikJBAVw78gNYzFYw6">
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary/10 blur-3xl rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Section 2: La nostra storia -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4">
+<span class="font-label-sm text-label-sm text-secondary tracking-[0.2em] uppercase mb-4 block">Timeline</span>
+<h2 class="font-headline-md text-headline-md">La nostra storia</h2>
+</div>
+<div class="md:col-span-8">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Abbiamo deciso di unire le nostre competenze per offrire ai clienti un approccio completo ai progetti digitali. Crediamo che un sito web debba essere molto più di una semplice vetrina: deve essere uno strumento capace di comunicare valore e generare opportunità. Ogni progetto che accogliamo diventa una sfida creativa dove la precisione del codice incontra l'eleganza del design.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Section 3: I nostri valori -->
+<section class="py-section-gap bg-surface-container-low/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Value 1 -->
+<div class="glass-surface p-8 rounded-2xl glow-soft flex flex-col gap-4" style="--mouse-x: 231px; --mouse-y: 202.949951171875px;">
+<div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<h3 class="font-headline-md text-[24px]">Trasparenza</h3>
+<p class="font-body-md text-on-surface-variant">Processi chiari, onesti e comunicazioni dirette in ogni fase del lavoro insieme.</p>
+</div>
+<!-- Value 2 -->
+<div class="glass-surface p-8 rounded-2xl glow-soft flex flex-col gap-4" style="--mouse-x: 74px; --mouse-y: 100.949951171875px;">
+<div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<h3 class="font-headline-md text-[24px]">Qualità</h3>
+<p class="font-body-md text-on-surface-variant">Eccellenza tecnica e cura maniacale per ogni singolo dettaglio visivo e funzionale.</p>
+</div>
+<!-- Value 3 -->
+<div class="glass-surface p-8 rounded-2xl glow-soft flex flex-col gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">insights</span>
+</div>
+<h3 class="font-headline-md text-[24px]">Strategia</h3>
+<p class="font-body-md text-on-surface-variant">Ogni nostra scelta è guidata dai dati e orientata al raggiungimento di obiettivi concreti.</p>
+</div>
+<!-- Value 4 -->
+<div class="glass-surface p-8 rounded-2xl glow-soft flex flex-col gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<h3 class="font-headline-md text-[24px]">Collaborazione</h3>
+<p class="font-body-md text-on-surface-variant">Lavoriamo fianco a fianco con te, diventando un'estensione tecnologica del tuo business.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Il team -->
+<section class="py-section-gap overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"><div class="mb-16 md:mb-24 text-center">
+<span class="font-label-sm text-label-sm text-secondary tracking-[0.2em] uppercase mb-4 block">Expertise</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Conosci il team</h2>
+</div>
+
+<div class="space-y-24 md:space-y-32">
+<!-- Member 1: Marco Rossi -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
+<div class="order-2 md:order-1 text-center md:text-left">
+<h3 class="font-headline-md text-headline-md mb-2">Marco Rossi</h3>
+<p class="font-label-sm text-label-sm text-secondary mb-6 tracking-widest uppercase">Creative Director</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 mx-auto md:mx-0 max-w-xl">
+                            Con oltre 10 anni di esperienza nel design di interfacce, Marco trasforma visioni astratte in ecosistemi digitali visivamente sorprendenti. La sua filosofia si basa sul minimalismo funzionale: eliminare il superfluo per lasciare spazio all'identità del brand.
+                        </p>
+<div class="flex justify-center md:justify-start">
+<a class="inline-flex items-center gap-2 font-label-sm text-label-sm text-on-surface border-b border-secondary/50 pb-1 hover:border-secondary transition-all" href="#">
+                            Visita il portfolio <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden glass-surface">
+<img alt="Marco Rossi" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ujw1dRhmyUkhuBS1lbiJDRDkXemSCLWEClTKBwQhaFDjIe329TAIoVYiIlzgdw2UCkK0ZygXtgIIO-F7dCic_q0vs4d3u838chINi-jnKbBhkuEO6LpnUsVapigumXg-hP0Xkhwu9i7meIZx7T22AAnu-45rJGf6xaXDPRhEy6b0WijnCHiCUcO9t6Se64u0-cfWYol0woDQJfB1O9ybP8g9VvGxb0pal-kjTfJ8uX2T2Y6U5IFzZFEC-k">
+</div>
+</div>
+</div>
+
+<!-- Member 2: Elena Bianchi -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
+<div class="md:order-1">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden glass-surface">
+<img alt="Elena Bianchi" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhvq9hC3SSAnZ4zi7Wg3hJkd1DT64rt0FLkgN057Jw0-AHFbOjmYiFrL5YJ4KPX5koDfyCs5Up-fzcX-Vr1i9mX2AaJJ_gLcRGh3G4OJpo1teEZHi7zSxkbQGMc9j6DpNYo69nlKLZxb4Mw-CRrvmXH7EGUAFVN8mzXSrk0V_TNKhHQhqt8BSkpWTfdS9W11uz27Ga7gfgeDZUNiUuFK32X8UEO1FvbYLrVdVpb3Hz5B8YIbuGtdhiUtwjr">
+</div>
+</div>
+<div class="md:order-2 text-center md:text-left">
+<h3 class="font-headline-md text-headline-md mb-2">Elena Bianchi</h3>
+<p class="font-label-sm text-label-sm text-secondary mb-6 tracking-widest uppercase">Lead Developer</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 mx-auto md:mx-0 max-w-xl">
+                            Specializzata in architetture web moderne e scalabili, Elena e la mente dietro la solidità tecnica dei nostri progetti. Crede in un codice pulito, performance estreme e accessibilità universale, garantendo che ogni sito sia veloce quanto bello.
+                        </p>
+<div class="flex justify-center md:justify-start">
+<a class="inline-flex items-center gap-2 font-label-sm text-label-sm text-on-surface border-b border-secondary/50 pb-1 hover:border-secondary transition-all" href="#">
+                            Visita il portfolio <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<!-- Section 5: Come lavoriamo -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md">Il nostro metodo</h2>
+</div>
+<div class="relative">
+<!-- Progress Line -->
+<div class="hidden lg:block absolute top-10 left-0 w-full h-[1px] bg-white/10 z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center glass-surface mb-6 group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary">analytics</span>
+</div>
+<h4 class="font-label-sm text-label-sm uppercase mb-2">Analisi</h4>
+<p class="text-on-surface-variant text-[14px]">Studio del mercato e definizione degli obiettivi.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center glass-surface mb-6">
+<span class="material-symbols-outlined text-secondary">architecture</span>
+</div>
+<h4 class="font-label-sm text-label-sm uppercase mb-2">Strategia</h4>
+<p class="text-on-surface-variant text-[14px]">Definizione della roadmap e dell'architettura.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center glass-surface mb-6">
+<span class="material-symbols-outlined text-secondary">palette</span>
+</div>
+<h4 class="font-label-sm text-label-sm uppercase mb-2">Design</h4>
+<p class="text-on-surface-variant text-[14px]">Creazione dell'interfaccia visiva unica.</p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center glass-surface mb-6">
+<span class="material-symbols-outlined text-secondary">code</span>
+</div>
+<h4 class="font-label-sm text-label-sm uppercase mb-2">Sviluppo</h4>
+<p class="text-on-surface-variant text-[14px]">Codifica performante e responsive.</p>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center glass-surface mb-6">
+<span class="material-symbols-outlined text-secondary">speed</span>
+</div>
+<h4 class="font-label-sm text-label-sm uppercase mb-2">Ottimizzazione</h4>
+<p class="text-on-surface-variant text-[14px]">Test, lancio e miglioramento continuo.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Final CTA -->
+<section class="py-section-gap px-margin-mobile">
+<div class="max-w-container-max mx-auto px-margin-desktop py-24 rounded-[40px] glass-surface text-center bg-gradient-to-br from-surface-container via-surface-dim to-surface-container overflow-hidden relative">
+<!-- Atmospheric glow -->
+<div class="absolute -top-1/2 -left-1/4 w-[150%] h-[150%] bg-secondary/5 blur-[120px] pointer-events-none"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-display-xl text-headline-lg-mobile md:text-headline-lg mb-6">Hai un progetto in mente?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                        Raccontaci i tuoi obiettivi e scopriamo insieme come trasformarli in una soluzione digitale efficace. Siamo pronti a dare forma alle tue idee.
+                    </p>
+<button class="bg-secondary text-on-secondary px-12 py-5 rounded-xl font-label-sm text-label-sm hover:scale-105 transition-all duration-300 shadow-xl shadow-secondary/20">
+                        Contattaci
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container full-width relative border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-unit px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="md:col-span-4">
+<div class="font-headline-md text-headline-md text-on-surface mb-6">Italia Saija</div>
+<p class="text-on-surface-variant font-body-md mb-8">Digital Atelier. Trasformiamo la complessità in eleganza digitale.</p>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-sm text-label-sm text-on-surface uppercase mb-6">Menu</h5>
+<ul class="flex flex-col gap-4">
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-all" href="#">Home</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-all" href="#">Servizi</a></li>
+<li class=""><a class="text-secondary transition-all" href="#">Chi Siamo</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-all" href="#">Contatti</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-sm text-label-sm text-on-surface uppercase mb-6">Social</h5>
+<ul class="flex flex-col gap-4">
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-all" href="#">LinkedIn</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-all" href="#">Instagram</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-all" href="#">Behance</a></li>
+</ul>
+</div>
+<div class="md:col-span-4">
+<h5 class="font-label-sm text-label-sm text-on-surface uppercase mb-6">Info Legali</h5>
+<ul class="flex flex-col gap-4">
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-all" href="#">Privacy Policy</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-all" href="#">Termini di Servizio</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-all" href="#">Cookie Policy</a></li>
+</ul>
+<div class="mt-12 text-on-surface-variant text-[14px]">
+                    © 2024 Italia Saija. Digital Atelier.
+                </div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple hover interaction for cards to simulate depth movement
+        document.querySelectorAll('.glass-surface').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+
+
+</body></html>
