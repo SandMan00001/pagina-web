@@ -1,13 +1,16 @@
 {
-  "name": "prova",
+  "name": "FounDreams",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "homepage": "https://www.italiasaija.it",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "lucide-react": "^1.16.0",
