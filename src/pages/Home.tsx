@@ -142,9 +142,9 @@ export const Home: React.FC = () => {
               Ogni progetto nasce da un’idea grezza e prende forma attraverso creatività, identità visiva e soluzioni digitali costruite con precisione e carattere.
             </p>
             <div className="flex flex-wrap gap-md pt-sm">
-              <Link to="/contattaci" style={{ textDecoration: 'none' }}>
+              <Link to="/chi-siamo" style={{ textDecoration: 'none' }}>
                 <button className="gradient-primary text-on-primary px-lg py-md rounded-xl font-label-md text-label-md shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
-                  Contattaci
+                  Scopri chi siamo
                 </button>
               </Link>
               <Link to="/servizi" style={{ textDecoration: 'none' }}>
