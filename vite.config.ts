@@ -24,4 +24,7 @@ export default defineConfig({
     injectCSP(),
   ],
   base: '/',
+  build: {
+    sourcemap: false,
+  }
 })

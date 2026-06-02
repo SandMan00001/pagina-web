@@ -185,6 +185,7 @@ export const Servizi: React.FC = () => {
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
               alt="Realizzazione Siti Web" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuALJeuoylIbFXdsUdTIp3Sy4m4kysgiPCZ9epiCb7o4-nj_awXIfUqOBWcZnw6G72eVMtREknwmQ6FeFOzCBVxvKgaWy-Ok-sm1ULULR7WlUqVcDtlw-aYykfHvXe1dTevKVl7i9hIYTlJXp8t9abysorBVrnnm6wqo0D1z7WCX_IBORTJ_OAgrTjY0O_2z2H6Y576J93iOAR3ldDJRuZZIoNHJUXysoQxHJJv6iRM4sIc_ul5Ey7hmL3n4AXuFXGHwSFf_2Rs8lqBG" 
+              loading="lazy"
             />
           </div>
         </div>
@@ -198,6 +199,7 @@ export const Servizi: React.FC = () => {
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
               alt="Gestione Pagine Social" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0kE_ncur3VnhJ6ID12sJ0HGPl7iXFET49jXO3hbelXdkGnMnMg-MtLn-V9O4KLTNMtLp98ZUVkbkK-KQHdyKT0QliZd5Uv4nQwcoqZUAvDCT2zsdzhPvly2Ba0HOehS7Mq5eDHmkEjMh_bpBRaIuZOSCFbHHEOOOe14PBHV0X2q61hucS6Jm3JNslxh6TS8KNVyVEZaRKcQ2AJsW-sUBWMWb5VIgz13Z0UqYtpzAioHg7WQxWXZemfL2lR4QwquXDdzwBkmYUH9Iq" 
+              loading="lazy"
             />
           </div>
           <div className="flex flex-col gap-md order-1 md:order-2">
@@ -262,6 +264,7 @@ export const Servizi: React.FC = () => {
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
               alt="Consulenza Informatica" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAgNZKCiwje8yEHFx642msY3-fWD1GPIYIL2efJag8X-e24L6Eqps1792xmhJl0_6Gm19iaPeQ_Md_1fRoh62FdfC1Fm8TIt6quafiYZwr_aCUVjAp5jLhAKxGY6LHKKsWB_Z99EUII59AaZP3xX7T2s-aJorzO_8JFpa6xyu39Ftzbvi81EO-Ow3VmvmiLw_GWMIy7eTCXVbLaTZUM14AvTz2SwPrnQHJo_9NmaxnjLBXqvCAcapmegju_IDYAe95ULO7PbJ835M5" 
+              loading="lazy"
             />
           </div>
         </div>

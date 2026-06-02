@@ -213,6 +213,7 @@ export const Home: React.FC = () => {
                 alt="Web Development" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMS5g9A9kYAm80WD3e64M8uOo3M_RSjah5u8egtGT06hTvJq8FnMG1yhCgpHJHoCRk6bUEThoN50SLhSwTo3IIGRBhQi1r4In06ILyMxElolWVsuG2EfLFJE3cPVmsc2DRpNyqRJk5G0_z89FCD2WaU9uPjAcsG5TY464D5IiDohsZh6EbX2bD0sDeWEtc6xxYQ2RrTGRJdte5GRwxnU8wkoeNpwgM_dQVYEAH_b83BkVAu7gyZDPqjd7G150LqQ8QKIB5xyeNGznh" 
+                loading="lazy"
               />
             </div>
           </div>
@@ -224,6 +225,7 @@ export const Home: React.FC = () => {
                 alt="Social Media Management" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0kE_ncur3VnhJ6ID12sJ0HGPl7iXFET49jXO3hbelXdkGnMnMg-MtLn-V9O4KLTNMtLp98ZUVkbkK-KQHdyKT0QliZd5Uv4nQwcoqZUAvDCT2zsdzhPvly2Ba0HOehS7Mq5eDHmkEjMh_bpBRaIuZOSCFbHHEOOOe14PBHV0X2q61hucS6Jm3JNslxh6TS8KNVyVEZaRKcQ2AJsW-sUBWMWb5VIgz13Z0UqYtpzAioHg7WQxWXZemfL2lR4QwquXDdzwBkmYUH9Iq" 
+                loading="lazy"
               />
             </div>
             <div className="space-y-md">
@@ -255,6 +257,7 @@ export const Home: React.FC = () => {
                 alt="Cybersecurity Systems" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa26GKBbGI6oVQyLcixuRDtRX40YFDnZ70NZfxVQavDHYAbzur8CulHb-yzKdQcL7L9rMH9OnT4eXpmycbaqD3fuwCEOBgPOJ98XTsM54uviQAP7cGmsYFQCwXsnulxcTzJNuLfO-hDKd-8VU_xQQbm3umaKIAvndZSUbQxsIUeIl1q340eAd8sSyu6YMnzvu3ZVhxWnxezm5VNjqhucgkAqZm8ZSwRyHYx1goU2Ci6QPWulnfjbhkhJhEspA7ZoIFh0CWMhyrfYeS" 
+                loading="lazy"
               />
             </div>
           </div>
