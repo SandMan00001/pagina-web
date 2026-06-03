@@ -258,7 +258,7 @@ export const ChiSiamo: React.FC = () => {
                 <h3 className="font-display text-3xl font-bold text-on-background">Saija Gabriele</h3>
                 <p className="text-tertiary font-headline font-semibold text-lg uppercase tracking-wider">cloud administrator &amp; security engineer</p>
                 <p className="text-on-surface-variant text-lg leading-relaxed">
-                  Una maestra dell'architettura digitale e della sicurezza difensiva. Progetta infrastrutture cloud resilienti in grado di gestire traffico elevato mantenendo una postura di sicurezza zero-trust, proteggendo i sogni che costruiamo da ogni minaccia.
+                  Costruisco le fondamenta digitali su cui far scalare il tuo business. Come DevOps e Cloud & Security Engineer, progetto infrastrutture IT inattaccabili e performanti. L'esperienza nell'insegnamento del coding ai più giovani mi ha insegnato la skill più preziosa: tradurre la complessità tecnica in soluzioni chiare e immediate. Tu pensa alla visione, a blindare i tuoi dati ci penso io.
                 </p>
                 <div className="flex gap-4">
                   <a className="text-primary font-medium hover:underline flex items-center gap-1 group transition-all" href="#">
