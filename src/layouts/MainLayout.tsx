@@ -80,8 +80,10 @@ export const MainLayout: React.FC = () => {
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-facebook w-6 h-6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
           </a>
         </div>
-        <div className="flex gap-md">
-          <a className="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+        <div className="flex flex-wrap gap-md justify-center md:justify-end">
+          <a className="iubenda-noiframe iubenda-embed font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="https://www.iubenda.com/privacy-policy/95264058" title="Privacy Policy">Privacy Policy</a>
+          <a className="iubenda-noiframe iubenda-embed font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="https://www.iubenda.com/privacy-policy/95264058/cookie-policy" title="Cookie Policy">Cookie Policy</a>
+          <a className="iubenda-cs-preferences-link font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#" onClick={(e) => e.preventDefault()}>Preferenze Cookie</a>
           <a className="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Termini di Servizio</a>
           <a className="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Lavora con noi</a>
         </div>

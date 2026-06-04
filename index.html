@@ -2,13 +2,57 @@
 <html class="dark" lang="it">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-87658D7PE"></script>
+  <!-- Inizializzazione di Google Consent Mode v2 (default: denied) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 2000
+    });
+    gtag('set', 'ads_data_redaction', true);
+  </script>
 
+  <!-- Codice di Integrazione Iubenda Cookie Solution -->
+  <script>
+    var _iub = _iub || [];
+    _iub.csConfiguration = {
+      "askConsentAtCookiePolicyUpdate": true,
+      "floatingButtonDisplay": "bottom-right",
+      "perPurposeConsent": true,
+      "siteId": 4554391, 
+      "cookiePolicyId": 95264058,
+      "lang": "it",
+      "enableConsentMode": true,
+      "banner": {
+        "acceptButtonDisplay": true,
+        "customizeButtonDisplay": true,
+        "rejectButtonDisplay": true,
+        "position": "float-bottom-center",
+        "textColor": "#e0e3e5",
+        "backgroundColor": "#101415",
+        "acceptButtonColor": "#a5e7ff",
+        "acceptButtonCaptionColor": "#101415",
+        "customizeButtonColor": "#44474d",
+        "customizeButtonCaptionColor": "#e0e3e5",
+        "rejectButtonColor": "#44474d",
+        "rejectButtonCaptionColor": "#e0e3e5"
+      }
+    };
+  </script>
+  <script src="https://cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+  <!-- Loader per dynamic privacy/cookie policy widget (iubenda.js) -->
+  <script>
+    (function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);
+  </script>
+
+  <!-- Google tag (gtag.js) - Bloccato preventivamente (attivato da Iubenda al consenso per la Categoria 4) -->
+  <script type="text/plain" class="_iub_cs_activate" data-iub-purposes="4" async src="https://www.googletagmanager.com/gtag/js?id=G-87658DZ7PE"></script>
+  <script type="text/plain" class="_iub_cs_activate" data-iub-purposes="4">
+    gtag('js', new Date());
     gtag('config', 'G-87658DZ7PE');
   </script>
 
