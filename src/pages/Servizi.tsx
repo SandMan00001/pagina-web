@@ -135,13 +135,28 @@ export const Servizi: React.FC = () => {
   const handleModalSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setModalStatus('sending');
+
+    const emails = [
+      'amministrazione@foundreams.it',
+      'gabriele.saija@foundreams.it',
+      'mykol.acquaotta@foundreams.it'
+    ].join(',');
+    
+    const subject = encodeURIComponent(modalForm.oggetto || 'Richiesta preventivo');
+    const body = encodeURIComponent(
+      `Nome: ${modalForm.nome}\n` +
+      `Email mittente: ${modalForm.email}\n\n` +
+      `Messaggio:\n${modalForm.messaggio}`
+    );
+
     setTimeout(() => {
+      window.location.href = `mailto:${emails}?subject=${subject}&body=${body}`;
       setModalStatus('success');
       setTimeout(() => {
         setSelectedBundle(null);
         setModalStatus('idle');
       }, 2500);
-    }, 1500);
+    }, 1000);
   };
 
   useEffect(() => {

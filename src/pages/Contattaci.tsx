@@ -55,7 +55,21 @@ export const Contattaci: React.FC = () => {
     e.preventDefault();
     setFormStatus('sending');
 
+    const emails = [
+      'amministrazione@foundreams.it',
+      'gabriele.saija@foundreams.it',
+      'mykol.acquaotta@foundreams.it'
+    ].join(',');
+    
+    const subject = encodeURIComponent(formData.oggetto || 'Richiesta di contatto - FounDreams');
+    const body = encodeURIComponent(
+      `Nome: ${formData.nome}\n` +
+      `Email mittente: ${formData.email}\n\n` +
+      `Messaggio:\n${formData.messaggio}`
+    );
+
     setTimeout(() => {
+      window.location.href = `mailto:${emails}?subject=${subject}&body=${body}`;
       setFormStatus('success');
       setTimeout(() => {
         setFormStatus('idle');
@@ -66,7 +80,7 @@ export const Contattaci: React.FC = () => {
           messaggio: ''
         });
       }, 3000);
-    }, 1500);
+    }, 1000);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
