@@ -7,8 +7,8 @@ const injectCSP = () => {
   return {
     name: 'inject-csp',
     transformIndexHtml(html: string, ctx: any) {
-      if (!ctx.server) { // Eseguito solo durante 'vite build'
-        const cspMeta = `<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://region1.google-analytics.com https://www.google-analytics.com https://analytics.google.com;">`;
+      if (!ctx.server) {
+        const cspMeta = `<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://region1.google-analytics.com https://www.google-analytics.com https://analytics.google.com;">`;
         return html.replace('</head>', `  ${cspMeta}\n</head>`);
       }
       return html;
