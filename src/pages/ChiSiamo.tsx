@@ -1,7 +1,23 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useSEO } from '../hooks/useSEO';
 
 export const ChiSiamo: React.FC = () => {
+  useSEO({
+    title: "Chi Siamo - FounDreams | Team di Esperti in Sviluppo e Security",
+    description: "Scopri la storia, i valori e la missione di FounDreams, lo studio boutique di sviluppo software e cybersecurity guidato da esperti programmatori.",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "@id": "https://foundreams.it/chi-siamo",
+      "name": "Chi Siamo",
+      "description": "La storia, la missione e i membri del team di FounDreams.",
+      "publisher": {
+        "@id": "https://foundreams.it/#organization"
+      }
+    }
+  });
+
   useEffect(() => {
     const observerOptions = {
       threshold: 0.15,
@@ -182,25 +198,25 @@ export const ChiSiamo: React.FC = () => {
           {/* Value 1 */}
           <div className="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group duration-300">
             <span className="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 transition-transform">group</span>
-            <h4 className="font-display text-xl font-bold mb-3 text-on-background">Collaborazione</h4>
+            <h3 className="font-display text-xl font-bold mb-3 text-on-background">Collaborazione</h3>
             <p className="text-on-surface-variant text-sm leading-relaxed">Lavoriamo come un'estensione del vostro team, assicurando che la vostra voce sia ascoltata in ogni fase del processo produttivo.</p>
           </div>
           {/* Value 2 */}
           <div className="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group duration-300">
             <span className="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 transition-transform">auto_awesome</span>
-            <h4 className="font-display text-xl font-bold mb-3 text-on-background">Innovazione</h4>
+            <h3 className="font-display text-xl font-bold mb-3 text-on-background">Innovazione</h3>
             <p className="text-on-surface-variant text-sm leading-relaxed">Non seguiamo le tendenze; le studiamo per costruire il "prossimo" prima che diventi l'attuale.</p>
           </div>
           {/* Value 3 */}
           <div className="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group duration-300">
             <span className="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 transition-transform">shield</span>
-            <h4 className="font-display text-xl font-bold mb-3 text-on-background">Sicurezza e Affidabilità</h4>
+            <h3 className="font-display text-xl font-bold mb-3 text-on-background">Sicurezza e Affidabilità</h3>
             <p className="text-on-surface-variant text-sm leading-relaxed">La sicurezza non è un optional; è il nucleo. Costruiamo fortezze digitali che resistono alla prova del tempo.</p>
           </div>
           {/* Value 4 */}
           <div className="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group duration-300">
             <span className="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 transition-transform">verified</span>
-            <h4 className="font-display text-xl font-bold mb-3 text-on-background">Trasparenza</h4>
+            <h3 className="font-display text-xl font-bold mb-3 text-on-background">Trasparenza</h3>
             <p className="text-on-surface-variant text-sm leading-relaxed">Report chiari, scadenze oneste e nessun gergo tecnico. Saprete sempre a che punto siamo.</p>
           </div>
         </div>
@@ -282,31 +298,31 @@ export const ChiSiamo: React.FC = () => {
           {/* Step 1 */}
           <div className="relative text-center md:text-left timeline-step">
             <div className="w-12 h-12 bg-surface-container-highest border border-secondary text-secondary rounded-full flex items-center justify-center font-bold mb-6 mx-auto md:mx-0 timeline-dot relative z-10">1</div>
-            <h5 className="font-display text-lg font-bold mb-2 text-on-background">Strategia</h5>
+            <h3 className="font-display text-lg font-bold mb-2 text-on-background">Strategia</h3>
             <p className="text-sm text-on-surface-variant">Analisi approfondita e pianificazione dei vostri obiettivi digitali.</p>
           </div>
           {/* Step 2 */}
           <div className="relative text-center md:text-left timeline-step">
             <div className="w-12 h-12 bg-surface-container-highest border border-secondary text-secondary rounded-full flex items-center justify-center font-bold mb-6 mx-auto md:mx-0 timeline-dot relative z-10">2</div>
-            <h5 className="font-display text-lg font-bold mb-2 text-on-background">Marketing</h5>
+            <h3 className="font-display text-lg font-bold mb-2 text-on-background">Marketing</h3>
             <p className="text-sm text-on-surface-variant">Definire la vostra voce e raggiungere il vostro pubblico principale.</p>
           </div>
           {/* Step 3 */}
           <div className="relative text-center md:text-left timeline-step">
             <div className="w-12 h-12 bg-surface-container-highest border border-secondary text-secondary rounded-full flex items-center justify-center font-bold mb-6 mx-auto md:mx-0 timeline-dot relative z-10">3</div>
-            <h5 className="font-display text-lg font-bold mb-2 text-on-background">Design</h5>
+            <h3 className="font-display text-lg font-bold mb-2 text-on-background">Design</h3>
             <p className="text-sm text-on-surface-variant">Forgiare interfacce moderne, intuitive e pronte alla conversione.</p>
           </div>
           {/* Step 4 */}
           <div className="relative text-center md:text-left timeline-step">
             <div className="w-12 h-12 bg-surface-container-highest border border-secondary text-secondary rounded-full flex items-center justify-center font-bold mb-6 mx-auto md:mx-0 timeline-dot relative z-10">4</div>
-            <h5 className="font-display text-lg font-bold mb-2 text-on-background">Sicurezza</h5>
+            <h3 className="font-display text-lg font-bold mb-2 text-on-background">Sicurezza</h3>
             <p className="text-sm text-on-surface-variant">Rafforzare l'infrastruttura con protezioni avanzate.</p>
           </div>
           {/* Step 5 */}
           <div className="relative text-center md:text-left timeline-step">
             <div className="w-12 h-12 bg-surface-container-highest border border-secondary text-secondary rounded-full flex items-center justify-center font-bold mb-6 mx-auto md:mx-0 timeline-dot relative z-10">5</div>
-            <h5 className="font-display text-lg font-bold mb-2 text-on-background">Crescita</h5>
+            <h3 className="font-display text-lg font-bold mb-2 text-on-background">Crescita</h3>
             <p className="text-sm text-on-surface-variant">Ottimizzazione continua e scalabilità del vostro successo.</p>
           </div>
         </div>

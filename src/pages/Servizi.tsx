@@ -1,10 +1,57 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useSEO } from '../hooks/useSEO';
 
 export const Servizi: React.FC = () => {
+  useSEO({
+    title: "Servizi - FounDreams | Siti Web, Social Media & Cybersecurity",
+    description: "Sviluppiamo soluzioni web innovative, gestiamo la tua comunicazione social con strategie avanzate e proteggiamo il tuo business con servizi DevOps e di cybersecurity dedicati.",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://foundreams.it/servizi",
+      "name": "Servizi FounDreams",
+      "description": "Catalogo servizi che include Sviluppo Web, Social Media Strategy e Consulenza DevOps & Cybersecurity.",
+      "provider": {
+        "@id": "https://foundreams.it/#organization"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Catalogo Soluzioni FounDreams",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sviluppo Web ad Alte Prestazioni",
+              "description": "Realizzazione di Landing Page, siti vetrina ed e-commerce moderni, ottimizzati SEO e fully responsive."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Social Media Strategy",
+              "description": "Pianificazione editoriale e gestione canali social con grafiche curate ed analisi algoritmi per massimizzare la reach."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "DevOps & Cybersecurity",
+              "description": "Consulenza IT, migrazione cloud (AWS/Azure), automazione di deploy e hardening di sicurezza con WAF e monitoraggio."
+            }
+          }
+        ]
+      }
+    }
+  });
+
   const [selectedBundle, setSelectedBundle] = useState<string | null>(null);
   const [modalForm, setModalForm] = useState({ nome: '', email: '', oggetto: '', messaggio: '' });
   const [modalStatus, setModalStatus] = useState<'idle' | 'sending' | 'success'>('idle');
+
 
   const bundleDetails: Record<string, {
     icon: string;
@@ -285,11 +332,11 @@ export const Servizi: React.FC = () => {
                   <span className="material-symbols-outlined">rocket_launch</span>
                 </div>
               </div>
-              <h4 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-xs">Startup Bundle</h4>
+              <h3 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-xs">Startup Bundle</h3>
               <p className="text-caption font-caption text-on-surface-variant mb-md">L'essenziale per partire subito forti.</p>
               <ul className="space-y-sm mb-lg flex-grow">
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
-                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Sito Web landing page
+                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Sito Web Landing Page
                 </li>
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
                   <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Configurazione Social
@@ -302,7 +349,7 @@ export const Servizi: React.FC = () => {
                 onClick={() => openModal("Startup Bundle")}
                 className="w-full py-md border border-outline-variant rounded-xl font-label-md text-label-md hover:bg-surface-variant transition-colors text-on-surface dark:text-on-surface mt-auto"
               >
-                scopri di più
+                Scopri di Più
               </button>
             </div>
 
@@ -314,7 +361,7 @@ export const Servizi: React.FC = () => {
                   <span className="material-symbols-outlined">trending_up</span>
                 </div>
               </div>
-              <h4 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-xs">Business Evolution</h4>
+              <h3 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-xs">Business Evolution</h3>
               <p className="text-caption font-caption text-on-surface-variant mb-md">Per chi vuole scalare il mercato.</p>
               <ul className="space-y-sm mb-lg flex-grow">
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
@@ -331,7 +378,7 @@ export const Servizi: React.FC = () => {
                 onClick={() => openModal("Business Evolution")}
                 className="w-full py-md gradient-primary text-on-primary rounded-xl font-label-md text-label-md shadow-lg shadow-primary/20 hover:scale-105 transition-transform mt-auto"
               >
-                scopri di più
+                Scopri di Più
               </button>
             </div>
 
@@ -342,7 +389,7 @@ export const Servizi: React.FC = () => {
                   <span className="material-symbols-outlined">shield_with_heart</span>
                 </div>
               </div>
-              <h4 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-xs">Enterprise Safe</h4>
+              <h3 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-xs">Enterprise Safe</h3>
               <p className="text-caption font-caption text-on-surface-variant mb-md">Massima sicurezza e personalizzazione.</p>
               <ul className="space-y-sm mb-lg flex-grow">
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
@@ -359,7 +406,7 @@ export const Servizi: React.FC = () => {
                 onClick={() => openModal("Enterprise Safe")}
                 className="w-full py-md border border-outline-variant rounded-xl font-label-md text-label-md hover:bg-surface-variant transition-colors text-on-surface dark:text-on-surface mt-auto"
               >
-                scopri di più
+                Scopri di Più
               </button>
             </div>
           </div>

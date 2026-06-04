@@ -1,10 +1,99 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useSEO } from '../hooks/useSEO';
 
 export const Home: React.FC = () => {
+  useSEO({
+    title: "FounDreams - Realizzazione Siti Web e Sicurezza Informatica",
+    description: "FounDreams realizza siti web professionali ad alte prestazioni, gestisce pagine social con strategie data-driven e offre consulenza IT in ambito DevOps, cloud e cybersecurity.",
+    structuredData: [
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": "https://foundreams.it/#organization",
+        "name": "FounDreams",
+        "url": "https://foundreams.it/",
+        "logo": "https://foundreams.it/favicon.svg",
+        "image": "https://foundreams.it/favicon.svg",
+        "description": "Studio boutique di sviluppo web, social media strategy e cybersecurity per proteggere e far scalare il tuo business.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IT",
+          "addressLocality": "Milano"
+        },
+        "telephone": "+393663192578",
+        "email": "info@foundreams.tech",
+        "priceRange": "$$",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "info@foundreams.tech",
+          "telephone": "+393663192578",
+          "contactType": "customer service"
+        },
+        "sameAs": [
+          "https://www.instagram.com/foundreams_?igsh=cnF6a3gzZXZxd3Rq",
+          "https://www.facebook.com/people/FounDreams/61590709104730/"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "FounDreams",
+        "url": "https://foundreams.it/"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Qual è la differenza tra i vari pacchetti di FounDreams?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Offriamo tre soluzioni su misura: lo Startup Bundle per chi inizia e desidera una landing page con canali social base; il pacchetto Business Evolution per chi intende crescere con un sito completo ed e-commerce; e il pacchetto Enterprise Safe per massime performance con cloud dedicato e sicurezza avanzata."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Come garantite la sicurezza dei siti web che realizzate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ogni nostro progetto integra di default certificati SSL per connessioni sicure HTTPS. Nelle soluzioni avanzate implementiamo Web Application Firewall (WAF) per prevenire minacce esterne e conduciamo attività periodiche di monitoraggio e pentesting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Che cos'è l'approccio DevOps e come aiuta la mia infrastruttura aziendale?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "L'approccio DevOps unisce lo sviluppo software e la gestione dell'infrastruttura IT. Attraverso l'automazione dei processi e l'uso del cloud (AWS/Azure) riduciamo a zero i disservizi, velocizziamo il rilascio di nuove funzionalità e ottimizziamo i costi operativi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quali canali social gestite e come create le strategie?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Gestiamo professionalmente canali come Instagram, Facebook e altre piattaforme concordate. Sviluppiamo piani editoriali coerenti con la vostra identità visiva, curando sia la grafica che l'analisi dell'algoritmo per massimizzare la portata organica."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "FounDreams si occupa anche di ottimizzazione SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Assolutamente sì. Tutti i siti che sviluppiamo sono ottimizzati dal punto di vista dell'architettura e della velocità (Core Web Vitals), includono meta tag descrittivi, sitemap XML, dati strutturati JSON-LD e robots.txt per garantire una perfetta indicizzazione su Google e massima comprensione da parte dei sistemi di intelligenza artificiale."
+            }
+          }
+        ]
+      }
+    ]
+  });
+
   const [selectedBundle, setSelectedBundle] = useState<string | null>(null);
   const [modalForm, setModalForm] = useState({ nome: '', email: '', oggetto: '', messaggio: '' });
   const [modalStatus, setModalStatus] = useState<'idle' | 'sending' | 'success'>('idle');
+
 
   const bundleDetails: Record<string, {
     icon: string;
@@ -196,6 +285,10 @@ export const Home: React.FC = () => {
       {/* Servizi Section */}
       <section className="scroll-reveal py-xl transition-all duration-700">
         <div className="container mx-auto px-margin-mobile md:px-margin-desktop space-y-xl">
+          <div className="text-center mb-xl">
+            <span className="text-primary font-label-md text-label-md tracking-widest uppercase">I Nostri Servizi</span>
+            <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface mt-xs">Soluzioni su Misura per il Tuo Business</h2>
+          </div>
           {/* Siti Web */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
             <div className="order-2 lg:order-1 space-y-md">
@@ -279,11 +372,11 @@ export const Home: React.FC = () => {
                   <span className="material-symbols-outlined">rocket_launch</span>
                 </div>
               </div>
-              <h4 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-xs">Startup Bundle</h4>
+              <h3 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-xs">Startup Bundle</h3>
               <p className="text-caption font-caption text-on-surface-variant mb-md">L'essenziale per partire subito forti.</p>
               <ul className="space-y-sm mb-lg flex-grow">
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
-                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Sito Web landinpage
+                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Sito Web Landing Page
                 </li>
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
                   <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Configurazione Social
@@ -308,7 +401,7 @@ export const Home: React.FC = () => {
                   <span className="material-symbols-outlined">trending_up</span>
                 </div>
               </div>
-              <h4 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-xs">Business Evolution</h4>
+              <h3 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-xs">Business Evolution</h3>
               <p className="text-caption font-caption text-on-surface-variant mb-md">Per chi vuole scalare il mercato.</p>
               <ul className="space-y-sm mb-lg flex-grow">
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
@@ -336,7 +429,7 @@ export const Home: React.FC = () => {
                   <span className="material-symbols-outlined">shield_with_heart</span>
                 </div>
               </div>
-              <h4 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-xs">Enterprise Safe</h4>
+              <h3 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-xs">Enterprise Safe</h3>
               <p className="text-caption font-caption text-on-surface-variant mb-md">Massima sicurezza e personalizzazione.</p>
               <ul className="space-y-sm mb-lg flex-grow">
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
@@ -356,6 +449,68 @@ export const Home: React.FC = () => {
                 Scopri di Più
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="scroll-reveal py-xl bg-surface-container-low transition-all duration-700">
+        <div className="container mx-auto px-margin-mobile md:px-margin-desktop">
+          <div className="text-center mb-xl">
+            <span className="text-primary font-label-md text-label-md tracking-widest uppercase">FAQ</span>
+            <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface mt-xs mb-sm">Domande Frequenti</h2>
+            <p className="text-on-surface-variant max-w-2xl mx-auto">Tutto quello che c'è da sapere sui servizi, la sicurezza e il flusso di lavoro di FounDreams.</p>
+          </div>
+          <div className="max-w-3xl mx-auto space-y-md">
+            <details className="group glass-card p-md rounded-2xl transition-all duration-300 [&_summary::-webkit-details-marker]:hidden open:bg-surface-bright/10">
+              <summary className="flex justify-between items-center font-headline-md text-[20px] md:text-headline-md text-on-surface cursor-pointer select-none">
+                <span>Qual è la differenza tra i vari pacchetti di FounDreams?</span>
+                <span className="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+              </summary>
+              <div className="mt-md font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/30 pt-sm leading-relaxed text-left">
+                Offriamo tre soluzioni calibrate sulle diverse esigenze di crescita: lo <strong>Startup Bundle</strong> è ideale per i nuovi progetti che necessitano di una presenza online essenziale e pulita; il pacchetto <strong>Business Evolution</strong> introduce lo sviluppo di siti web completi fino a 5 pagine (anche e-commerce) e cybersecurity avanzata con WAF; il pacchetto <strong>Enterprise Safe</strong> offre infine il massimo delle performance con infrastrutture cloud dedicate, monitoraggio SOC continuo e strategie marketing omnicanale.
+              </div>
+            </details>
+
+            <details className="group glass-card p-md rounded-2xl transition-all duration-300 [&_summary::-webkit-details-marker]:hidden open:bg-surface-bright/10">
+              <summary className="flex justify-between items-center font-headline-md text-[20px] md:text-headline-md text-on-surface cursor-pointer select-none">
+                <span>Come garantite la sicurezza dei siti web che realizzate?</span>
+                <span className="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+              </summary>
+              <div className="mt-md font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/30 pt-sm leading-relaxed text-left">
+                La sicurezza informatica non è un'opzione aggiuntiva, ma il pilastro del nostro processo di sviluppo. Di serie, tutti i siti utilizzano protocolli sicuri SSL (HTTPS) e configurazioni di server resilienti. Per i pacchetti aziendali e su misura, implementiamo Web Application Firewall (WAF), conduciamo sessioni di pentesting semestrali e configuriamo policy di Content Security (CSP) rigide per neutralizzare vulnerabilità e attacchi XSS.
+              </div>
+            </details>
+
+            <details className="group glass-card p-md rounded-2xl transition-all duration-300 [&_summary::-webkit-details-marker]:hidden open:bg-surface-bright/10">
+              <summary className="flex justify-between items-center font-headline-md text-[20px] md:text-headline-md text-on-surface cursor-pointer select-none">
+                <span>Che cos'è l'approccio DevOps e come aiuta la mia infrastruttura aziendale?</span>
+                <span className="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+              </summary>
+              <div className="mt-md font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/30 pt-sm leading-relaxed text-left">
+                L'approccio DevOps fonde lo sviluppo software (Dev) con la gestione dei sistemi IT (Ops). Attraverso automazione CI/CD, monitoraggio avanzato e containerizzazione (Docker/Kubernetes), riduciamo i tempi di deploy, azzeriamo i tempi di inattività (downtime) e gestiamo in modo efficiente ed economico infrastrutture cloud pubbliche o ibride su provider come AWS e Azure.
+              </div>
+            </details>
+
+            <details className="group glass-card p-md rounded-2xl transition-all duration-300 [&_summary::-webkit-details-marker]:hidden open:bg-surface-bright/10">
+              <summary className="flex justify-between items-center font-headline-md text-[20px] md:text-headline-md text-on-surface cursor-pointer select-none">
+                <span>Quali canali social gestite e come create le strategie?</span>
+                <span className="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+              </summary>
+              <div className="mt-md font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/30 pt-sm leading-relaxed text-left">
+                Gestiamo profili professionali su Instagram, Facebook e altre piattaforme social a seconda degli obiettivi di marketing. Ogni piano editoriale è personalizzato: combiniamo la progettazione visiva e la creazione di contenuti creativi con l'ottimizzazione per gli algoritmi dei vari canali, programmando la pubblicazione a frequenze ottimali per accrescere la reach organica del tuo brand.
+              </div>
+            </details>
+
+            <details className="group glass-card p-md rounded-2xl transition-all duration-300 [&_summary::-webkit-details-marker]:hidden open:bg-surface-bright/10">
+              <summary className="flex justify-between items-center font-headline-md text-[20px] md:text-headline-md text-on-surface cursor-pointer select-none">
+                <span>FounDreams si occupa anche di ottimizzazione SEO?</span>
+                <span className="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+              </summary>
+              <div className="mt-md font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/30 pt-sm leading-relaxed text-left">
+                Certamente. Ogni sito web che realizziamo viene progettato con un'architettura on-page ottimizzata per l'indicizzazione organica. Implementiamo metadati descrittivi dinamici per ciascuna pagina, configuriamo file robots.txt e sitemap XML e integriamo dati strutturati (JSON-LD) per far sì che motori di ricerca come Google e motori di risposta AI come Gemini comprendano alla perfezione l'identità del tuo brand.
+              </div>
+            </details>
           </div>
         </div>
       </section>

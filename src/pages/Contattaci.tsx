@@ -1,9 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useSEO } from '../hooks/useSEO';
 
 export const Contattaci: React.FC = () => {
   const location = useLocation();
   const selectedPackage = location.state?.package as string | undefined;
+
+  useSEO({
+    title: "Contattaci - FounDreams | Richiedi un Preventivo Gratuito",
+    description: "Contatta il team di FounDreams per lo sviluppo del tuo nuovo sito web, la gestione dei canali social o consulenze IT. Preventivi rapidi e gratuiti.",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "@id": "https://foundreams.it/contattaci",
+      "name": "Contattaci",
+      "description": "Form di contatto per richiedere informazioni e preventivi personalizzati a FounDreams.",
+      "publisher": {
+        "@id": "https://foundreams.it/#organization"
+      }
+    }
+  });
+
 
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success'>('idle');
   const [formData, setFormData] = useState({
