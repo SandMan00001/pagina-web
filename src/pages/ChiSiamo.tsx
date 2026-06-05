@@ -238,7 +238,7 @@ export const ChiSiamo: React.FC = () => {
                   Esperto nel creare narrazioni digitali ad alto impatto che risuonano con il pubblico target. Combinando approfondimenti basati sui dati con lo storytelling creativo, assicura che ogni progetto ottenga la massima visibilità e conversione.
                 </p>
                 <div className="flex gap-4">
-                  <a className="text-primary font-medium hover:underline flex items-center gap-1 group transition-all" href="#">
+                  <a className="text-primary font-medium hover:underline flex items-center gap-1 group transition-all" href="https://mykolacquaotta.lovable.app/">
                     Visualizza portfolio 
                     <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
                   </a>
@@ -277,7 +277,7 @@ export const ChiSiamo: React.FC = () => {
                   Costruisco le fondamenta digitali su cui far scalare il tuo business. Come DevOps e Cloud & Security Engineer, progetto infrastrutture IT inattaccabili e performanti. L'esperienza nell'insegnamento del coding ai più giovani mi ha insegnato la skill più preziosa: tradurre la complessità tecnica in soluzioni chiare e immediate. Tu pensa alla visione, a blindare i tuoi dati ci penso io.
                 </p>
                 <div className="flex gap-4">
-                  <a className="text-primary font-medium hover:underline flex items-center gap-1 group transition-all" href="#">
+                  <a className="text-primary font-medium hover:underline flex items-center gap-1 group transition-all" href="https://www.italiasaija.it">
                     Visualizza portfolio 
                     <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
                   </a>
