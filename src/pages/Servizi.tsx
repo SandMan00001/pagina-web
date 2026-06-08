@@ -204,10 +204,10 @@ export const Servizi: React.FC = () => {
       <section className="px-margin-mobile md:px-margin-desktop mb-xl text-center max-w-4xl mx-auto relative scroll-reveal transition-all duration-700">
         <div className="hero-glow top-0 left-1/2 -translate-x-1/2"></div>
         <h1 className="font-display-lg text-[48px] md:text-display-lg mb-md leading-tight text-on-surface dark:text-on-surface">
-          Soluzioni Digitali di <span className="text-gradient">Eccellenza</span>
+          Soluzioni Digitali <span className="text-gradient">Concrete</span>
         </h1>
         <p className="font-body-lg text-body-lg text-on-surface-variant">
-          Trasformiamo visioni ambiziose in realtà tecnologiche sicure, performanti e di impatto globale. Dalla difesa dei dati alla narrazione social.
+          Nessuna promessa irrealizzabile. Costruiamo strumenti web performanti, gestiamo i tuoi social con dati alla mano e proteggiamo la tua infrastruttura con le migliori tecnologie accessibili.
         </p>
       </section>
 
@@ -217,10 +217,10 @@ export const Servizi: React.FC = () => {
           <div className="flex flex-col gap-md">
             <div className="flex items-center gap-sm">
               <span className="material-symbols-outlined text-primary text-4xl">web</span>
-              <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface">Realizzazione Siti Web</h2>
+              <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface">Sviluppo Web</h2>
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Sviluppiamo ecosistemi digitali che fondono design d'avanguardia e architetture scalabili. Non creiamo solo siti, ma strumenti di business ottimizzati per le performance (SEO), accessibili e responsive. Ogni riga di codice è scritta con precisione chirurgica per garantire velocità di caricamento fulminee e un'esperienza utente memorabile che converte i visitatori in clienti fedeli.
+              Evitiamo i siti vetrina fini a se stessi. Sviluppiamo piattaforme veloci, ottimizzate per i motori di ricerca e facili da navigare. Il nostro obiettivo è creare uno strumento utile al tuo business, che comunichi chiaramente chi sei e cosa offri, convertendo le visite in contatti reali senza inutili complicazioni.
             </p>
             <div className="grid grid-cols-2 gap-sm mb-base">
               <div className="flex items-center gap-xs text-on-surface-variant font-caption">
@@ -267,10 +267,10 @@ export const Servizi: React.FC = () => {
           <div className="flex flex-col gap-md order-1 md:order-2">
             <div className="flex items-center gap-sm">
               <span className="material-symbols-outlined text-on-tertiary-container text-4xl">share</span>
-              <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface">Gestione Pagine Social</h2>
+              <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface">Social Media Management</h2>
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Eleviamo la presenza del tuo brand attraverso una narrazione visiva coerente e data-driven. Analizziamo i trend, studiamo l'algoritmo e creiamo contenuti che generano engagement reale. La nostra gestione social è una fusione tra creatività visionaria e analisi tecnica, pensata per costruire community solide e autorevoli.
+              I social non fanno miracoli da soli, ma sono un canale fondamentale. Gestiamo la tua presenza online con trasparenza: studiamo il tuo pubblico, creiamo contenuti autentici e analizziamo i dati per capire cosa funziona davvero. Nessuna metrica di vanità, solo strategie mirate a costruire una community interessata ai tuoi servizi.
             </p>
             <div className="flex flex-wrap gap-sm mb-base">
               <span className="bg-tertiary-container/30 px-md py-xs rounded-full text-on-tertiary-container font-caption text-[11px] uppercase tracking-widest border border-on-tertiary-container/20">Strategy</span>
@@ -299,20 +299,20 @@ export const Servizi: React.FC = () => {
           <div className="flex flex-col gap-md">
             <div className="flex items-center gap-sm">
               <span className="material-symbols-outlined text-error text-4xl">lock</span>
-              <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface">Consulenza Informatica</h2>
+              <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface">Cybersecurity & DevOps</h2>
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Aiutamo le aziende a trasformare l’IT in un vantaggio competitivo: progetto, automatizziamo e gestiamo infrastrutture cloud, on-premise e ibride, con un approccio DevOps che punta a ridurre downtime, contenere i costi e aumentare la velocità di rilascio. Mettiamo al centro sicurezza, monitoraggio e automazione, così il tuo team può concentrarsi sul business mentre l’infrastruttura resta stabile, scalabile e sotto controllo.
+              Facciamo sicurezza informatica reale. Sappiamo benissimo che il "sistema perfetto e inviolabile" non esiste. Quello che facciamo è ricercare e implementare le tecnologie più sicure possibili per il tuo specifico caso, ottimizzando i costi. Automatizziamo i processi e riduciamo le vulnerabilità per garantirti un'infrastruttura solida e resiliente, pronta ad affrontare le vere minacce della rete.
             </p>
             <div className="flex flex-wrap gap-md mb-base">
               <div className="flex flex-col gap-xs">
-                <span className="text-error font-bold font-headline-md text-headline-md">99.9%</span>
-                <span className="text-on-surface-variant font-caption">Resilienza Attacchi</span>
+                <span className="text-error font-bold font-headline-md text-headline-md">REALE</span>
+                <span className="text-on-surface-variant font-caption">Protezione</span>
               </div>
               <div className="w-px h-12 bg-outline-variant hidden sm:block"></div>
               <div className="flex flex-col gap-xs">
-                <span className="text-error font-bold font-headline-md text-headline-md">IMMEDIATA</span>
-                <span className="text-on-surface-variant font-caption">Consulenza</span>
+                <span className="text-error font-bold font-headline-md text-headline-md">MIRATO</span>
+                <span className="text-on-surface-variant font-caption">Investimento</span>
               </div>
             </div>
             <Link to="/contattaci" style={{ textDecoration: 'none' }}>
@@ -430,8 +430,8 @@ export const Servizi: React.FC = () => {
 
       {/* CTA Final Section */}
       <section className="scroll-reveal px-margin-mobile md:px-margin-desktop py-xl text-center bg-surface-container-lowest transition-all duration-700">
-        <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface mb-base">Pronto a trasformare la tua visione?</h2>
-        <p className="font-body-md text-body-md text-on-surface-variant mb-lg max-w-2xl mx-auto">Unisciti alle aziende che hanno già scelto l'innovazione di FounDreams. Il futuro digitale inizia qui.</p>
+        <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface mb-base">Pronto a fare sul serio?</h2>
+        <p className="font-body-md text-body-md text-on-surface-variant mb-lg max-w-2xl mx-auto">Siamo qui per darti soluzioni concrete, non parole vuote. Parliamone insieme.</p>
         <div className="flex flex-col sm:flex-row gap-md justify-center">
           <Link to="/contattaci" style={{ textDecoration: 'none' }}>
             <button className="cta-gradient px-xl py-md rounded-full font-label-md text-label-md text-on-primary">

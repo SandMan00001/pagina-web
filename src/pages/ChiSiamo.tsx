@@ -86,10 +86,10 @@ export const ChiSiamo: React.FC = () => {
         </div>
         <div className="max-w-4xl mx-auto text-center z-10 scroll-reveal">
           <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight text-on-background">
-            Dove le <span className="bg-gradient-to-r from-secondary to-tertiary bg-clip-text text-transparent">idee</span> diventano <span className="text-primary">realtà</span>.
+            Lavoriamo con te, <span className="bg-gradient-to-r from-secondary to-tertiary bg-clip-text text-transparent">senza fumo</span> negli occhi.
           </h1>
           <p className="text-lg md:text-xl text-on-surface-variant mb-10 max-w-2xl mx-auto leading-relaxed">
-            FounDreams è uno studio digitale boutique dove l'intuizione del marketing, la tecnologia all'avanguardia e la cybersicurezza si fondono per forgiare il vostro futuro digitale.
+            Siamo un team unito dalla passione per il digitale. Niente supercazzole tecnologiche, solo strategie marketing misurabili, sviluppo web performante e un approccio concreto alla cybersecurity.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/contattaci" className="w-full sm:w-auto" style={{ textDecoration: 'none' }}>
@@ -111,13 +111,13 @@ export const ChiSiamo: React.FC = () => {
       <section id="genesis" className="scroll-reveal py-xl max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
-            <span className="text-secondary font-headline font-bold tracking-widest uppercase text-sm">La Nostra Genesi</span>
-            <h2 className="font-display text-4xl font-semibold leading-tight text-on-background">Il Concetto di FounDreams</h2>
+            <span className="text-secondary font-headline font-bold tracking-widest uppercase text-sm">Chi Siamo Veramente</span>
+            <h2 className="font-display text-4xl font-semibold leading-tight text-on-background">Cosa ci spinge</h2>
             <p className="text-on-surface-variant text-lg leading-relaxed">
-              Il nostro nome deriva da <em>Foundry Dreams</em> ("fucina dei sogni"), un concetto che rappresenta ciò che vogliamo essere: un luogo in cui idee, ambizioni e progetti vengono sviluppati, rafforzati e trasformati in opportunità reali.
+              Il nostro nome, <em>FounDreams</em> ("fucina dei sogni"), nasce dall'idea di trasformare progetti su carta in realtà tangibili. Lo facciamo sporcandoci le mani, affrontando i problemi tecnici e trovando soluzioni che funzionano sul mercato.
             </p>
             <p className="text-on-surface-variant text-lg leading-relaxed">
-              Unendo marketing, crescita digitale, sviluppo, consulenza informatica e sicurezza, adottiamo un approccio che mette al centro non solo la visibilità e la crescita del business, ma anche la qualità, l'affidabilità e la protezione delle soluzioni realizzate.
+              Non ti promettiamo il primo posto su Google in una settimana o la sicurezza assoluta, perché sappiamo che non esistono. Ti offriamo invece il nostro impegno per massimizzare la tua visibilità e blindare i tuoi sistemi con le migliori tecnologie attualmente disponibili, rispettando i tuoi budget.
             </p>
           </div>
           <div className="relative h-[400px] rounded-2xl overflow-hidden glass-card p-2 animate-float">
@@ -142,27 +142,27 @@ export const ChiSiamo: React.FC = () => {
               <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-6">
                 <span className="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
               </div>
-              <h3 className="font-display text-2xl font-bold mb-4 text-on-background">La nostra Missione</h3>
+              <h3 className="font-display text-2xl font-bold mb-4 text-on-background">Come Lavoriamo</h3>
               <div className="text-on-surface-variant leading-relaxed space-y-4">
                 <p>
-                  Il nostro lavoro quotidiano in <strong>FounDreams</strong> consiste nel fornire ad aziende e privati le competenze e gli strumenti necessari per l'evoluzione del loro business. Lo facciamo attraverso tre azioni concrete:
+                  Il nostro approccio è diretto e si basa su fatti, non su illusioni. Forniamo gli strumenti tecnologici necessari senza farti sprecare budget in servizi inutili:
                 </p>
                 <ul className="space-y-2 list-none pl-0">
                   <li className="flex items-start gap-2">
                     <span className="text-primary font-bold min-w-[12px]">-</span>
-                    <span><strong>Sviluppare con intelligenza:</strong> Progettiamo ecosistemi digitali ottimizzati tramite <strong>automazioni avanzate</strong> e protetti da una <strong>sicurezza informatica</strong> nativa, eliminando i rischi e ottimizzando i tempi di gestione.</span>
+                    <span><strong>Sviluppo essenziale:</strong> Scriviamo codice pulito per creare siti che caricano in fretta e funzionano bene. La sicurezza non è un'aggiunta, è integrata fin dal primo giorno, sapendo che l'infallibilità non esiste, ma la prevenzione efficace sì.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary font-bold min-w-[12px]">-</span>
-                    <span><strong>Massimizzare il valore:</strong> Applichiamo strategie di <strong>marketing d'impatto</strong>, sfruttando ogni piattaforma e servizio disponibile sul mercato per posizionare il tuo prodotto al massimo del suo valore commerciale.</span>
+                    <span><strong>Marketing realistico:</strong> Analizziamo i dati del tuo mercato per trovare i canali giusti. Nessuna campagna "miracolosa", ma un lavoro costante per portare conversioni vere e clienti interessati.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary font-bold min-w-[12px]">-</span>
-                    <span><strong>Coltivare il talento, non i manuali:</strong> Diamo ascolto e priorità all'elasticità mentale e all'intuizione dei singoli. Crediamo nel valore delle persone curiose e colte, capaci di trovare soluzioni flessibili dove il rigido nozionismo si ferma.</span>
+                    <span><strong>Zero supercazzole:</strong> Parliamo chiaro. Se una cosa non serve al tuo business, te lo diciamo. L'elasticità mentale e la capacità di risolvere problemi reali valgono più di cento manuali di teoria.</span>
                   </li>
                 </ul>
                 <p className="pt-2">
-                  Non ci limitiamo a consegnare un progetto finito: <strong>affianchiamo i nostri clienti per insegnare la messa in atto pratica delle soluzioni create</strong>, formando team e persone consapevoli, creative e autonome.
+                  Non ti abbandoniamo dopo il lancio. Ti diamo le chiavi in mano e ti spieghiamo come usarle, perché un cliente consapevole è il nostro miglior partner.
                 </p>
               </div>
             </div>
@@ -174,13 +174,13 @@ export const ChiSiamo: React.FC = () => {
               <h3 className="font-display text-2xl font-bold mb-4 text-on-background">La nostra Visione</h3>
               <div className="text-on-surface-variant leading-relaxed space-y-4">
                 <p>
-                  Ogni grande innovazione nasce da un sogno, ma sopravvive solo grazie alla struttura. In <strong>FounDreams</strong> aiutiamo aziende e privati a realizzare progetti unici, unendo l'efficienza delle <strong>automazioni</strong> alla solidità della <strong>sicurezza informatica</strong>.
+                  Siamo stanchi del fumo negli occhi che spesso circonda il settore IT e marketing. Vogliamo dimostrare che si può fare tecnologia ad alto livello lavorando in modo onesto, etico e orientato al risultato.
                 </p>
                 <p>
-                  Eleviamo il potenziale di ogni prodotto grazie a un <strong>marketing strategico e totale</strong>, stringendo partnership con i migliori servizi sul mercato per garantire un ritorno sull'investimento senza precedenti.
+                  La nostra priorità è farti ottenere un ritorno reale sul tuo investimento. Che si tratti di blindare un server o lanciare una campagna social, ogni azione ha uno scopo preciso e misurabile.
                 </p>
                 <p>
-                  Lavoriamo con chi sa guardare oltre: valorizziamo l'intelligenza critica e l'elasticità mentale rispetto al nozionismo teorico. Il nostro scopo è <strong>insegnare la pratica dell'innovazione</strong>, accendendo la scintilla in persone creative, consapevoli e animate dalla passione. Diamo gambe alle tue idee, ti diamo lo scudo per proteggerle e la mappa per farle crescere.
+                  Cerchiamo clienti che apprezzano la verità anche quando è scomoda. Lavoriamo sodo per offrirti l'equilibrio perfetto tra prestazioni ottimali, sicurezza pragmatica e costi sostenibili. Siamo qui per costruire la tua presenza digitale su fondamenta solide, passo dopo passo.
                 </p>
               </div>
             </div>
@@ -204,20 +204,20 @@ export const ChiSiamo: React.FC = () => {
           {/* Value 2 */}
           <div className="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group duration-300">
             <span className="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 transition-transform">auto_awesome</span>
-            <h3 className="font-display text-xl font-bold mb-3 text-on-background">Innovazione</h3>
-            <p className="text-on-surface-variant text-sm leading-relaxed">Non seguiamo le tendenze; le studiamo per costruire il "prossimo" prima che diventi l'attuale.</p>
+            <h3 className="font-display text-xl font-bold mb-3 text-on-background">Pragmatismo</h3>
+            <p className="text-on-surface-variant text-sm leading-relaxed">Non usiamo l'ultima tecnologia solo perché è di moda, ma solo se porta un reale beneficio al tuo progetto.</p>
           </div>
           {/* Value 3 */}
           <div className="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group duration-300">
             <span className="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 transition-transform">shield</span>
-            <h3 className="font-display text-xl font-bold mb-3 text-on-background">Sicurezza e Affidabilità</h3>
-            <p className="text-on-surface-variant text-sm leading-relaxed">La sicurezza non è un optional; è il nucleo. Costruiamo fortezze digitali che resistono alla prova del tempo.</p>
+            <h3 className="font-display text-xl font-bold mb-3 text-on-background">Sicurezza Reale</h3>
+            <p className="text-on-surface-variant text-sm leading-relaxed">Nessun sistema è invulnerabile, chi dice il contrario mente. Noi riduciamo drasticamente i rischi implementando le difese più efficaci sul mercato.</p>
           </div>
           {/* Value 4 */}
           <div className="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group duration-300">
             <span className="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 transition-transform">verified</span>
             <h3 className="font-display text-xl font-bold mb-3 text-on-background">Trasparenza</h3>
-            <p className="text-on-surface-variant text-sm leading-relaxed">Report chiari, scadenze oneste e nessun gergo tecnico. Saprete sempre a che punto siamo.</p>
+            <p className="text-on-surface-variant text-sm leading-relaxed">Niente gergo incomprensibile per farti sentire inadeguato. Ti spieghiamo i pro, i contro e i costi reali di ogni operazione.</p>
           </div>
         </div>
       </section>
@@ -235,7 +235,7 @@ export const ChiSiamo: React.FC = () => {
                 <h3 className="font-display text-3xl font-bold text-on-background">Acquaotta Mykol</h3>
                 <p className="text-secondary font-headline font-semibold text-lg uppercase tracking-wider">Digital marketer</p>
                 <p className="text-on-surface-variant text-lg leading-relaxed">
-                  Esperto nel creare narrazioni digitali ad alto impatto che risuonano con il pubblico target. Combinando approfondimenti basati sui dati con lo storytelling creativo, assicura che ogni progetto ottenga la massima visibilità e conversione.
+                  Meno fuffa, più dati. Gestisco i social e le campagne marketing con l'unico obiettivo di portarti risultati misurabili. Analizzo i numeri e creo contenuti che parlano al tuo pubblico, senza illuderti con metriche inutili.
                 </p>
                 <div className="flex gap-4">
                   <a className="text-primary font-medium hover:underline flex items-center gap-1 group transition-all" href="https://mykolacquaotta.lovable.app/">
@@ -274,7 +274,7 @@ export const ChiSiamo: React.FC = () => {
                 <h3 className="font-display text-3xl font-bold text-on-background">Saija Gabriele</h3>
                 <p className="text-tertiary font-headline font-semibold text-lg uppercase tracking-wider">cloud administrator &amp; security engineer</p>
                 <p className="text-on-surface-variant text-lg leading-relaxed">
-                  Costruisco le fondamenta digitali su cui far scalare il tuo business. Come DevOps e Cloud & Security Engineer, progetto infrastrutture IT inattaccabili e performanti. L'esperienza nell'insegnamento del coding ai più giovani mi ha insegnato la skill più preziosa: tradurre la complessità tecnica in soluzioni chiare e immediate. Tu pensa alla visione, a blindare i tuoi dati ci penso io.
+                  Fin dall'infanzia, la profonda curiosità tecnica mi ha spinto a smontare e studiare i sistemi per capirne il vero funzionamento. Oggi applico questa dedizione per progettare infrastrutture cloud sicure e resilienti "dalle fondamenta", senza venderti miracoli o soluzioni infallibili. Lavoro con passione su progetti concreti per tradurre le tue sfide in architetture solide, mirate ed economicamente sostenibili. Grazie anche alla mia esperienza come formatore, so che la vera fiducia nasce dalla chiarezza: il mio obiettivo è sempre colmare la distanza tra il gergo tecnico e i tuoi obiettivi di business, affinché tu capisca e abbia pieno controllo su ciò che stiamo costruendo.
                 </p>
                 <div className="flex gap-4">
                   <a className="text-primary font-medium hover:underline flex items-center gap-1 group transition-all" href="https://www.italiasaija.it">
@@ -372,10 +372,10 @@ export const ChiSiamo: React.FC = () => {
         <div className="max-w-7xl mx-auto bg-gradient-to-br from-primary-container to-surface-container-highest rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full animate-pulse-glow"></div>
           <div className="relative z-10">
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-on-background">Pronto a costruire qualcosa di significativo?</h2>
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-on-background">Cerchi professionisti onesti?</h2>
             <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto mb-10">
               <span className="font-body" style={{ backgroundColor: 'rgba(1, 18, 48, 0.6)' }}>
-                Raccontaci i tuoi obiettivi e scopriamo insieme come trasformarli in una soluzione digitale efficace. Siamo pronti a dare forma alle tue idee.
+                Nessuna pressione e zero false promesse. Scrivici cosa ti serve, ne parliamo senza filtri e valutiamo insieme se e come possiamo esserti utili.
               </span>
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
