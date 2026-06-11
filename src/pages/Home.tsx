@@ -242,6 +242,7 @@ export const Home: React.FC = () => {
             <h1 className="font-display-lg text-[48px] md:text-display-lg leading-tight tracking-tight text-on-surface dark:text-on-surface">
               Fonda la tua presenza online, <span className="text-gradient">realizza i tuoi sogni</span> in sicurezza
             </h1>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full opacity-80"></div>
             <p className="text-on-surface-variant font-body-lg text-body-lg max-w-xl">
               Ogni progetto nasce da un’idea grezza e prende forma attraverso creatività, identità visiva e soluzioni digitali costruite con precisione e carattere.
             </p>

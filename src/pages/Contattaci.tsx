@@ -96,6 +96,7 @@ export const Contattaci: React.FC = () => {
           <h1 className="font-headline-lg text-headline-lg md:font-display-lg md:text-display-lg text-gradient leading-tight">
             Hai un sogno nel cassetto per il tuo business? <br className="hidden md:block" />Raccontacelo.
           </h1>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full opacity-80 mx-auto"></div>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
             Il team di FounDreams è pronto a realizzarlo. Uniamo eccellenza tecnica e innovazione visionaria per dare forma al tuo futuro digitale.
           </p>

@@ -113,6 +113,7 @@ export const ChiSiamo: React.FC = () => {
           <div className="space-y-6">
             <span className="text-secondary font-headline font-bold tracking-widest uppercase text-sm">Chi Siamo Veramente</span>
             <h2 className="font-display text-4xl font-semibold leading-tight text-on-background">Cosa ci spinge</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full opacity-80"></div>
             <p className="text-on-surface-variant text-lg leading-relaxed">
               Il nostro nome, <em>FounDreams</em> ("fucina dei sogni"), nasce dall'idea di trasformare progetti su carta in realtà tangibili. Lo facciamo sporcandoci le mani, affrontando i problemi tecnici e trovando soluzioni che funzionano sul mercato.
             </p>
@@ -346,6 +347,7 @@ export const ChiSiamo: React.FC = () => {
           <div className="space-y-6 order-1 lg:order-2">
             <span className="text-tertiary font-headline font-bold uppercase text-sm">Academy</span>
             <h2 className="font-display text-4xl font-semibold text-on-background">Crescere attraverso la Conoscenza</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full opacity-80"></div>
             <p className="text-on-surface-variant text-lg">
               Non costruiamo solo soluzioni; vi insegniamo come padroneggiarle. I nostri programmi di consulenza e formazione sono progettati per colmare il divario di competenze digitali, assicurando che il vostro team sia attrezzato per mantenere e far crescere i vostri asset digitali con fiducia.
             </p>
@@ -372,7 +374,8 @@ export const ChiSiamo: React.FC = () => {
         <div className="max-w-7xl mx-auto bg-gradient-to-br from-primary-container to-surface-container-highest rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full animate-pulse-glow"></div>
           <div className="relative z-10">
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-on-background">Cerchi professionisti onesti?</h2>
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 text-on-background">Cerchi professionisti onesti?</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full opacity-80 mx-auto mb-6"></div>
             <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto mb-10">
               <span className="font-body" style={{ backgroundColor: 'rgba(1, 18, 48, 0.6)' }}>
                 Nessuna pressione e zero false promesse. Scrivici cosa ti serve, ne parliamo senza filtri e valutiamo insieme se e come possiamo esserti utili.
