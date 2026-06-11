@@ -277,8 +277,8 @@ export const ChiSiamo: React.FC = () => {
                   Fin dall'infanzia, la profonda curiosità mi ha spinto a smontare e studiare i sistemi per capirne il vero funzionamento. Oggi applico questa dedizione per progettare infrastrutture cloud sicure e resilienti "dalle fondamenta". Lavoro con passione su progetti concreti per tradurre le tue sfide in architetture solide, mirate ed economicamente sostenibili. Grazie anche alla mia esperienza come formatore, so che la vera fiducia nasce dalla chiarezza: il mio obiettivo è sempre colmare la distanza tra il gergo tecnico e i tuoi obiettivi di business, affinché tu capisca e abbia pieno controllo su ciò che stiamo costruendo.
                 </p>
                 <div className="flex gap-4">
-                  <a className="text-primary font-medium hover:underline flex items-center gap-1 group transition-all" href="https://www.italiasaija.it">
-                    Visualizza portfolio 
+                  <a className="text-primary font-medium hover:underline flex items-center gap-1 group transition-all" href="mailto:gabriele.saija.2003@gmail.com">
+                    Contattami 
                     <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
                   </a>
                 </div>
