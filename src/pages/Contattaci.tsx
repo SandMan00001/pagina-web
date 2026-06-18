@@ -113,7 +113,7 @@ export const Contattaci: React.FC = () => {
               <span className="font-label-md text-label-md uppercase tracking-widest">profili social</span>
             </div>
             <div className="font-body-md text-on-surface flex items-center gap-2">
-              @foundreams
+              @foundreams__
             </div>
           </div>
           <div className="glass-card p-md rounded-xl transition-transform duration-200">
@@ -122,7 +122,7 @@ export const Contattaci: React.FC = () => {
               <span className="font-label-md text-label-md uppercase tracking-widest">Contatti Diretti</span>
             </div>
             <div className="font-body-md text-on-surface space-y-xs">
-              <div>info@foundreams.tech</div>
+              <div>amministrazione@foundreams.it</div>
               <div className="pt-xs">
                 <div>+39 366 319 2578</div>
                 <div>+39 380 379 1477</div>
