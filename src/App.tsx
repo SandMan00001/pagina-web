@@ -15,6 +15,29 @@ const ScrollToTop: React.FC = () => {
       left: 0,
       behavior: 'instant'
     });
+
+    const protectIcons = () => {
+      document.querySelectorAll('.material-symbols-outlined, .material-icons').forEach(el => {
+        if (!el.classList.contains('notranslate')) {
+          el.classList.add('notranslate');
+        }
+        if (el.getAttribute('translate') !== 'no') {
+          el.setAttribute('translate', 'no');
+        }
+      });
+    };
+
+    protectIcons();
+
+    // Esegui a intervalli per catturare elementi renderizzati in ritardo o lazy
+    const timers = [
+      setTimeout(protectIcons, 50),
+      setTimeout(protectIcons, 150),
+      setTimeout(protectIcons, 300),
+      setTimeout(protectIcons, 600)
+    ];
+
+    return () => timers.forEach(clearTimeout);
   }, [pathname]);
   return null;
 };

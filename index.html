@@ -82,28 +82,6 @@
   <meta name="twitter:image" content="https://foundreams.it/favicon.png" />
 
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-  
-  <!-- Prevenzione traduzione icone per Google Translate -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const protectIcons = () => {
-        document.querySelectorAll('.material-symbols-outlined, .material-icons').forEach(el => {
-          if (!el.classList.contains('notranslate')) {
-            el.classList.add('notranslate');
-          }
-          if (el.getAttribute('translate') !== 'no') {
-            el.setAttribute('translate', 'no');
-          }
-        });
-      };
-      protectIcons();
-      const observer = new MutationObserver(protectIcons);
-      observer.observe(document.documentElement, {
-        childList: true,
-        subtree: true
-      });
-    });
-  </script>
 </head>
 
 <body class="font-body-md text-body-md bg-background text-on-background">
