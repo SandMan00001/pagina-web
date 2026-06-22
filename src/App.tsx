@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { MainLayout } from './layouts/MainLayout';
 
 const Home = React.lazy(() => import('./pages/Home').then(m => ({ default: m.Home })));
@@ -7,9 +7,22 @@ const ChiSiamo = React.lazy(() => import('./pages/ChiSiamo').then(m => ({ defaul
 const Servizi = React.lazy(() => import('./pages/Servizi').then(m => ({ default: m.Servizi })));
 const Contattaci = React.lazy(() => import('./pages/Contattaci').then(m => ({ default: m.Contattaci })));
 
+const ScrollToTop: React.FC = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+  }, [pathname]);
+  return null;
+};
+
 const App: React.FC = () => {
   return (
     <Router basename="/">
+      <ScrollToTop />
       <React.Suspense fallback={
         <div className="min-h-screen bg-background flex flex-col items-center justify-center gap-md">
           <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
