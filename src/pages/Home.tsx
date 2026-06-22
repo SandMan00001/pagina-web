@@ -6,6 +6,28 @@ export const Home: React.FC = () => {
   useSEO({
     title: "FounDreams - Realizzazione Siti Web e Sicurezza Informatica",
     description: "FounDreams realizza siti web professionali ad alte prestazioni, gestisce pagine social con strategie data-driven e offre consulenza IT in ambito DevOps, cloud e cybersecurity.",
+    keywords: [
+      "sogno",
+      "fucina di sogni",
+      "fucina dei sogni",
+      "foundreams",
+      "sogni digitali",
+      "realizzazione siti web",
+      "sicurezza informatica",
+      "creazione siti internet",
+      "sviluppo siti web milano",
+      "cybersecurity consulenza",
+      "gestione social media",
+      "social media manager",
+      "consulenza devops",
+      "cloud solutions",
+      "siti web professionali",
+      "creazione siti web",
+      "sogni che diventano realtà",
+      "trasformazione digitale",
+      "cyber security italia",
+      "sviluppo software"
+    ],
     structuredData: [
       {
         "@context": "https://schema.org",
@@ -229,7 +251,7 @@ export const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-clip">
       {/* Hero Section */}
       <header className="relative min-h-[calc(100vh-72px)] flex items-center pt-xl overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -278,7 +300,7 @@ export const Home: React.FC = () => {
             <span className="text-primary font-label-md text-label-md tracking-widest uppercase">La Nostra Visione</span>
             <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface">L'incontro tra Creatività e Sicurezza</h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              <strong>FounDreams</strong> nasce dall'intesa di due giovani programmatori e marketer con un obiettivo comune: trasformare le idee in realtà sicure. Uniamo il lato visivo del design alla precisione della <strong>sicurezza informatica</strong>, perché ogni sogno digitale ha bisogno di una struttura solida per svilupparsi senza confini. Innoviamo ogni giorno per proteggere ciò che ami di più.
+              <strong>FounDreams</strong> nasce dall'intesa di due giovani un programmatore e un marketer con un obiettivo comune: trasformare le idee in realtà sicure. Uniamo il lato visivo del design alla precisione della <strong>sicurezza informatica</strong>, perché ogni sogno digitale ha bisogno di una struttura solida per svilupparsi senza confini. Innoviamo ogni giorno per proteggere ciò che ami di più.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-md pt-lg">
               <div className="p-md text-center">

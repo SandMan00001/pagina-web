@@ -9,6 +9,15 @@ export const Contattaci: React.FC = () => {
   useSEO({
     title: "Contattaci - FounDreams | Richiedi un Preventivo Gratuito",
     description: "Contatta il team di FounDreams per lo sviluppo del tuo nuovo sito web, la gestione dei canali social o consulenze IT. Preventivi rapidi e gratuiti.",
+    keywords: [
+      "contatti foundreams",
+      "preventivo sito web gratis",
+      "consulenza gratuita informatica",
+      "richiedi informazioni",
+      "fucina di sogni contatti",
+      "realizza il tuo sogno digitale",
+      "supporto tecnico foundreams"
+    ],
     structuredData: {
       "@context": "https://schema.org",
       "@type": "ContactPage",
@@ -89,7 +98,7 @@ export const Contattaci: React.FC = () => {
   };
 
   return (
-    <main className="pt-xl md:pt-32 pb-xl overflow-x-hidden">
+    <main className="pt-xl md:pt-32 pb-xl overflow-x-clip">
       {/* Hero Section */}
       <section className="px-margin-mobile md:px-margin-desktop mb-xl">
         <div className="max-w-4xl mx-auto text-center space-y-md">

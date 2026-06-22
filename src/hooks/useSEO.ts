@@ -3,11 +3,12 @@ import { useEffect } from 'react';
 interface SEOProps {
   title: string;
   description: string;
+  keywords?: string | string[];
   canonicalUrl?: string;
   structuredData?: Record<string, any> | Record<string, any>[];
 }
 
-export const useSEO = ({ title, description, canonicalUrl, structuredData }: SEOProps) => {
+export const useSEO = ({ title, description, keywords, canonicalUrl, structuredData }: SEOProps) => {
   useEffect(() => {
     // 1. Update Document Title
     document.title = title;
@@ -20,6 +21,18 @@ export const useSEO = ({ title, description, canonicalUrl, structuredData }: SEO
       document.head.appendChild(metaDesc);
     }
     metaDesc.setAttribute('content', description);
+
+    // 2b. Update Meta Keywords
+    if (keywords) {
+      let metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (!metaKeywords) {
+        metaKeywords = document.createElement('meta');
+        metaKeywords.setAttribute('name', 'keywords');
+        document.head.appendChild(metaKeywords);
+      }
+      const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+      metaKeywords.setAttribute('content', keywordsString);
+    }
 
     // 3. Update Canonical Link
     let linkCanonical = document.querySelector('link[rel="canonical"]');
@@ -52,5 +65,5 @@ export const useSEO = ({ title, description, canonicalUrl, structuredData }: SEO
       const scripts = document.querySelectorAll('script[data-seo-jsonld]');
       scripts.forEach(el => el.remove());
     };
-  }, [title, description, canonicalUrl, JSON.stringify(structuredData)]);
+  }, [title, description, JSON.stringify(keywords), canonicalUrl, JSON.stringify(structuredData)]);
 };

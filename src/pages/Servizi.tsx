@@ -6,6 +6,19 @@ export const Servizi: React.FC = () => {
   useSEO({
     title: "Servizi - FounDreams | Siti Web, Social Media & Cybersecurity",
     description: "Sviluppiamo soluzioni web innovative, gestiamo la tua comunicazione social con strategie avanzate e proteggiamo il tuo business con servizi DevOps e di cybersecurity dedicati.",
+    keywords: [
+      "servizi foundreams",
+      "realizzazione siti e-commerce",
+      "consulenza informatica",
+      "sviluppo applicativi web",
+      "penetration testing",
+      "vulnerability assessment",
+      "gestione instagram facebook",
+      "social media marketing",
+      "sogni aziendali",
+      "progetti digitali",
+      "automazione dei processi rpa"
+    ],
     structuredData: {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -199,7 +212,7 @@ export const Servizi: React.FC = () => {
   }, []);
 
   return (
-    <main className="relative pt-[48px] overflow-x-hidden">
+    <main className="relative pt-[48px] overflow-x-clip">
       {/* Hero Header */}
       <section className="px-margin-mobile md:px-margin-desktop mb-xl text-center max-w-4xl mx-auto relative scroll-reveal transition-all duration-700">
         <div className="hero-glow top-0 left-1/2 -translate-x-1/2"></div>

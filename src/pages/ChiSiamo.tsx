@@ -6,6 +6,19 @@ export const ChiSiamo: React.FC = () => {
   useSEO({
     title: "Chi Siamo - FounDreams | Team di Esperti in Sviluppo e Security",
     description: "Scopri la storia, i valori e la missione di FounDreams, lo studio boutique di sviluppo software e cybersecurity guidato da esperti programmatori.",
+    keywords: [
+      "team foundreams",
+      "chi siamo foundreams",
+      "sogni e tecnologia",
+      "visione digitale",
+      "fucina di talenti",
+      "esperti programmazione",
+      "sviluppatori web milano",
+      "esperti cybersecurity",
+      "storia di foundreams",
+      "valori aziendali",
+      "ingegneria del software"
+    ],
     structuredData: {
       "@context": "https://schema.org",
       "@type": "AboutPage",
@@ -77,7 +90,7 @@ export const ChiSiamo: React.FC = () => {
   };
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-clip">
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden px-margin-mobile md:px-margin-desktop">
         <div className="absolute inset-0 z-0">

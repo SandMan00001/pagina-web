@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
+import { LanguageSelector } from '../components/LanguageSelector';
 
 export const MainLayout: React.FC = () => {
   const location = useLocation();
@@ -28,6 +29,7 @@ export const MainLayout: React.FC = () => {
           <Link className={getLinkClass('/chi-siamo')} to="/chi-siamo">Chi Siamo</Link>
           <Link className={getLinkClass('/servizi')} to="/servizi">Servizi</Link>
           <Link className={getLinkClass('/contattaci')} to="/contattaci">Contattaci</Link>
+          <LanguageSelector />
           <Link to="/contattaci" style={{ textDecoration: 'none' }}>
             <button className="bg-primary text-on-primary px-md py-sm rounded-full font-label-md text-label-md scale-95 active:scale-90 transition-transform hover:opacity-90">
               Inizia Progetto
@@ -50,6 +52,9 @@ export const MainLayout: React.FC = () => {
             <Link className={getLinkClass('/chi-siamo')} to="/chi-siamo" onClick={() => setMobileMenuOpen(false)}>Chi Siamo</Link>
             <Link className={getLinkClass('/servizi')} to="/servizi" onClick={() => setMobileMenuOpen(false)}>Servizi</Link>
             <Link className={getLinkClass('/contattaci')} to="/contattaci" onClick={() => setMobileMenuOpen(false)}>Contattaci</Link>
+            <div className="flex justify-start py-1">
+              <LanguageSelector />
+            </div>
             <Link to="/contattaci" style={{ textDecoration: 'none' }} onClick={() => setMobileMenuOpen(false)}>
               <button className="bg-primary text-on-primary px-md py-sm rounded-full font-label-md text-label-md w-full">
                 Inizia Progetto
