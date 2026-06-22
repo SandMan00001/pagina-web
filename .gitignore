@@ -25,5 +25,3 @@ dist-ssr
 
 SPIEGAZIONE/*
 *.md
-vite.config.ts
-package-lock.json
