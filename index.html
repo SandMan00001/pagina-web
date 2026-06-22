@@ -59,8 +59,51 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FounDreams - Visione Digitale</title>
+  <title>FounDreams - Realizzazione Siti Web, Social Media &amp; Sicurezza Informatica</title>
+  
+  <!-- Fallback SEO per Motori di Ricerca (DuckDuckGo, Bing, Yahoo, Google) -->
+  <meta name="description" content="FounDreams realizza siti web professionali ad alte prestazioni, gestisce pagine social con strategie data-driven e offre consulenza IT in ambito DevOps, cloud e cybersecurity." />
+  <meta name="keywords" content="sogno, fucina di sogni, fucina dei sogni, foundreams, sogni digitali, realizzazione siti web, sicurezza informatica, creazione siti internet, sviluppo siti web milano, cybersecurity consulenza, gestione social media, social media manager, consulenza devops, cloud solutions, siti web professionali, creazione siti web, sogni che diventano realtà, trasformazione digitale, cyber security italia, sviluppo software" />
+  <meta name="author" content="FounDreams" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- OpenGraph (Per Bing, DuckDuckGo, Facebook, LinkedIn, WhatsApp, Telegram) -->
+  <meta property="og:title" content="FounDreams - Realizzazione Siti Web, Social Media &amp; Sicurezza Informatica" />
+  <meta property="og:description" content="FounDreams realizza siti web professionali ad alte prestazioni, gestisce pagine social con strategie data-driven e offre consulenza IT in ambito DevOps, cloud e cybersecurity." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://foundreams.it/" />
+  <meta property="og:image" content="https://foundreams.it/favicon.png" />
+  <meta property="og:site_name" content="FounDreams" />
+
+  <!-- Twitter Cards (Per X/Twitter, Slack, Discord) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FounDreams - Realizzazione Siti Web, Social Media &amp; Sicurezza Informatica" />
+  <meta name="twitter:description" content="FounDreams realizza siti web professionali ad alte prestazioni, gestisce pagine social con strategie data-driven e offre consulenza IT in ambito DevOps, cloud e cybersecurity." />
+  <meta name="twitter:image" content="https://foundreams.it/favicon.png" />
+
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  
+  <!-- Prevenzione traduzione icone per Google Translate -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const protectIcons = () => {
+        document.querySelectorAll('.material-symbols-outlined, .material-icons').forEach(el => {
+          if (!el.classList.contains('notranslate')) {
+            el.classList.add('notranslate');
+          }
+          if (el.getAttribute('translate') !== 'no') {
+            el.setAttribute('translate', 'no');
+          }
+        });
+      };
+      protectIcons();
+      const observer = new MutationObserver(protectIcons);
+      observer.observe(document.documentElement, {
+        childList: true,
+        subtree: true
+      });
+    });
+  </script>
 </head>
 
 <body class="font-body-md text-body-md bg-background text-on-background">

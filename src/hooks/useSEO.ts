@@ -4,11 +4,12 @@ interface SEOProps {
   title: string;
   description: string;
   keywords?: string | string[];
+  image?: string;
   canonicalUrl?: string;
   structuredData?: Record<string, any> | Record<string, any>[];
 }
 
-export const useSEO = ({ title, description, keywords, canonicalUrl, structuredData }: SEOProps) => {
+export const useSEO = ({ title, description, keywords, image, canonicalUrl, structuredData }: SEOProps) => {
   useEffect(() => {
     // 1. Update Document Title
     document.title = title;
@@ -33,6 +34,42 @@ export const useSEO = ({ title, description, keywords, canonicalUrl, structuredD
       const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
       metaKeywords.setAttribute('content', keywordsString);
     }
+
+    // 2c. Update OpenGraph Tags
+    const updateOGMeta = (property: string, content: string) => {
+      let meta = document.querySelector(`meta[property="${property}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    const currentUrl = canonicalUrl || window.location.origin + window.location.pathname;
+    const ogImage = image || 'https://foundreams.it/favicon.png';
+
+    updateOGMeta('og:title', title);
+    updateOGMeta('og:description', description);
+    updateOGMeta('og:url', currentUrl);
+    updateOGMeta('og:image', ogImage);
+    updateOGMeta('og:type', 'website');
+
+    // 2d. Update Twitter Card Tags
+    const updateTwitterMeta = (name: string, content: string) => {
+      let meta = document.querySelector(`meta[name="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    updateTwitterMeta('twitter:card', 'summary_large_image');
+    updateTwitterMeta('twitter:title', title);
+    updateTwitterMeta('twitter:description', description);
+    updateTwitterMeta('twitter:image', ogImage);
 
     // 3. Update Canonical Link
     let linkCanonical = document.querySelector('link[rel="canonical"]');
@@ -65,5 +102,5 @@ export const useSEO = ({ title, description, keywords, canonicalUrl, structuredD
       const scripts = document.querySelectorAll('script[data-seo-jsonld]');
       scripts.forEach(el => el.remove());
     };
-  }, [title, description, JSON.stringify(keywords), canonicalUrl, JSON.stringify(structuredData)]);
+  }, [title, description, JSON.stringify(keywords), image, canonicalUrl, JSON.stringify(structuredData)]);
 };

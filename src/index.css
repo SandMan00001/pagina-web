@@ -166,8 +166,8 @@
   --color-on-tertiary-fixed-variant: #5700c9;
 
   /* Typography */
-  --font-family-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-family-body: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-display: "Outfit", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-body: "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   /* Shapes (Rounded) */
   --rounded-sm: 0.25rem;
@@ -330,6 +330,7 @@ p {
   -webkit-text-fill-color: transparent;
 }
 .material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
@@ -446,4 +447,46 @@ body {
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+/* --- PREVENZIONE OVERRIDE FONT E STILI GOOGLE TRANSLATE --- */
+/* Forza i tag <font> iniettati da Google Translate a ereditare font, stili, dimensioni e colori dei relativi padri */
+font,
+.google-src-text,
+.translated-ltr,
+.translated-rtl {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  text-transform: inherit !important;
+  color: inherit !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Protegge i font per il corpo del testo generico */
+body, 
+p, 
+span, 
+a, 
+li, 
+button, 
+input, 
+textarea, 
+label,
+span *,
+p *,
+a *,
+li * {
+  font-family: var(--font-family-body) !important;
+}
+
+/* Protegge i font per i titoli e gli elementi di visualizzazione premium */
+h1, h2, h3, h4, h5, h6,
+.display-lg, .headline-lg, .headline-md,
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
+.display-lg *, .headline-lg *, .headline-md * {
+  font-family: var(--font-family-display) !important;
 }
