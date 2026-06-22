@@ -207,8 +207,6 @@ export const LanguageSelector: React.FC = () => {
 
   return (
     <div className="relative notranslate" ref={dropdownRef}>
-      {/* Hidden container required by Google Translate */}
-      <div id="google_translate_element" style={{ display: 'none' }}></div>
 
       {/* Dropdown Toggle Button */}
       <button

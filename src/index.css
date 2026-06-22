@@ -410,6 +410,14 @@ input:focus, textarea:focus {
 .goog-te-menu-value {
   display: none !important;
 }
+
+/* Nasconde i popup di traduzione al passaggio del mouse */
+.goog-tooltip, .goog-tooltip:hover, .goog-text-highlight {
+  display: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border: none !important;
+}
 body {
   top: 0px !important;
   position: static !important;
