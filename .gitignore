@@ -24,5 +24,6 @@ dist-ssr
 *.sw?
 
 SPIEGAZIONE/*
+*.md
 vite.config.ts
 package-lock.json
