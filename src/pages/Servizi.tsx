@@ -447,7 +447,7 @@ export const Servizi: React.FC = () => {
         <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface mb-base">Pronto a fare sul serio?</h2>
         <p className="font-body-md text-body-md text-on-surface-variant mb-lg max-w-2xl mx-auto">Siamo qui per darti soluzioni concrete, non parole vuote. Parliamone insieme.</p>
         <div className="flex flex-col sm:flex-row gap-md justify-center">
-          <a href="https://calendly.com/gabriele-saija-2003/30min" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+          <a href="https://calendly.com/foundreams/30min" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
             <button className="cta-gradient px-xl py-md rounded-full font-label-md text-label-md text-on-primary">
               Prenota una Consulenza Gratuita
             </button>
