@@ -458,11 +458,13 @@ body {
 }
 
 /* --- PREVENZIONE OVERRIDE FONT E STILI GOOGLE TRANSLATE --- */
-/* Forza i tag <font> iniettati da Google Translate a ereditare font, stili, dimensioni e colori dei relativi padri */
+/* Forza i tag <font> iniettati da Google Translate a ereditare font, stili, dimensioni e colori dei relativi padri.
+   Escludiamo .translated-ltr e .translated-rtl da questa regola per non resettare e compromettere le proprietà
+   del tag root <html> (come il font-size rem e il background-color) su dispositivi mobili. */
 font,
+font *,
 .google-src-text,
-.translated-ltr,
-.translated-rtl {
+.google-src-text * {
   font-family: inherit !important;
   font-size: inherit !important;
   font-weight: inherit !important;
@@ -497,4 +499,38 @@ h1, h2, h3, h4, h5, h6,
 h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
 .display-lg *, .headline-lg *, .headline-md * {
   font-family: var(--font-family-display) !important;
+}
+
+/* --- PROTEZIONE TIPOGRAFICA SPECIFICA PER LE CARD E I POPUP DI DETTAGLIO --- */
+/* Garantisce la stabilità del design system nelle card (.glass-card, .package-card) e nei modali (.modal-content.glass) in qualsiasi lingua */
+
+/* 1. Titoli delle card: blocco rigido sul font display (Outfit) */
+.glass-card h1, .glass-card h2, .glass-card h3, .glass-card h4, .glass-card h5, .glass-card h6,
+.package-card h1, .package-card h2, .package-card h3, .package-card h4, .package-card h5, .package-card h6,
+.glass-card .headline-md, .package-card .headline-md,
+.glass-card .headline-lg, .package-card .headline-lg,
+.modal-content.glass h1, .modal-content.glass h2, .modal-content.glass h3, .modal-content.glass h4 {
+  font-family: var(--font-family-display) !important;
+}
+
+/* 2. Testi, descrizioni, elenchi e bottoni: blocco rigido sul font body (Inter) */
+.glass-card p, .package-card p, .modal-content.glass p,
+.glass-card li, .package-card li, .modal-content.glass li,
+.glass-card button, .package-card button, .modal-content.glass button,
+.glass-card a, .package-card a, .modal-content.glass a,
+.glass-card span:not(.material-symbols-outlined):not(.material-icons),
+.package-card span:not(.material-symbols-outlined):not(.material-icons),
+.modal-content.glass span:not(.material-symbols-outlined):not(.material-icons),
+.glass-card div, .package-card div, .modal-content.glass div {
+  font-family: var(--font-family-body) !important;
+}
+
+/* 3. Icone: conservazione prioritaria del font 'Material Symbols Outlined' per impedire che vengano tradotte in testo standard */
+.glass-card .material-symbols-outlined,
+.package-card .material-symbols-outlined,
+.modal-content.glass .material-symbols-outlined,
+.glass-card .material-icons,
+.package-card .material-icons,
+.modal-content.glass .material-icons {
+  font-family: 'Material Symbols Outlined' !important;
 }
