@@ -8,11 +8,11 @@ export const Contattaci: React.FC = () => {
 
   useSEO({
     title: "Contattaci - FounDreams | Richiedi un Preventivo Gratuito",
-    description: "Contatta il team di FounDreams per lo sviluppo del tuo nuovo sito web, la gestione dei canali social o consulenze IT. Preventivi rapidi e gratuiti.",
+    description: "Contatta il team di FounDreams per lo sviluppo del tuo nuovo sito web, la gestione dei canali social o consulenze strategiche. Preventivi rapidi e gratuiti.",
     keywords: [
       "contatti foundreams",
       "preventivo sito web gratis",
-      "consulenza gratuita informatica",
+      "consulenza strategica aziendale",
       "richiedi informazioni",
       "fucina di sogni contatti",
       "realizza il tuo sogno digitale",
@@ -141,7 +141,7 @@ export const Contattaci: React.FC = () => {
           {/* Abstract Decorative Card */}
           <div className="relative overflow-hidden rounded-xl h-48 group">
             <img 
-              alt="Cybersecurity interface" 
+              alt="Project Management interface" 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ-ycS70scNdm_ywugDKTgfO28kXhcadcDbzUgA6omaPftXpM_YK3CDaDic5-RtDATsykSWPxEn0oRqw5e2Ee0urs6KltkXSC6aNL_3amZD1iT9yQ4D8uDNWZ0gn2YbwhK1pFDU0qfGhwKjdhw7TVky4Nc-8T2-oYohrAxwuRAod0wvQpqq7CChb3RPdOAKw_v7GeYaWLCahlJDZ61SGgk8R2PgVr7oRx4U58wKcEkiqOyaskvD8Pw-UUe_Zo-gRQ_eXmq4fFhikPZ" 
             />
@@ -228,12 +228,12 @@ export const Contattaci: React.FC = () => {
       <section className="px-margin-mobile md:px-margin-desktop py-xl text-center">
         <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mb-lg opacity-60">Alcune Tecnologie che utilizziamo</p>
         <div className="flex flex-wrap justify-center gap-xl opacity-30 grayscale hover:grayscale-0 transition-all duration-500">
-          <span className="font-headline-md">Azure</span>
-          <span className="font-headline-md">Python</span>
-          <span className="font-headline-md">AWS</span>
-          <span className="font-headline-md">Typescript</span>
-          <span className="font-headline-md">Kubernetes</span>
-          <span className="font-headline-md">Proxmox</span>
+          <span className="font-headline-md">Notion</span>
+          <span className="font-headline-md">Asana</span>
+          <span className="font-headline-md">Miro</span>
+          <span className="font-headline-md">Trello</span>
+          <span className="font-headline-md">React</span>
+          <span className="font-headline-md">Next.js</span>
         </div>
         <div className="flex flex-wrap justify-center gap-xl opacity-30 grayscale hover:grayscale-0 transition-all duration-500 mt-lg">
           <span className="font-headline-md text-on-surface-variant">WordPress</span>

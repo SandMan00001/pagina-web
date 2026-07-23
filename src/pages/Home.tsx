@@ -4,8 +4,8 @@ import { useSEO } from '../hooks/useSEO';
 
 export const Home: React.FC = () => {
   useSEO({
-    title: "FounDreams - Realizzazione Siti Web e Sicurezza Informatica",
-    description: "FounDreams realizza siti web professionali ad alte prestazioni, gestisce pagine social con strategie data-driven e offre consulenza IT in ambito DevOps, cloud e cybersecurity.",
+    title: "FounDreams - Realizzazione Siti Web e Project Management",
+    description: "FounDreams realizza siti web professionali ad alte prestazioni, gestisce pagine social con strategie data-driven e offre consulenza strategica in ambito project management e business planning.",
     keywords: [
       "sogno",
       "fucina di sogni",
@@ -13,20 +13,20 @@ export const Home: React.FC = () => {
       "foundreams",
       "sogni digitali",
       "realizzazione siti web",
-      "sicurezza informatica",
+      "business planning",
       "creazione siti internet",
       "sviluppo siti web milano",
-      "cybersecurity consulenza",
+      "project management",
       "gestione social media",
       "social media manager",
-      "consulenza devops",
-      "cloud solutions",
+      "consulenza strategica",
+      "creatività digitale",
       "siti web professionali",
       "creazione siti web",
       "sogni che diventano realtà",
       "trasformazione digitale",
-      "cyber security italia",
-      "sviluppo software"
+      "business structuring",
+      "diagrammi di gantt"
     ],
     structuredData: [
       {
@@ -37,7 +37,7 @@ export const Home: React.FC = () => {
         "url": "https://foundreams.it/",
         "logo": "https://foundreams.it/favicon.svg",
         "image": "https://foundreams.it/favicon.svg",
-        "description": "Studio boutique di sviluppo web, social media strategy e cybersecurity per proteggere e far scalare il tuo business.",
+        "description": "Studio boutique di sviluppo web, social media strategy e project management per strutturare e far scalare il tuo business.",
         "address": {
           "@type": "PostalAddress",
           "addressCountry": "IT",
@@ -72,23 +72,23 @@ export const Home: React.FC = () => {
             "name": "Qual è la differenza tra i vari pacchetti di FounDreams?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Offriamo tre soluzioni su misura: lo Startup Bundle per chi inizia e desidera una landing page con canali social base; il pacchetto Business Evolution per chi intende crescere con un sito completo ed e-commerce; e il pacchetto Enterprise Safe per massime performance con cloud dedicato e sicurezza avanzata."
+              "text": "Offriamo tre soluzioni su misura: lo Startup Bundle per chi inizia e desidera una landing page con canali social base; il pacchetto Business Evolution per chi intende crescere con un sito completo ed e-commerce; e il pacchetto Enterprise Safe per massime performance con organizzazione avanzata e pianificazione strategica omnicanale."
             }
           },
           {
             "@type": "Question",
-            "name": "Come garantite la sicurezza dei siti web che realizzate?",
+            "name": "Come strutturate i progetti che realizzate?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ogni nostro progetto integra di default certificati SSL per connessioni sicure HTTPS. Nelle soluzioni avanzate implementiamo Web Application Firewall (WAF) per prevenire minacce esterne e conduciamo attività periodiche di monitoraggio e pentesting."
+              "text": "Utilizziamo le migliori piattaforme CMS moderne e sicure, ottimizzando l'architettura per garantire velocità, scalabilità e affidabilità. Ci assicuriamo che ogni sito web e-commerce o vetrina sia costruito con logiche solide e best practice di sviluppo, senza gravarti con tecnicismi complessi."
             }
           },
           {
             "@type": "Question",
-            "name": "Che cos'è l'approccio DevOps e come aiuta la mia infrastruttura aziendale?",
+            "name": "Come mi aiutate a strutturare il mio progetto aziendale?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "L'approccio DevOps unisce lo sviluppo software e la gestione dell'infrastruttura IT. Attraverso l'automazione dei processi e l'uso del cloud (AWS/Azure) riduciamo a zero i disservizi, velocizziamo il rilascio di nuove funzionalità e ottimizziamo i costi operativi."
+              "text": "Ti aiutiamo a strutturare il progetto partendo dalle fondamenta: attraverso l'applicazione di solide metodologie di project management, la creazione di diagrammi di Gantt e una consulenza strategica dedicata. Pianifichiamo con te risorse, tempistiche e flussi di lavoro, affinché ogni obiettivo venga raggiunto rispettando le scadenze."
             }
           },
           {
@@ -136,13 +136,13 @@ export const Home: React.FC = () => {
       cardFeatures: [
         "Sito Web On-page",
         "Configurazione Social",
-        "Certificato SSL & Security"
+        "Branding Kit Base"
       ],
       modalFeatures: [
         "Gestione social base: gestione instagram e facebook",
-        "Infrastuttura & IT Governance: server & dominio",
+        "Infrastruttura base: spazio web & dominio",
         "Sviluppo web & SEO: creazione landing page e indicizzazione SEO base",
-        "Cybersecurity base: utilizzo certificati SSL(HTTPS) + Resilienza dati"
+        "Pianificazione Iniziale: definizione struttura e obiettivi"
       ]
     },
     "Business Evolution": {
@@ -154,13 +154,13 @@ export const Home: React.FC = () => {
       cardFeatures: [
         "Sito E-commerce Pro",
         "Gestione Social Mensile",
-        "Pentesting Semestrale"
+        "Setup Project Management (Gantt)"
       ],
       modalFeatures: [
         "Gestione social intermedia (+1): gestione instagram e facebook (+ un social a scelta) e maggiore frequenza nella pubblicazione ",
-        "Consulenza informatica: 1 ora al mese per analizzare andamento sito e social e pianificazione business evolutivi",
+        "Consulenza strategica: 1 ora al mese per analizzare andamento sito e social e pianificazione business evolutivi",
         "Sviluppo web & SEO: sito web completo fino a 5 pagine + SEO avanzata",
-        "Cybersecurity avanzata: implementazione WAF"
+        "Organizzazione aziendale: Setup Project Management e diagrammi di Gantt"
       ],
       tag: "Più Popolare"
     },
@@ -168,19 +168,19 @@ export const Home: React.FC = () => {
       icon: "shield_with_heart",
       iconColor: "text-secondary",
       bgColor: "bg-secondary/10",
-      description: "Massima sicurezza e personalizzazione.",
+      description: "Massima affidabilità e personalizzazione.",
       color: "secondary",
       cardFeatures: [
-        "Infrastruttura Cloud Dedicata",
-        "Monitoraggio SOC 24/7",
+        "Sito Web Completo",
+        "Business Planning Strategico Omnicanale",
         "Strategia Multicanale"
       ],
       modalFeatures: [
         "Gestione social ominichanel: compertura su tutti i canali social e strategie marketing avanzate",
         "Sviluppo web avanzato: sviluppo e progettazione siti web complessi su misura (e-commerce/web app)",
         "SEO Full-Continuty: scrittura costante di articoli e posizionamento organico a lungo termine",
-        "Consulenza strategica IT: consulenza strategica per innovazione e trasformazione digitale(cloud & on-premise)",
-        "Formazione specialistica IT: consulenza tecnica specialistica e formazione per il personale interno (IT & Marketing)"
+        "Consulenza strategica: consulenza strategica per innovazione e trasformazione digitale",
+        "Formazione specialistica: consulenza strategica e formazione per il personale interno"
       ]
     }
   };
@@ -262,7 +262,7 @@ export const Home: React.FC = () => {
         <div className="relative z-10 container mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
           <div className="space-y-md">
             <h1 className="font-display-lg text-[48px] md:text-display-lg leading-tight tracking-tight text-on-surface dark:text-on-surface">
-              Fonda la tua presenza online, <span className="text-gradient">realizza i tuoi sogni</span> in sicurezza
+              Fonda la tua presenza online, <span className="text-gradient">progetta e realizza i tuoi sogni</span> digitali
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full opacity-80"></div>
             <p className="text-on-surface-variant font-body-lg text-body-lg max-w-xl">
@@ -284,7 +284,7 @@ export const Home: React.FC = () => {
           <div className="relative hidden lg:block">
             <div className="glass rounded-3xl p-base overflow-hidden aspect-square flex items-center justify-center">
               <img 
-                alt="Cybersecurity and Innovation" 
+                alt="Digital Marketing & Project Management" 
                 className="w-full h-full object-cover rounded-2xl opacity-80" 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfEB-bT-6tKI-icy7rHwYY0Gs26EAqvRwKZFRP1hDmIkeVWOn6KQXkW1JvXwrhSFh88sdeWAfIAD_5E9VV_MhXwgPPE1VoPqvLy9oBn2k-8whHB2rK48xWRJYuBMbuxd_cX8c8zamUulxcE_tsjDQpUbTaChNaY-jFaDbrTgXdxfBv1vfXowWGbI4WmXFeQhIE4YL5JGgsUvwSuDL3GnU3kAYw2xnyVNhz-VaKP_SJ66Bq3Ux6kEfsZ733ebOtxOha0iN1S0YUojoD" 
               />
@@ -298,9 +298,9 @@ export const Home: React.FC = () => {
         <div className="container mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="max-w-4xl mx-auto text-center space-y-md">
             <span className="text-primary font-label-md text-label-md tracking-widest uppercase">La Nostra Visione</span>
-            <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface">L'incontro tra Creatività e Sicurezza</h2>
+            <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface">L'incontro tra Creatività e Organizzazione</h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              <strong>FounDreams</strong> nasce dall'intesa di due giovani un programmatore e un marketer con un obiettivo comune: trasformare le idee in realtà sicure. Uniamo il lato visivo del design alla precisione della <strong>sicurezza informatica</strong>, perché ogni sogno digitale ha bisogno di una struttura solida per svilupparsi senza confini. Innoviamo ogni giorno per proteggere ciò che ami di più.
+              <strong>FounDreams</strong> nasce dall'intesa di due giovani un programmatore e un marketer con un obiettivo comune: trasformare le idee in realtà concrete. Uniamo il lato visivo e creativo alla precisione della <strong>pianificazione e del project management</strong> per far crescere il tuo business. Innoviamo ogni giorno per strutturare progetti vincenti e guidarti verso il successo.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-md pt-lg">
               <div className="p-md text-center">
@@ -332,7 +332,7 @@ export const Home: React.FC = () => {
             <div className="order-2 lg:order-1 space-y-md">
               <span className="material-symbols-outlined text-primary text-[40px]">language</span>
               <h3 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface">Siti Web ad Alte Prestazioni</h3>
-              <p className="text-on-surface-variant">Realizziamo piattaforme web che non sono solo belle, ma veloci e ottimizzate. Ogni linea di codice è scritta pensando alla scalabilità e all'esperienza utente finale.</p>
+              <p className="text-on-surface-variant">Realizziamo vetrine digitali veloci e ottimizzate. Spingiamo al massimo su UI/UX Design e creatività, offrendo soluzioni e-commerce performanti e su misura per far decollare la tua presenza online.</p>
               <Link to="/servizi#siti-web" style={{ textDecoration: 'none' }}>
                 <button className="flex items-center gap-xs text-primary font-label-md text-label-md hover:underline transition-all">
                   Più informazioni <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
@@ -375,8 +375,8 @@ export const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
             <div className="order-2 lg:order-1 space-y-md">
               <span className="material-symbols-outlined text-secondary text-[40px]">security</span>
-              <h3 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface">Consulenza &amp; Protezione</h3>
-              <p className="text-on-surface-variant">Trasformiamo il tuo IT in un vantaggio competitivo. Progettiamo, automatizziamo e proteggiamo infrastrutture cloud e ibride per azzerare i disservizi e ridurre i costi. Ci occupiamo noi di stabilità e sicurezza, così puoi concentrarti solo sulla crescita del tuo business.</p>
+              <h3 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface">Project Management &amp; Business Structuring</h3>
+              <p className="text-on-surface-variant">Aiutiamo a strutturare un progetto partendo da zero: definizione dei flussi di lavoro, creazione di diagrammi di Gantt, pianificazione delle risorse, gestione delle tempistiche e dei budget per garantirti risultati concreti.</p>
               <Link to="/servizi#consulenza-informatica" style={{ textDecoration: 'none' }}>
                 <button className="flex items-center gap-xs text-secondary font-label-md text-label-md hover:underline transition-all">
                   Più informazioni <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
@@ -385,7 +385,7 @@ export const Home: React.FC = () => {
             </div>
             <div className="order-1 lg:order-2 glass rounded-2xl h-[300px] md:h-[400px] overflow-hidden">
               <img 
-                alt="Cybersecurity Systems" 
+                alt="Business Structuring and Planning" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa26GKBbGI6oVQyLcixuRDtRX40YFDnZ70NZfxVQavDHYAbzur8CulHb-yzKdQcL7L9rMH9OnT4eXpmycbaqD3fuwCEOBgPOJ98XTsM54uviQAP7cGmsYFQCwXsnulxcTzJNuLfO-hDKd-8VU_xQQbm3umaKIAvndZSUbQxsIUeIl1q340eAd8sSyu6YMnzvu3ZVhxWnxezm5VNjqhucgkAqZm8ZSwRyHYx1goU2Ci6QPWulnfjbhkhJhEspA7ZoIFh0CWMhyrfYeS" 
                 loading="lazy"
@@ -420,7 +420,7 @@ export const Home: React.FC = () => {
                   <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Configurazione Social
                 </li>
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
-                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Certificato SSL
+                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Branding Kit Base
                 </li>
               </ul>
               <button 
@@ -449,7 +449,7 @@ export const Home: React.FC = () => {
                   <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Gestione Social intermedio
                 </li>
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
-                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Implementazione WAF
+                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Setup Project Management (Gantt)
                 </li>
               </ul>
               <button 
@@ -468,7 +468,7 @@ export const Home: React.FC = () => {
                 </div>
               </div>
               <h3 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-xs">Enterprise Safe</h3>
-              <p className="text-caption font-caption text-on-surface-variant mb-md">Massima sicurezza e personalizzazione.</p>
+              <p className="text-caption font-caption text-on-surface-variant mb-md">Massima affidabilità e personalizzazione.</p>
               <ul className="space-y-sm mb-lg flex-grow">
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
                   <span className="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Sito Web 100% personalizzato
@@ -497,7 +497,7 @@ export const Home: React.FC = () => {
           <div className="text-center mb-xl">
             <span className="text-primary font-label-md text-label-md tracking-widest uppercase">FAQ</span>
             <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface mt-xs mb-sm">Domande Frequenti</h2>
-            <p className="text-on-surface-variant max-w-2xl mx-auto">Tutto quello che c'è da sapere sui servizi, la sicurezza e il flusso di lavoro di FounDreams.</p>
+            <p className="text-on-surface-variant max-w-2xl mx-auto">Tutto quello che c'è da sapere sui servizi, l'organizzazione e il flusso di lavoro di FounDreams.</p>
           </div>
           <div className="max-w-3xl mx-auto space-y-md">
             <details className="group glass-card p-md rounded-2xl transition-all duration-300 [&_summary::-webkit-details-marker]:hidden open:bg-surface-bright/10">
@@ -506,27 +506,27 @@ export const Home: React.FC = () => {
                 <span className="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
               </summary>
               <div className="mt-md font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/30 pt-sm leading-relaxed text-left">
-                Offriamo tre soluzioni calibrate sulle diverse esigenze di crescita: lo <strong>Startup Bundle</strong> è ideale per i nuovi progetti che necessitano di una presenza online essenziale e pulita; il pacchetto <strong>Business Evolution</strong> introduce lo sviluppo di siti web completi fino a 5 pagine (anche e-commerce) e cybersecurity avanzata con WAF; il pacchetto <strong>Enterprise Safe</strong> offre infine il massimo delle performance con infrastrutture cloud dedicate, monitoraggio SOC continuo e strategie marketing omnicanale.
+                Offriamo tre soluzioni calibrate sulle diverse esigenze di crescita: lo <strong>Startup Bundle</strong> è ideale per i nuovi progetti che necessitano di una presenza online essenziale e pulita; il pacchetto <strong>Business Evolution</strong> introduce lo sviluppo di siti web completi fino a 5 pagine (anche e-commerce) e l'impostazione di metodologie di Project Management; il pacchetto <strong>Enterprise Safe</strong> offre infine il massimo delle performance con pianificazione strategica omnicanale e consulenze avanzate dedicate.
               </div>
             </details>
 
             <details className="group glass-card p-md rounded-2xl transition-all duration-300 [&_summary::-webkit-details-marker]:hidden open:bg-surface-bright/10">
               <summary className="flex justify-between items-center font-headline-md text-[20px] md:text-headline-md text-on-surface cursor-pointer select-none">
-                <span>Come garantite la sicurezza dei siti web che realizzate?</span>
+                <span>Come strutturate i progetti che realizzate?</span>
                 <span className="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
               </summary>
               <div className="mt-md font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/30 pt-sm leading-relaxed text-left">
-                La sicurezza informatica non è un'opzione aggiuntiva, ma il pilastro del nostro processo di sviluppo. Di serie, tutti i siti utilizzano protocolli sicuri SSL (HTTPS) e configurazioni di server resilienti. Per i pacchetti aziendali e su misura, implementiamo Web Application Firewall (WAF), conduciamo sessioni di pentesting semestrali e configuriamo policy di Content Security (CSP) rigide per neutralizzare vulnerabilità e attacchi XSS.
+                La stabilità dei nostri progetti non è un'opzione aggiuntiva, ma il pilastro del nostro processo di sviluppo. Utilizziamo le migliori piattaforme CMS moderne e sicure, ottimizzando l'architettura per garantire velocità, scalabilità e affidabilità. Ci assicuriamo che ogni sito web e-commerce o vetrina sia costruito con logiche solide e best practice di sviluppo, senza gravarti con tecnicismi complessi.
               </div>
             </details>
 
             <details className="group glass-card p-md rounded-2xl transition-all duration-300 [&_summary::-webkit-details-marker]:hidden open:bg-surface-bright/10">
               <summary className="flex justify-between items-center font-headline-md text-[20px] md:text-headline-md text-on-surface cursor-pointer select-none">
-                <span>Che cos'è l'approccio DevOps e come aiuta la mia infrastruttura aziendale?</span>
+                <span>Come mi aiutate a strutturare il mio progetto aziendale?</span>
                 <span className="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
               </summary>
               <div className="mt-md font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/30 pt-sm leading-relaxed text-left">
-                L'approccio DevOps fonde lo sviluppo software (Dev) con la gestione dei sistemi IT (Ops). Attraverso automazione CI/CD, monitoraggio avanzato e containerizzazione (Docker/Kubernetes), riduciamo i tempi di deploy, azzeriamo i tempi di inattività (downtime) e gestiamo in modo efficiente ed economico infrastrutture cloud pubbliche o ibride su provider come AWS e Azure.
+                Ti aiutiamo a strutturare il progetto partendo dalle fondamenta: attraverso l'applicazione di solide metodologie di project management, la creazione di diagrammi di Gantt e una consulenza strategica dedicata. Pianifichiamo con te risorse, tempistiche e flussi di lavoro, affinché ogni obiettivo venga raggiunto rispettando le scadenze e ottimizzando il budget a disposizione.
               </div>
             </details>
 

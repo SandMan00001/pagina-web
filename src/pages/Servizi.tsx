@@ -4,15 +4,15 @@ import { useSEO } from '../hooks/useSEO';
 
 export const Servizi: React.FC = () => {
   useSEO({
-    title: "Servizi - FounDreams | Siti Web, Social Media & Cybersecurity",
-    description: "Sviluppiamo soluzioni web innovative, gestiamo la tua comunicazione social con strategie avanzate e proteggiamo il tuo business con servizi DevOps e di cybersecurity dedicati.",
+    title: "Servizi - FounDreams | Siti Web, Social Media & Project Management",
+    description: "Sviluppiamo soluzioni web innovative, gestiamo la tua comunicazione social con strategie avanzate e strutturiamo il tuo business con servizi di project management e pianificazione dedicati.",
     keywords: [
       "servizi foundreams",
       "realizzazione siti e-commerce",
-      "consulenza informatica",
+      "project management",
       "sviluppo applicativi web",
-      "penetration testing",
-      "vulnerability assessment",
+      "pianificazione strategica",
+      "diagrammi di gantt",
       "gestione instagram facebook",
       "social media marketing",
       "sogni aziendali",
@@ -24,7 +24,7 @@ export const Servizi: React.FC = () => {
       "@type": "Service",
       "@id": "https://foundreams.it/servizi",
       "name": "Servizi FounDreams",
-      "description": "Catalogo servizi che include Sviluppo Web, Social Media Strategy e Consulenza DevOps & Cybersecurity.",
+      "description": "Catalogo servizi che include Sviluppo Web, Social Media Strategy e Consulenza di Project Management.",
       "provider": {
         "@id": "https://foundreams.it/#organization"
       },
@@ -52,8 +52,8 @@ export const Servizi: React.FC = () => {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "DevOps & Cybersecurity",
-              "description": "Consulenza IT, migrazione cloud (AWS/Azure), automazione di deploy e hardening di sicurezza con WAF e monitoraggio."
+              "name": "Project Management",
+              "description": "Consulenza strategica, pianificazione flussi di lavoro, creazione di diagrammi di Gantt e gestione risorse aziendali."
             }
           }
         ]
@@ -85,13 +85,13 @@ export const Servizi: React.FC = () => {
       cardFeatures: [
         "Sito Web On-page",
         "Configurazione Social",
-        "Certificato SSL & Security"
+        "Branding Kit Base"
       ],
       modalFeatures: [
         "Gestione social base: gestione instagram e facebook",
-        "Infrastuttura & IT Governance: server & dominio",
+        "Infrastuttura base: spazio web & dominio",
         "Sviluppo web & SEO: creazione landing page e indicizzazione SEO base",
-        "Cybersecurity base: utilizzo certificati SSL(HTTPS) + Resilienza dati"
+        "Pianificazione Iniziale: definizione struttura e obiettivi"
       ]
     },
     "Business Evolution": {
@@ -103,13 +103,13 @@ export const Servizi: React.FC = () => {
       cardFeatures: [
         "Sito E-commerce Pro",
         "Gestione Social Mensile",
-        "Pentesting Semestrale"
+        "Setup Project Management (Gantt)"
       ],
       modalFeatures: [
         "Gestione social intermedia (+1): gestione instagram e facebook (+ un social a scelta) e maggiore frequenza nella pubblicazione ",
-        "Consulenza informatica: 1 ora al mese per analizzare andamento sito e social e pianificazione business evolutivi",
+        "Consulenza strategica: 1 ora al mese per analizzare andamento sito e social e pianificazione business evolutivi",
         "Sviluppo web & SEO: sito web completo fino a 5 pagine + SEO avanzata",
-        "Cybersecurity avanzata: implementazione WAF"
+        "Organizzazione aziendale: Setup Project Management e diagrammi di Gantt"
       ],
       tag: "Più Popolare"
     },
@@ -117,19 +117,19 @@ export const Servizi: React.FC = () => {
       icon: "shield_with_heart",
       iconColor: "text-secondary",
       bgColor: "bg-secondary/10",
-      description: "Massima sicurezza e personalizzazione.",
+      description: "Massima affidabilità e personalizzazione.",
       color: "secondary",
       cardFeatures: [
-        "Infrastruttura Cloud Dedicata",
-        "Monitoraggio SOC 24/7",
+        "Sito Web Completo",
+        "Business Planning Strategico Omnicanale",
         "Strategia Multicanale"
       ],
       modalFeatures: [
         "Gestione social ominichanel: compertura su tutti i canali social e strategie marketing avanzate",
         "Sviluppo web avanzato: sviluppo e progettazione siti web complessi su misura (e-commerce/web app)",
         "SEO Full-Continuty: scrittura costante di articoli e posizionamento organico a lungo termine",
-        "Consulenza strategica IT: consulenza strategica per innovazione e trasformazione digitale(cloud & on-premise)",
-        "Formazione specialistica IT: consulenza tecnica specialistica e formazione per il personale interno (IT & Marketing)"
+        "Consulenza strategica: consulenza strategica per innovazione e trasformazione digitale",
+        "Formazione specialistica: consulenza strategica e formazione per il personale interno"
       ]
     }
   };
@@ -221,7 +221,7 @@ export const Servizi: React.FC = () => {
         </h1>
         <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full opacity-80 mx-auto mb-md"></div>
         <p className="font-body-lg text-body-lg text-on-surface-variant">
-          Nessuna promessa irrealizzabile. Costruiamo strumenti web performanti, gestiamo i tuoi social con dati alla mano e proteggiamo la tua infrastruttura con le migliori tecnologie accessibili.
+          Nessuna promessa irrealizzabile. Costruiamo strumenti web performanti, gestiamo i tuoi social con dati alla mano e strutturiamo il tuo progetto aziendale con metodologie comprovate.
         </p>
       </section>
 
@@ -313,15 +313,15 @@ export const Servizi: React.FC = () => {
           <div className="flex flex-col gap-md">
             <div className="flex items-center gap-sm">
               <span className="material-symbols-outlined text-error text-4xl">lock</span>
-              <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface">Cybersecurity & DevOps</h2>
+              <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface">Project Management</h2>
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Facciamo sicurezza informatica reale. Sappiamo benissimo che il "sistema perfetto e inviolabile" non esiste. Quello che facciamo è ricercare e implementare le tecnologie più sicure possibili per il tuo specifico caso, ottimizzando i costi. Automatizziamo i processi e riduciamo le vulnerabilità per garantirti un'infrastruttura solida e resiliente, pronta ad affrontare le vere minacce della rete.
+              Ti affianchiamo nella strutturazione del progetto partendo da zero. Definiamo i flussi di lavoro, creiamo diagrammi di Gantt su misura e pianifichiamo attentamente le risorse. Gestiamo le tempistiche e ottimizziamo i budget, garantendoti un percorso chiaro, scadenze rispettate e risultati concreti per la crescita del tuo business.
             </p>
             <div className="flex flex-wrap gap-md mb-base">
               <div className="flex flex-col gap-xs">
-                <span className="text-error font-bold font-headline-md text-headline-md">REALE</span>
-                <span className="text-on-surface-variant font-caption">Protezione</span>
+                <span className="text-error font-bold font-headline-md text-headline-md">CONCRETA</span>
+                <span className="text-on-surface-variant font-caption">Pianificazione</span>
               </div>
               <div className="w-px h-12 bg-outline-variant hidden sm:block"></div>
               <div className="flex flex-col gap-xs">
@@ -338,7 +338,7 @@ export const Servizi: React.FC = () => {
           <div className="rounded-3xl overflow-hidden glass border border-white/5 aspect-video md:aspect-square">
             <img 
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
-              alt="Consulenza Informatica" 
+              alt="Project Management e Planning" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAgNZKCiwje8yEHFx642msY3-fWD1GPIYIL2efJag8X-e24L6Eqps1792xmhJl0_6Gm19iaPeQ_Md_1fRoh62FdfC1Fm8TIt6quafiYZwr_aCUVjAp5jLhAKxGY6LHKKsWB_Z99EUII59AaZP3xX7T2s-aJorzO_8JFpa6xyu39Ftzbvi81EO-Ow3VmvmiLw_GWMIy7eTCXVbLaTZUM14AvTz2SwPrnQHJo_9NmaxnjLBXqvCAcapmegju_IDYAe95ULO7PbJ835M5" 
               loading="lazy"
             />
@@ -371,7 +371,7 @@ export const Servizi: React.FC = () => {
                   <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Configurazione Social
                 </li>
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
-                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Certificato SSL
+                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Branding Kit Base
                 </li>
               </ul>
               <button 
@@ -400,7 +400,7 @@ export const Servizi: React.FC = () => {
                   <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Gestione Social intermedio
                 </li>
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
-                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Implementazione WAF
+                  <span className="material-symbols-outlined text-primary text-[18px]">check_circle</span> Setup Project Management (Gantt)
                 </li>
               </ul>
               <button 
@@ -419,7 +419,7 @@ export const Servizi: React.FC = () => {
                 </div>
               </div>
               <h3 className="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-xs">Enterprise Safe</h3>
-              <p className="text-caption font-caption text-on-surface-variant mb-md">Massima sicurezza e personalizzazione.</p>
+              <p className="text-caption font-caption text-on-surface-variant mb-md">Massima affidabilità e personalizzazione.</p>
               <ul className="space-y-sm mb-lg flex-grow">
                 <li className="flex items-center gap-sm text-body-md text-on-surface dark:text-on-surface">
                   <span className="material-symbols-outlined text-secondary text-[18px]">check_circle</span> Sito Web 100% personalizzato

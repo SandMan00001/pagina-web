@@ -4,8 +4,8 @@ import { useSEO } from '../hooks/useSEO';
 
 export const ChiSiamo: React.FC = () => {
   useSEO({
-    title: "Chi Siamo - FounDreams | Team di Esperti in Sviluppo e Security",
-    description: "Scopri la storia, i valori e la missione di FounDreams, lo studio boutique di sviluppo software e cybersecurity guidato da esperti programmatori.",
+    title: "Chi Siamo - FounDreams | Team di Esperti in Sviluppo e Consulenza Strategica",
+    description: "Scopri la storia, i valori e la missione di FounDreams, l'agenzia creativa di sviluppo web e consulenza strategica guidata da esperti.",
     keywords: [
       "team foundreams",
       "chi siamo foundreams",
@@ -14,7 +14,7 @@ export const ChiSiamo: React.FC = () => {
       "fucina di talenti",
       "esperti programmazione",
       "sviluppatori web milano",
-      "esperti cybersecurity",
+      "consulenti creativi",
       "storia di foundreams",
       "valori aziendali",
       "ingegneria del software"
@@ -102,7 +102,7 @@ export const ChiSiamo: React.FC = () => {
             Lavoriamo con te, <span className="bg-gradient-to-r from-secondary to-tertiary bg-clip-text text-transparent">senza fumo</span> negli occhi.
           </h1>
           <p className="text-lg md:text-xl text-on-surface-variant mb-10 max-w-2xl mx-auto leading-relaxed">
-            Siamo un team unito dalla passione per il digitale. Niente supercazzole tecnologiche, solo strategie marketing misurabili, sviluppo web performante e un approccio concreto alla cybersecurity.
+            Siamo un team unito dalla passione per il digitale. Niente supercazzole tecnologiche, solo strategie marketing misurabili, sviluppo web performante e un approccio concreto all'organizzazione aziendale.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/contattaci" className="w-full sm:w-auto" style={{ textDecoration: 'none' }}>
@@ -131,7 +131,7 @@ export const ChiSiamo: React.FC = () => {
               Il nostro nome, <em>FounDreams</em> ("fucina dei sogni"), nasce dall'idea di trasformare progetti su carta in realtà tangibili. Lo facciamo sporcandoci le mani, affrontando i problemi tecnici e trovando soluzioni che funzionano sul mercato.
             </p>
             <p className="text-on-surface-variant text-lg leading-relaxed">
-              Non ti promettiamo il primo posto su Google in una settimana o la sicurezza assoluta, perché sappiamo che non esistono. Ti offriamo invece il nostro impegno per massimizzare la tua visibilità e blindare i tuoi sistemi con le migliori tecnologie attualmente disponibili, rispettando i tuoi budget.
+              Non ti promettiamo il primo posto su Google in una settimana o risultati magici, perché sappiamo che non esistono. Ti offriamo invece il nostro impegno per massimizzare la tua visibilità e strutturare i tuoi progetti con le metodologie più solide attualmente disponibili, rispettando i tuoi budget.
             </p>
           </div>
           <div className="relative h-[400px] rounded-2xl overflow-hidden glass-card p-2 animate-float">
@@ -164,7 +164,7 @@ export const ChiSiamo: React.FC = () => {
                 <ul className="space-y-2 list-none pl-0">
                   <li className="flex items-start gap-2">
                     <span className="text-primary font-bold min-w-[12px]">-</span>
-                    <span><strong>Sviluppo essenziale:</strong> Scriviamo codice pulito per creare siti che caricano in fretta e funzionano bene. La sicurezza non è un'aggiunta, è integrata fin dal primo giorno, sapendo che l'infallibilità non esiste, ma la prevenzione efficace sì.</span>
+                    <span><strong>Sviluppo essenziale:</strong> Scriviamo codice pulito per creare siti che caricano in fretta e funzionano bene. L'organizzazione non è un'aggiunta, è integrata fin dal primo giorno, costruendo fondamenta solide per il tuo business online.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary font-bold min-w-[12px]">-</span>
@@ -188,13 +188,13 @@ export const ChiSiamo: React.FC = () => {
               <h3 className="font-display text-2xl font-bold mb-4 text-on-background">La nostra Visione</h3>
               <div className="text-on-surface-variant leading-relaxed space-y-4">
                 <p>
-                  Siamo stanchi del fumo negli occhi che spesso circonda il settore IT e marketing. Vogliamo dimostrare che si può fare tecnologia ad alto livello lavorando in modo onesto, etico e orientato al risultato.
+                  Siamo stanchi del fumo negli occhi che spesso circonda il settore del web e marketing. Vogliamo dimostrare che si può fare tecnologia ad alto livello lavorando in modo onesto, etico e orientato al risultato.
                 </p>
                 <p>
-                  La nostra priorità è farti ottenere un ritorno reale sul tuo investimento. Che si tratti di blindare un server o lanciare una campagna social, ogni azione ha uno scopo preciso e misurabile.
+                  La nostra priorità è farti ottenere un ritorno reale sul tuo investimento. Che si tratti di ottimizzare un sito o lanciare una campagna social, ogni azione ha uno scopo preciso e misurabile.
                 </p>
                 <p>
-                  Cerchiamo clienti che apprezzano la verità anche quando è scomoda. Lavoriamo sodo per offrirti l'equilibrio perfetto tra prestazioni ottimali, sicurezza pragmatica e costi sostenibili. Siamo qui per costruire la tua presenza digitale su fondamenta solide, passo dopo passo.
+                  Cerchiamo clienti che apprezzano la verità anche quando è scomoda. Lavoriamo sodo per offrirti l'equilibrio perfetto tra prestazioni ottimali, creatività pragmatica e costi sostenibili. Siamo qui per costruire la tua presenza digitale su fondamenta solide, passo dopo passo.
                 </p>
               </div>
             </div>
@@ -224,8 +224,8 @@ export const ChiSiamo: React.FC = () => {
           {/* Value 3 */}
           <div className="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group duration-300">
             <span className="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 transition-transform">shield</span>
-            <h3 className="font-display text-xl font-bold mb-3 text-on-background">Sicurezza Reale</h3>
-            <p className="text-on-surface-variant text-sm leading-relaxed">Nessun sistema è invulnerabile, chi dice il contrario mente. Noi riduciamo drasticamente i rischi implementando le difese più efficaci sul mercato.</p>
+            <h3 className="font-display text-xl font-bold mb-3 text-on-background">Strategia Concreta</h3>
+            <p className="text-on-surface-variant text-sm leading-relaxed">Nessun progetto cresce per caso. Noi riduciamo gli imprevisti pianificando ogni fase con metodologie rigorose e diagrammi di Gantt precisi.</p>
           </div>
           {/* Value 4 */}
           <div className="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 hover:border-secondary transition-all group duration-300">
@@ -277,7 +277,7 @@ export const ChiSiamo: React.FC = () => {
                 <div className="relative group">
                   <div className="absolute -inset-4 bg-tertiary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <img 
-                    alt="Ingegnere della Sicurezza" 
+                    alt="Web Designer e Project Manager" 
                     className="w-full h-auto rounded-2xl relative grayscale hover:grayscale-0 transition-all duration-700" 
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvQ_uQWg2lz9e12VClzZxPhYUD7bQRfAlOvi0BrplCB5w0hh4mwLLKPgfiOFlSb4xxE0T6gvy3lhSABmEPVMFZCV1w2MKz3wL3vypbrTWLeNv2j-N1zgBy716QQ54ZKX0d0nsNz6PfTxBU3OcWlDVFx0fzLjX3sx-ygokSGQGB1JEGO08rkzsEhYMv1jDTP1xaNhkWnyskIp4IniOxlkH8-p5QeIrcPnHOsgXkKfZdyIuf9yfGlyyxgDmSDmou2RSiS69G4xunOKR4" 
                     loading="lazy"
@@ -286,9 +286,9 @@ export const ChiSiamo: React.FC = () => {
               </div>
               <div className="w-full md:w-1/2 space-y-6">
                 <h3 className="font-display text-3xl font-bold text-on-background">Saija Gabriele</h3>
-                <p className="text-tertiary font-headline font-semibold text-lg uppercase tracking-wider">cloud administrator &amp; security engineer</p>
+                <p className="text-tertiary font-headline font-semibold text-lg uppercase tracking-wider">web developer &amp; project manager</p>
                 <p className="text-on-surface-variant text-lg leading-relaxed">
-                  Fin dall'infanzia, la profonda curiosità mi ha spinto a smontare e studiare i sistemi per capirne il vero funzionamento. Oggi applico questa dedizione per progettare infrastrutture cloud sicure e resilienti "dalle fondamenta". Lavoro con passione su progetti concreti per tradurre le tue sfide in architetture solide, mirate ed economicamente sostenibili. Grazie anche alla mia esperienza come formatore, so che la vera fiducia nasce dalla chiarezza: il mio obiettivo è sempre colmare la distanza tra il gergo tecnico e i tuoi obiettivi di business, affinché tu capisca e abbia pieno controllo su ciò che stiamo costruendo.
+                  Fin dall'infanzia, la profonda curiosità mi ha spinto a capire come costruire soluzioni che funzionino davvero. Oggi applico questa dedizione per progettare vetrine digitali e piattaforme e-commerce performanti "dalle fondamenta". Lavoro con passione su progetti concreti per tradurre le tue idee in business plan solidi, flussi di lavoro ottimizzati e interfacce accattivanti. Grazie anche alla mia esperienza nella gestione di progetti, so che la vera fiducia nasce dalla chiarezza: il mio obiettivo è sempre colmare la distanza tra l'idea astratta e i tuoi obiettivi concreti, affinché tu abbia il pieno controllo su tempistiche e risultati.
                 </p>
                 <div className="flex gap-4">
                   <a className="text-primary font-medium hover:underline flex items-center gap-1 group transition-all" href="https://italiasaija.it/">
@@ -330,8 +330,8 @@ export const ChiSiamo: React.FC = () => {
           {/* Step 4 */}
           <div className="relative text-center md:text-left timeline-step">
             <div className="w-12 h-12 bg-surface-container-highest border border-secondary text-secondary rounded-full flex items-center justify-center font-bold mb-6 mx-auto md:mx-0 timeline-dot relative z-10">4</div>
-            <h3 className="font-display text-lg font-bold mb-2 text-on-background">Sicurezza</h3>
-            <p className="text-sm text-on-surface-variant">Rafforzare l'infrastruttura con protezioni avanzate.</p>
+            <h3 className="font-display text-lg font-bold mb-2 text-on-background">Pianificazione</h3>
+            <p className="text-sm text-on-surface-variant">Strutturare il lavoro con Gantt e risorse ottimizzate.</p>
           </div>
           {/* Step 5 */}
           <div className="relative text-center md:text-left timeline-step">
@@ -367,7 +367,7 @@ export const ChiSiamo: React.FC = () => {
             <ul className="space-y-4 pl-0 list-none">
               <li className="flex items-center gap-3 text-on-surface group transition-transform hover:translate-x-2">
                 <span className="material-symbols-outlined text-secondary">check_circle</span>
-                <span>Formazione sulla consapevolezza della cybersicurezza</span>
+                <span>Formazione sulle metodologie di project management</span>
               </li>
               <li className="flex items-center gap-3 text-on-surface group transition-transform hover:translate-x-2">
                 <span className="material-symbols-outlined text-secondary">check_circle</span>
