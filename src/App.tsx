@@ -5,6 +5,7 @@ import { MainLayout } from './layouts/MainLayout';
 const Home = React.lazy(() => import('./pages/Home').then(m => ({ default: m.Home })));
 const ChiSiamo = React.lazy(() => import('./pages/ChiSiamo').then(m => ({ default: m.ChiSiamo })));
 const Servizi = React.lazy(() => import('./pages/Servizi').then(m => ({ default: m.Servizi })));
+const Giovani = React.lazy(() => import('./pages/Giovani').then(m => ({ default: m.Giovani })));
 const Contattaci = React.lazy(() => import('./pages/Contattaci').then(m => ({ default: m.Contattaci })));
 
 const ScrollToTop: React.FC = () => {
@@ -57,6 +58,7 @@ const App: React.FC = () => {
             <Route index element={<Home />} />
             <Route path="chi-siamo" element={<ChiSiamo />} />
             <Route path="servizi" element={<Servizi />} />
+            <Route path="giovani" element={<Giovani />} />
             <Route path="contattaci" element={<Contattaci />} />
           </Route>
         </Routes>

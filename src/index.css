@@ -322,10 +322,10 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .gradient-primary {
-  background: linear-gradient(135deg, #b9c7e4 0%, #d1bcff 100%);
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-tertiary) 100%);
 }
 .text-gradient {
-  background: linear-gradient(135deg, #b9c7e4 0%, #47d6ff 100%);
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-tertiary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -342,11 +342,11 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 .cta-gradient {
-  background: linear-gradient(135deg, #b9c7e4 0%, #9362ff 100%);
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-tertiary) 100%);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .cta-gradient:hover {
-  box-shadow: 0 0 20px rgba(185, 199, 228, 0.4);
+  box-shadow: 0 0 20px rgba(165, 231, 255, 0.4);
   transform: translateY(-2px);
 }
 .hero-glow {
@@ -533,4 +533,10 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
 .package-card .material-icons,
 .modal-content.glass .material-icons {
   font-family: 'Material Symbols Outlined' !important;
+}
+@theme {
+  --font-display: var(--font-family-display);
+  --font-headline: var(--font-family-display);
+  --font-body: var(--font-family-body);
+  --font-label: var(--font-family-body);
 }
