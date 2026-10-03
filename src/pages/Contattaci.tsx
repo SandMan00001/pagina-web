@@ -27,6 +27,7 @@ export const Contattaci: React.FC = () => {
 ]
   });
 
+  // @ts-ignore
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success'>('idle');
   const [formData, setFormData] = useState({
     nome: '',
@@ -66,10 +67,6 @@ export const Contattaci: React.FC = () => {
     }, 1000);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
 
   return (
     <div className="overflow-x-clip">
