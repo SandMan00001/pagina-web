@@ -25,8 +25,6 @@ export const Servizi: React.FC = () => {
   const [modalForm, setModalForm] = useState({ nome: '', email: '', servizio: 'Sviluppo Web', messaggio: '' });
   const [modalStatus, setModalStatus] = useState<'idle' | 'sending' | 'success'>('idle');
 
-   // @ts-ignore
-  const openModal = (type: string) => {
     setIsModalOpen(true);
     setModalStatus('idle');
   };
