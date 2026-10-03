@@ -6,7 +6,19 @@ export const Giovani: React.FC = () => {
     title: "Giovani Imprenditori - FounDreams",
     description: "Il trampolino per la tua autonomia digitale. Scopri i servizi dedicati ai giovani imprenditori.",
     keywords: [],
-    structuredData: {}
+    structuredData: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Web Development & Digital Marketing",
+        "provider": {
+          "@type": "Organization",
+          "name": "FounDreams"
+        },
+        "areaServed": "Italy",
+        "description": "Servizi professionali di realizzazione siti web, gestione social media, cloud architecture e cybersecurity."
+      }
+]
   });
 
   useEffect(() => {
@@ -357,7 +369,7 @@ export const Giovani: React.FC = () => {
 </p>
 </div>
 <div className="space-y-4">
-<details className="group rounded-2xl bg-surface-container border border-outline-variant/30 p-6 shadow-md transition-all duration-300 open:bg-surface-container-high cursor-pointer" open="">
+<details className="group rounded-2xl bg-surface-container border border-outline-variant/30 p-6 shadow-md transition-all duration-300 open:bg-surface-container-high cursor-pointer" open>
 <summary className="flex items-center justify-between font-headline font-semibold text-lg md:text-xl text-on-surface list-none">
 <span className="">Cosa succede se un domani voglio gestire tutto in completa autonomia?</span>
 <span className="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
@@ -366,7 +378,7 @@ export const Giovani: React.FC = () => {
   Sarai pienamente libero e capace di farlo. È uno dei pilastri centrali di FounDreams: non applichiamo nessun vincolo di esclusiva forzata né blocchi tecnici. Ricevi l'intero codice sorgente, l'accesso a tutti i canali e la formazione su come gestirli. Il progetto è tuo al 100%.
 </div>
 </details>
-<details className="group rounded-2xl bg-surface-container border border-outline-variant/30 p-6 shadow-md transition-all duration-300 open:bg-surface-container-high cursor-pointer" open="">
+<details className="group rounded-2xl bg-surface-container border border-outline-variant/30 p-6 shadow-md transition-all duration-300 open:bg-surface-container-high cursor-pointer" open>
 <summary className="flex items-center justify-between font-headline font-semibold text-lg md:text-xl text-on-surface list-none">
 <span className="">Come funziona l'affiancamento e la formazione durante lo sviluppo?</span>
 <span className="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
@@ -375,7 +387,7 @@ export const Giovani: React.FC = () => {
   Non ci limitiamo a consegnare un lavoro finito senza spiegazioni. Durante tutto lo sviluppo organizziamo sessioni individuali dedicate in cui ti illustriamo il funzionamento della piattaforma, come monitorare le statistiche, gestire i contenuti e comprendere le scelte architetturali fondamentali.
 </div>
 </details>
-<details className="group rounded-2xl bg-surface-container border border-outline-variant/30 p-6 shadow-md transition-all duration-300 open:bg-surface-container-high cursor-pointer" open="">
+<details className="group rounded-2xl bg-surface-container border border-outline-variant/30 p-6 shadow-md transition-all duration-300 open:bg-surface-container-high cursor-pointer" open>
 <summary className="flex items-center justify-between font-headline font-semibold text-lg md:text-xl text-on-surface list-none">
 <span className="">Potete continuare a gestire la piattaforma, il marketing e la sicurezza anche dopo il lancio?</span>
 <span className="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>

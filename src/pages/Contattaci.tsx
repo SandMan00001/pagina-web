@@ -10,7 +10,21 @@ export const Contattaci: React.FC = () => {
     title: "Contattaci - FounDreams | Richiedi un Preventivo Gratuito",
     description: "Contatta il team di FounDreams per lo sviluppo del tuo nuovo sito web, la gestione dei canali social o consulenze strategiche. Preventivi rapidi e gratuiti.",
     keywords: ["contatti foundreams", "preventivo sito web gratis", "consulenza strategica aziendale", "richiedi informazioni"],
-    structuredData: {}
+    structuredData: [
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "FounDreams",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "amministrazione@foundreams.it",
+            "contactType": "customer service"
+          }
+        }
+      }
+]
   });
 
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success'>('idle');

@@ -14,7 +14,26 @@ export const Home: React.FC = () => {
       "creazione siti web", "sogni che diventano realtà", "trasformazione digitale",
       "cyber security italia", "sviluppo software"
     ],
-    structuredData: []
+    structuredData: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FounDreams",
+        "url": "https://foundreams.it",
+        "logo": "https://foundreams.it/favicon.png",
+        "description": "FounDreams realizza siti web professionali ad alte prestazioni, gestisce pagine social con strategie data-driven e offre consulenza IT in ambito DevOps, cloud e cybersecurity.",
+        "sameAs": [
+          "https://www.instagram.com/foundreams__",
+          "https://www.facebook.com/people/FounDreams/61590709104730/"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "amministrazione@foundreams.it",
+          "contactType": "customer support",
+          "availableLanguage": "Italian"
+        }
+      }
+]
   });
 
   const [isModalOpen, setIsModalOpen] = useState(false);

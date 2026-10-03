@@ -6,13 +6,26 @@ export const Servizi: React.FC = () => {
     title: "Servizi - FounDreams | Web, Social & Consulenza",
     description: "Scopri i servizi di FounDreams: Realizzazione siti web ad alte prestazioni, social media management strategico e project management.",
     keywords: [],
-    structuredData: {}
+    structuredData: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Web Development & Digital Marketing",
+        "provider": {
+          "@type": "Organization",
+          "name": "FounDreams"
+        },
+        "areaServed": "Italy",
+        "description": "Servizi professionali di realizzazione siti web, gestione social media, cloud architecture e cybersecurity."
+      }
+]
   });
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalForm, setModalForm] = useState({ nome: '', email: '', servizio: 'Sviluppo Web', messaggio: '' });
   const [modalStatus, setModalStatus] = useState<'idle' | 'sending' | 'success'>('idle');
 
+   // @ts-ignore
   const openModal = (type: string) => {
     setIsModalOpen(true);
     setModalStatus('idle');
