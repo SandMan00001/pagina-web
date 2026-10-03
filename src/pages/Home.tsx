@@ -100,8 +100,7 @@ export const Home: React.FC = () => {
   return (
     <div className="overflow-x-clip bg-surface">
       <main className="flex-grow">
-        
-        {/* HERO SECTION */}
+
         <section className="relative min-h-[calc(100vh-72px)] flex items-center pt-10 pb-20 overflow-hidden px-6 lg:px-16 scroll-reveal transition-all duration-700 opacity-0 translate-y-10">
           <div className="absolute inset-0 z-0">
             <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] bg-secondary-container/10 blur-[140px] rounded-full animate-pulse-glow"></div>
@@ -129,14 +128,13 @@ export const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* SERVIZI CARDS */}
         <section className="px-6 lg:px-16 py-24 bg-surface scroll-reveal transition-all duration-700 opacity-0 translate-y-10 relative">
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
           <div className="max-w-7xl mx-auto text-center mb-16 relative z-10">
             <span className="text-xs font-label uppercase font-bold tracking-widest text-secondary bg-secondary/10 px-3 py-1 rounded-full">Le Nostre Competenze</span>
             <h2 className="font-headline font-bold text-3xl sm:text-4xl md:text-5xl text-on-surface mt-6">Soluzioni su Misura per il Tuo Business</h2>
           </div>
-          
+
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
             <div className="relative rounded-3xl p-8 bg-surface-container-low border border-primary/20 shadow-2xl hover:shadow-primary/10 transition-all duration-300 flex flex-col group overflow-hidden">
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl pointer-events-none group-hover:bg-primary/20 transition-all"></div>
@@ -148,7 +146,7 @@ export const Home: React.FC = () => {
                 Realizziamo piattaforme web che non sono solo belle, ma veloci e ottimizzate. Ogni linea di codice è scritta pensando alla scalabilità e all'esperienza utente finale.
               </p>
             </div>
-            
+
             <div className="relative rounded-3xl p-8 bg-surface-container-low border border-secondary/20 shadow-2xl hover:shadow-secondary/10 transition-all duration-300 flex flex-col group overflow-hidden">
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-secondary/10 rounded-full blur-3xl pointer-events-none group-hover:bg-secondary/20 transition-all"></div>
               <div className="w-14 h-14 rounded-2xl bg-secondary/15 text-secondary flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
@@ -159,7 +157,7 @@ export const Home: React.FC = () => {
                 Gestiamo la tua voce digitale. Dalla creazione di contenuti visivi alla strategia di crescita organica, portiamo il tuo brand dove si trovano i tuoi clienti.
               </p>
             </div>
-            
+
             <div className="relative rounded-3xl p-8 bg-surface-container-low border border-tertiary/20 shadow-2xl hover:shadow-tertiary/10 transition-all duration-300 flex flex-col group overflow-hidden">
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-tertiary/10 rounded-full blur-3xl pointer-events-none group-hover:bg-tertiary/20 transition-all"></div>
               <div className="w-14 h-14 rounded-2xl bg-tertiary/15 text-tertiary flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
@@ -173,7 +171,6 @@ export const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* PACCHETTI / BUNDLES */}
         <section className="px-6 lg:px-16 py-24 bg-surface-container-lowest scroll-reveal transition-all duration-700 opacity-0 translate-y-10">
           <div className="max-w-7xl mx-auto text-center mb-16">
             <span className="text-xs font-label uppercase font-bold tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">Soluzioni Chiavi in Mano</span>

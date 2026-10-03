@@ -7,8 +7,6 @@ interface Language {
   flag: string;
 }
 
-// Comprehensive list of Google Translate supported languages.
-// We place Italian (source) and English (global) at the top, followed by the rest alphabetically.
 const LANGUAGES: Language[] = [
   { code: 'it', name: 'Italiano', flag: '🇮🇹' },
   { code: 'en', name: 'English', flag: '🇬🇧' },
@@ -127,9 +125,8 @@ export const LanguageSelector: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Initialize Google Translate Script and check cookie
   useEffect(() => {
-    // Read cookie to set initial active language
+
     const getActiveLang = () => {
       const match = document.cookie.match(/googtrans=([^;]+)/);
       if (match) {
@@ -143,7 +140,6 @@ export const LanguageSelector: React.FC = () => {
 
     setCurrentLang(getActiveLang());
 
-    // Inject Google Translate script dynamically if not already present
     const id = 'google-translate-script';
     if (!document.getElementById(id)) {
       const script = document.createElement('script');
@@ -154,7 +150,6 @@ export const LanguageSelector: React.FC = () => {
       document.body.appendChild(script);
     }
 
-    // Set callback function on window
     (window as any).googleTranslateElementInit = () => {
       new (window as any).google.translate.TranslateElement(
         {
@@ -167,7 +162,6 @@ export const LanguageSelector: React.FC = () => {
     };
   }, []);
 
-  // Close dropdown on click outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -178,7 +172,6 @@ export const LanguageSelector: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Reset search query when dropdown opens/closes
   useEffect(() => {
     if (!isOpen) {
       setSearchQuery('');
@@ -187,8 +180,7 @@ export const LanguageSelector: React.FC = () => {
 
   const handleLanguageChange = (langCode: string) => {
     const cookieValue = langCode === 'it' ? '' : `/it/${langCode}`;
-    
-    // Clear cookies for path / and various domain configurations
+
     const domains = [
       '',
       window.location.hostname,
@@ -202,7 +194,7 @@ export const LanguageSelector: React.FC = () => {
     });
 
     if (cookieValue) {
-      // Set new cookie
+
       document.cookie = `googtrans=${cookieValue}; path=/;`;
       document.cookie = `googtrans=${cookieValue}; path=/; domain=${window.location.hostname}`;
       document.cookie = `googtrans=${cookieValue}; path=/; domain=.${window.location.hostname.replace(/^www\./, '')}`;
@@ -215,7 +207,6 @@ export const LanguageSelector: React.FC = () => {
 
   const activeLangObj = LANGUAGES.find(l => l.code === currentLang) || LANGUAGES[0];
 
-  // Filter languages based on search query
   const filteredLanguages = LANGUAGES.filter(
     lang =>
       lang.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -225,7 +216,6 @@ export const LanguageSelector: React.FC = () => {
   return (
     <div className="relative notranslate" ref={dropdownRef}>
 
-      {/* Dropdown Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer text-on-surface text-label-md select-none outline-none"
@@ -235,10 +225,9 @@ export const LanguageSelector: React.FC = () => {
         <ChevronDown size={12} className={`text-on-surface-variant transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
-      {/* Dropdown Menu */}
       {isOpen && (
         <div className="absolute right-0 mt-1.5 w-60 rounded-md bg-surface-container-high/95 border border-white/10 backdrop-blur-md shadow-lg py-2 z-50 animate-fade-in flex flex-col max-h-[350px]">
-          {/* Search Bar Input */}
+
           <div className="px-3 pb-2 mb-1 border-b border-white/10 flex items-center gap-2">
             <Search size={14} className="text-on-surface-variant shrink-0" />
             <input
@@ -251,7 +240,6 @@ export const LanguageSelector: React.FC = () => {
             />
           </div>
 
-          {/* Languages List Container */}
           <div className="overflow-y-auto flex-1 custom-scrollbar">
             {filteredLanguages.length > 0 ? (
               filteredLanguages.map((lang) => {

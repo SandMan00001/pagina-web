@@ -15,15 +15,14 @@ export const MainLayout: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col pt-[72px]">
-      {/* TopNavBar */}
+
       <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 lg:px-16 py-4 max-w-full mx-auto bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-white/10 dark:border-white/10 shadow-sm">
         <Link to="/" style={{ textDecoration: 'none' }}>
           <div className="font-headline font-bold text-xl  font-bold text-on-surface dark:text-on-surface cursor-pointer">
             FounDreams
           </div>
         </Link>
-        
-        {/* Desktop Nav */}
+
         <div className="hidden md:flex gap-6 items-center">
           <Link className={getLinkClass('/')} to="/">Home</Link>
           <Link className={getLinkClass('/chi-siamo')} to="/chi-siamo">Chi Siamo</Link>
@@ -38,7 +37,6 @@ export const MainLayout: React.FC = () => {
           </Link>
         </div>
 
-        {/* Mobile Toggle */}
         <button 
           className="md:hidden text-on-surface flex items-center" 
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -46,7 +44,6 @@ export const MainLayout: React.FC = () => {
           <span className="material-symbols-outlined">{mobileMenuOpen ? 'close' : 'menu'}</span>
         </button>
 
-        {/* Mobile Nav Dropdown */}
         {mobileMenuOpen && (
           <div className="absolute top-[57px] left-0 w-full bg-surface border-b border-white/10 flex flex-col p-6 gap-6 md:hidden z-40">
             <Link className={getLinkClass('/')} to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
@@ -66,12 +63,10 @@ export const MainLayout: React.FC = () => {
         )}
       </nav>
 
-      {/* Main Content Area */}
       <main className="flex-grow">
         <Outlet />
       </main>
 
-      {/* Footer */}
       <footer className="w-full px-6 lg:px-16 py-12 flex flex-col md:flex-row justify-between items-center gap-8 bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant mt-12">
         <div className="font-headline font-bold text-xl  font-bold text-on-surface dark:text-on-surface">
           FounDreams

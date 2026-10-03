@@ -11,10 +11,9 @@ interface SEOProps {
 
 export const useSEO = ({ title, description, keywords, image, canonicalUrl, structuredData }: SEOProps) => {
   useEffect(() => {
-    // 1. Update Document Title
+
     document.title = title;
 
-    // 2. Update Meta Description
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {
       metaDesc = document.createElement('meta');
@@ -23,7 +22,6 @@ export const useSEO = ({ title, description, keywords, image, canonicalUrl, stru
     }
     metaDesc.setAttribute('content', description);
 
-    // 2b. Update Meta Keywords
     if (keywords) {
       let metaKeywords = document.querySelector('meta[name="keywords"]');
       if (!metaKeywords) {
@@ -35,7 +33,6 @@ export const useSEO = ({ title, description, keywords, image, canonicalUrl, stru
       metaKeywords.setAttribute('content', keywordsString);
     }
 
-    // 2c. Update OpenGraph Tags
     const updateOGMeta = (property: string, content: string) => {
       let meta = document.querySelector(`meta[property="${property}"]`);
       if (!meta) {
@@ -55,7 +52,6 @@ export const useSEO = ({ title, description, keywords, image, canonicalUrl, stru
     updateOGMeta('og:image', ogImage);
     updateOGMeta('og:type', 'website');
 
-    // 2d. Update Twitter Card Tags
     const updateTwitterMeta = (name: string, content: string) => {
       let meta = document.querySelector(`meta[name="${name}"]`);
       if (!meta) {
@@ -71,7 +67,6 @@ export const useSEO = ({ title, description, keywords, image, canonicalUrl, stru
     updateTwitterMeta('twitter:description', description);
     updateTwitterMeta('twitter:image', ogImage);
 
-    // 3. Update Canonical Link
     let linkCanonical = document.querySelector('link[rel="canonical"]');
     if (!linkCanonical) {
       linkCanonical = document.createElement('link');
@@ -81,8 +76,6 @@ export const useSEO = ({ title, description, keywords, image, canonicalUrl, stru
     const currentCanonical = canonicalUrl || window.location.origin + window.location.pathname;
     linkCanonical.setAttribute('href', currentCanonical);
 
-    // 4. Update JSON-LD Structured Data
-    // Remove any previously set JSON-LD dynamic elements
     const existingScripts = document.querySelectorAll('script[data-seo-jsonld]');
     existingScripts.forEach(el => el.remove());
 
@@ -97,7 +90,6 @@ export const useSEO = ({ title, description, keywords, image, canonicalUrl, stru
       });
     }
 
-    // Cleanup scripts on unmount
     return () => {
       const scripts = document.querySelectorAll('script[data-seo-jsonld]');
       scripts.forEach(el => el.remove());

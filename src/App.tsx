@@ -30,7 +30,6 @@ const ScrollToTop: React.FC = () => {
 
     protectIcons();
 
-    // Esegui a intervalli per catturare elementi renderizzati in ritardo o lazy
     const timers = [
       setTimeout(protectIcons, 50),
       setTimeout(protectIcons, 150),
