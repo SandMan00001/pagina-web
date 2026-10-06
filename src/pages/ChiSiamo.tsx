@@ -71,9 +71,9 @@ Unendo marketing, crescita digitale, sviluppo, consulenza informatica e sicurezz
 </p>
 </div>
 <div className="relative h-[400px] rounded-2xl overflow-hidden glass-card p-2 reveal-on-scroll animate-float active">
-<div className="w-full h-full rounded-xl bg-surface-container relative overflow-hidden group">
+<div className="w-full h-full rounded-xl bg-surface-container relative overflow-hidden group outline-none" tabIndex={0}>
 <div className="absolute inset-0 bg-gradient-to-tr from-primary-container/40 to-transparent z-10"></div>
-<img alt="Incontro strategico" className="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL0GZXzBhVOgvRsp5fU9jYTgGVPzfMJCUsmj-rY4ORyMbbWiZSO4yG42o8f_LFGzzQ5oqLvolzX38kz124Gp1v4BYSBdvp6ahd6Q6hff7_Tu2PCMc2vUOojUZXHKsyNAKAYvam0n1bzCg3DyxB1REOmR-n4MlR8AQoYeONjFXvizmrtSMrLFS7_meN3rghiSbeiDywhNomwvUnQMQ8P-Eww7jn17xKL5YPVzU7g92hHLpR6HRAOgA_G2dV4VBA0e-eI2eQgJUYiXF9" />
+<img alt="Incontro strategico" className="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-focus:grayscale-0 group-active:grayscale-0 group-hover:scale-105 group-focus:scale-105 group-active:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL0GZXzBhVOgvRsp5fU9jYTgGVPzfMJCUsmj-rY4ORyMbbWiZSO4yG42o8f_LFGzzQ5oqLvolzX38kz124Gp1v4BYSBdvp6ahd6Q6hff7_Tu2PCMc2vUOojUZXHKsyNAKAYvam0n1bzCg3DyxB1REOmR-n4MlR8AQoYeONjFXvizmrtSMrLFS7_meN3rghiSbeiDywhNomwvUnQMQ8P-Eww7jn17xKL5YPVzU7g92hHLpR6HRAOgA_G2dV4VBA0e-eI2eQgJUYiXF9" />
 </div>
 </div>
 </div>
@@ -137,14 +137,18 @@ Unendo marketing, crescita digitale, sviluppo, consulenza informatica e sicurezz
 <h3 className="font-display text-3xl font-bold">Acquaotta Mykol</h3>
 <p className="text-secondary font-headline font-semibold text-lg uppercase tracking-wider">Digital marketer</p>
 <p className="text-on-surface-variant text-lg leading-relaxed">
-                            Esperto nel creare narrazioni digitali ad alto impatto che risuonano con il pubblico target. Combinando approfondimenti basati sui dati con lo storytelling creativo, assicura che ogni progetto ottenga la massima visibilità e conversione.
-                        </p>
-<div className="flex gap-4"><a className="text-primary font-medium hover:underline flex items-center gap-1 group transition-all" href="#" onClick={(e) => e.preventDefault()}>Visualizza portfolio <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a></div>
+Meno fuffa, più dati. Gestisco i social e le campagne marketing con l'unico obiettivo di portarti risultati misurabili. Analizzo i numeri e creo contenuti che parlano al tuo pubblico, senza illuderti con metriche inutili.
+</p>
+<div className="flex gap-4">
+<a className="text-primary font-medium hover:underline flex items-center gap-1 group transition-all" href="https://mykolacquaotta.lovable.app/">
+Visualizza portfolio <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
 </div>
 <div className="w-full md:w-1/2 order-1 md:order-2 reveal-on-scroll active">
 <div className="relative group">
 <div className="absolute -inset-4 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<img alt="Specialista Marketing" className="w-full h-auto rounded-2xl relative grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA5m0WFFJfxLeukAVAs6Th4bqCdRgxc-GqJLbkolW1gE4UcL4G-SD0qzMsVNNtaU4v3sK71LdPW983UFROmiK5fJfMi9AePcFOlNsJKVCwt45YophwgTZLLd8f_jiGrB5j8rCq5uaFC6KBap-IgaNLb1nhUOrq2ViBiXHiVSrCMHuj2VWtCE9caETwbmeIpCZrp_OkNs4f_FGLI4R9w6POQkqP7L9f2je_dOr-tC5HRyk2riV8RE6nK6en-TwTfTWSNTxXcTQELUwK" />
+<img alt="Specialista Marketing" className="w-full h-auto rounded-2xl relative grayscale hover:grayscale-0 active:grayscale-0 focus:grayscale-0 outline-none transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA5m0WFFJfxLeukAVAs6Th4bqCdRgxc-GqJLbkolW1gE4UcL4G-SD0qzMsVNNtaU4v3sK71LdPW983UFROmiK5fJfMi9AePcFOlNsJKVCwt45YophwgTZLLd8f_jiGrB5j8rCq5uaFC6KBap-IgaNLb1nhUOrq2ViBiXHiVSrCMHuj2VWtCE9caETwbmeIpCZrp_OkNs4f_FGLI4R9w6POQkqP7L9f2je_dOr-tC5HRyk2riV8RE6nK6en-TwTfTWSNTxXcTQELUwK" tabIndex={0} />
 </div>
 </div>
 </div>
@@ -152,16 +156,20 @@ Unendo marketing, crescita digitale, sviluppo, consulenza informatica e sicurezz
 <div className="w-full md:w-1/2 reveal-on-scroll active">
 <div className="relative group">
 <div className="absolute -inset-4 bg-tertiary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<img alt="Ingegnere della Sicurezza" className="w-full h-auto rounded-2xl relative grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvQ_uQWg2lz9e12VClzZxPhYUD7bQRfAlOvi0BrplCB5w0hh4mwLLKPgfiOFlSb4xxE0T6gvy3lhSABmEPVMFZCV1w2MKz3wL3vypbrTWLeNv2j-N1zgBy716QQ54ZKX0d0nsNz6PfTxBU3OcWlDVFx0fzLjX3sx-ygokSGQGB1JEGO08rkzsEhYMv1jDTP1xaNhkWnyskIp4IniOxlkH8-p5QeIrcPnHOsgXkKfZdyIuf9yfGlyyxgDmSDmou2RSiS69G4xunOKR4" />
+<img alt="Ingegnere della Sicurezza" className="w-full h-auto rounded-2xl relative grayscale hover:grayscale-0 active:grayscale-0 focus:grayscale-0 outline-none transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvQ_uQWg2lz9e12VClzZxPhYUD7bQRfAlOvi0BrplCB5w0hh4mwLLKPgfiOFlSb4xxE0T6gvy3lhSABmEPVMFZCV1w2MKz3wL3vypbrTWLeNv2j-N1zgBy716QQ54ZKX0d0nsNz6PfTxBU3OcWlDVFx0fzLjX3sx-ygokSGQGB1JEGO08rkzsEhYMv1jDTP1xaNhkWnyskIp4IniOxlkH8-p5QeIrcPnHOsgXkKfZdyIuf9yfGlyyxgDmSDmou2RSiS69G4xunOKR4" tabIndex={0} />
 </div>
 </div>
 <div className="w-full md:w-1/2 space-y-6 reveal-on-scroll active">
-<h3 className="font-display text-3xl font-bold">Saija Grabriele</h3>
+<h3 className="font-display text-3xl font-bold">Saija Gabriele</h3>
 <p className="text-tertiary font-headline font-semibold text-lg uppercase tracking-wider">cloud administrator & security engineer</p>
 <p className="text-on-surface-variant text-lg leading-relaxed">
-                            Una maestra dell'architettura digitale e della sicurezza difensiva. Progetta infrastrutture cloud resilienti in grado di gestire traffico elevato mantenendo una postura di sicurezza zero-trust, proteggendo i sogni che costruiamo da ogni minaccia.
-                        </p>
-<div className="flex gap-4"><a className="text-primary font-medium hover:underline flex items-center gap-1 group transition-all" href="#" onClick={(e) => e.preventDefault()}>Visualizza portfolio <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a></div>
+Fin dall'infanzia, la profonda curiosità mi ha spinto a smontare e studiare i sistemi per capirne il vero funzionamento. Oggi applico questa dedizione per progettare infrastrutture cloud sicure e resilienti "dalle fondamenta". Lavoro con passione su progetti concreti per tradurre le tue sfide in architetture solide, mirate ed economicamente sostenibili. Grazie anche alla mia esperienza come formatore, so che la vera fiducia nasce dalla chiarezza: il mio obiettivo è sempre colmare la distanza tra il gergo tecnico e i tuoi obiettivi di business, affinché tu capisca e abbia pieno controllo su ciò che stiamo costruendo.
+</p>
+<div className="flex gap-4">
+<a className="text-primary font-medium hover:underline flex items-center gap-1 group transition-all" href="https://www.italiasaija.it">
+Visualizza portfolio <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
 </div>
 </div>
 </div>

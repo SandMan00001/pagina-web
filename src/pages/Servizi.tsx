@@ -72,40 +72,10 @@ export const Servizi: React.FC = () => {
 <span className="">Richiedi Audit di Marketing & Brand</span>
 <span className="material-symbols-outlined text-base">arrow_forward</span>
 </a>
-<div className="relative inline-block" id="services-dropdown-container">
-<button aria-expanded="false" aria-haspopup="true" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-xs font-label font-semibold uppercase tracking-wider bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-secondary shadow-sm transition-all duration-300 focus:outline-none" id="services-dropdown-btn" type="button">
+<a className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-xs font-label font-semibold uppercase tracking-wider bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-secondary shadow-sm transition-all duration-300 focus:outline-none" href="#aree-competenza">
 <span>Esplora i Servizi di Crescita</span>
-<span className="material-symbols-outlined text-base transition-transform duration-300" id="services-dropdown-icon">expand_more</span>
-</button>
-<div className="absolute left-0 sm:left-auto sm:right-0 mt-2.5 w-80 sm:w-88 rounded-2xl bg-surface-container/95 backdrop-blur-xl border border-outline-variant/40 shadow-2xl p-2.5 opacity-0 pointer-events-none -translate-y-2 transition-all duration-200 z-50 divide-y divide-surface-container-high/60" id="services-dropdown-menu">
-<a className="group flex items-start gap-3.5 p-3 rounded-xl hover:bg-surface-container-high/70 transition-all duration-200 text-left focus:outline-none" href="javascript:void(0)">
-<div className="w-10 h-10 rounded-xl bg-tertiary-container/40 text-tertiary flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
-<span className="material-symbols-outlined text-xl">rocket_launch</span>
-</div>
-<div className="flex-grow">
-<div className="flex items-center justify-between">
-<span className="text-sm font-headline font-bold text-on-surface group-hover:text-tertiary transition-colors">Giovani</span>
-<span className="text-[10px] font-label font-semibold uppercase px-2 py-0.5 rounded-full bg-tertiary-container/50 text-tertiary">Under 30</span>
-</div>
-<p className="text-xs font-body text-on-surface-variant mt-0.5 leading-snug">Idee, Mentorship & Sviluppo startup per aspiranti founder.</p>
-</div>
-<span className="material-symbols-outlined text-on-surface-variant/50 group-hover:text-tertiary group-hover:translate-x-0.5 transition-all text-sm shrink-0 self-center">arrow_forward</span>
+<span className="material-symbols-outlined text-base transition-transform duration-300">expand_more</span>
 </a>
-<a className="group flex items-start gap-3.5 p-3 rounded-xl hover:bg-surface-container-high/70 transition-all duration-200 text-left focus:outline-none" href="#aree-competenza">
-<div className="w-10 h-10 rounded-xl bg-secondary-container/20 text-secondary-container flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
-<span className="material-symbols-outlined text-xl">corporate_fare</span>
-</div>
-<div className="flex-grow">
-<div className="flex items-center justify-between">
-<span className="text-sm font-headline font-bold text-on-surface group-hover:text-secondary transition-colors">Aziende</span>
-<span className="text-[10px] font-label font-semibold uppercase px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary">Attivo</span>
-</div>
-<p className="text-xs font-body text-on-surface-variant mt-0.5 leading-snug">Soluzioni B2B, Brand Identity, Social Authority & Marketing.</p>
-</div>
-<span className="material-symbols-outlined text-on-surface-variant/50 group-hover:text-secondary group-hover:translate-x-0.5 transition-all text-sm shrink-0 self-center">arrow_forward</span>
-</a>
-</div>
-</div>
 </div>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 pt-10 border-t border-surface-container-high/70"><div className="flex items-center gap-4 p-4 rounded-xl bg-surface-container/70 shadow-sm">
@@ -180,7 +150,7 @@ Presidio strategico dei canali con contenuti ad alto ingaggio, video format mode
           Un portafoglio di soluzioni modulari o integrate a servizio di direzioni generali, responsabili marketing e IT manager.
         </p>
 </div>
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-8"> Area 01: Brand Identity & Direzione Creativa 
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 <div className="p-8 sm:p-10 rounded-2xl bg-surface-container-low flex flex-col justify-between shadow-lg">
 <div>
 <div className="flex items-center justify-between mb-6">
@@ -264,7 +234,7 @@ Architetture web ultra-veloci pensate come macchine commerciali per convertire v
           Un metodo collaudato basato su milestone chiare, verifiche intermedie e assenza totale di sorprese sui tempi e sui costi.
         </p>
 </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"> Step 1 
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 <div className="p-6 rounded-2xl bg-surface-container-low flex flex-col relative group">
 <div className="text-xs font-label font-bold px-3 py-1 rounded-full bg-surface-container text-secondary w-fit mb-4">
 FASE 01
@@ -330,7 +300,7 @@ Creazione delle brand guidelines, architettura dei messaggi chiave, stesura del 
           Tutto ciò che dovete sapere prima di avviare una partnership con noi.
         </p>
 </div>
-<div className="space-y-4" id="faq-accordion"> FAQ 1 
+<div className="space-y-4" id="faq-accordion">
 <div className="rounded-2xl bg-surface-container-low transition-colors duration-200 overflow-hidden shadow-sm"><button className="w-full px-6 py-5 text-left flex items-center justify-between text-on-surface font-headline font-semibold text-base focus:outline-none"><span className="">Come viene strutturato e condiviso il piano editoriale aziendale?</span><span className="material-symbols-outlined text-secondary text-xl transition-transform duration-200 transform">expand_more</span></button><div className="px-6 pb-5 text-sm text-on-surface-variant font-body leading-relaxed hidden">Il piano editoriale viene elaborato su base mensile con un calendario condiviso e trasparente. Ogni contenuto (testi, grafiche, video e caroselli) viene sottoposto alla vostra approvazione preventiva con congruo anticipo. Vengono definite rubriche tematiche mirate, copy in linea con il tone of voice concordato e orari di pubblicazione ottimizzati.</div></div>
 <div className="rounded-2xl bg-surface-container-low transition-colors duration-200 overflow-hidden shadow-sm"><button className="w-full px-6 py-5 text-left flex items-center justify-between text-on-surface font-headline font-semibold text-base focus:outline-none"><span className="">Quali tempistiche occorrono per vedere i primi risultati dal piano editoriale e dai canali social?</span><span className="material-symbols-outlined text-secondary text-xl transition-transform duration-200 transform">expand_more</span></button><div className="px-6 pb-5 text-sm text-on-surface-variant font-body leading-relaxed hidden">L'innalzamento dell'autorevolezza e della coerenza visiva è immediato già dalle prime settimane di pubblicazione coordinata. La crescita di una community fidelizzata, dell'engagement organico e delle opportunità di networking qualificato si consolida stabilmente nell'arco di 60-90 giorni di continuità editoriale.</div></div>
 <div className="rounded-2xl bg-surface-container-low transition-colors duration-200 overflow-hidden shadow-sm">
@@ -365,7 +335,7 @@ Prenotate un audit preliminare di 30 minuti con i nostri strategist di marketing
 </p></div>
 <div className="p-8 sm:p-12 rounded-3xl bg-surface-container-high/90 backdrop-blur-xl shadow-2xl">
 <form className="space-y-6" id="b2b-contact-form">
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:grid-cols-3">
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 <div>
 <label className="block text-xs font-label font-semibold text-on-surface mb-2" htmlFor="b2b-name">Nome e Cognome *</label>
 <input className="w-full px-4 py-3 rounded-xl bg-surface-container border-0 ring-0 text-on-surface placeholder:text-on-surface-variant/40 focus:ring-2 focus:ring-secondary text-sm" id="b2b-name" placeholder="es. Ing. Roberto Ferri" required type="text" />
@@ -375,7 +345,7 @@ Prenotate un audit preliminare di 30 minuti con i nostri strategist di marketing
 <input className="w-full px-4 py-3 rounded-xl bg-surface-container border-0 ring-0 text-on-surface placeholder:text-on-surface-variant/40 focus:ring-2 focus:ring-secondary text-sm" id="b2b-company" placeholder="es. Apex Impianti S.p.A." required type="text" />
 </div>
 </div>
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:grid-cols-3">
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 <div>
 <label className="block text-xs font-label font-semibold text-on-surface mb-2" htmlFor="b2b-email">Email Aziendale *</label>
 <input className="w-full px-4 py-3 rounded-xl bg-surface-container border-0 ring-0 text-on-surface placeholder:text-on-surface-variant/40 focus:ring-2 focus:ring-secondary text-sm" id="b2b-email" placeholder="direzione@azienda.it" required type="email" />
@@ -387,7 +357,7 @@ Prenotate un audit preliminare di 30 minuti con i nostri strategist di marketing
 </div>
 <div>
 <label className="block text-xs font-label font-semibold text-on-surface mb-3">Servizi d'interesse (Seleziona uno o più ambiti):</label>
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:grid-cols-3"><label className="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container cursor-pointer hover:bg-surface-container-highest transition-colors">
+<div className="grid grid-cols-1 sm:grid-cols-3 gap-3"><label className="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container cursor-pointer hover:bg-surface-container-highest transition-colors">
 <input className="w-4 h-4 rounded text-secondary bg-surface-container-lowest focus:ring-secondary focus:ring-offset-0" name="services" type="checkbox" value="brand" />
 <span className="text-xs font-body text-on-surface">Brand Identity & Rebranding</span>
 </label>
