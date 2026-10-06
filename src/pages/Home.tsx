@@ -118,9 +118,9 @@ export const Home: React.FC = () => {
               FounDreams è la fucina dove le idee si trasformano in realtà digitali. Creiamo esperienze web uniche, gestiamo la tua identità e proteggiamo il tuo business.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button onClick={() => openModal('Richiesta Contatto Generica')} className="w-full sm:w-auto px-8 py-4 rounded-full font-label font-bold text-xs uppercase tracking-wider bg-gradient-to-r from-secondary-container to-tertiary text-on-primary-container shadow-[0_0_20px_rgba(0,210,255,0.25)] hover:shadow-[0_0_28px_rgba(209,188,255,0.4)] hover:brightness-110 active:scale-95 transition-all">
+              <Link to="/contattaci" className="w-full sm:w-auto px-8 py-4 rounded-full font-label font-bold text-xs uppercase tracking-wider bg-gradient-to-r from-secondary-container to-tertiary text-on-primary-container shadow-[0_0_20px_rgba(0,210,255,0.25)] hover:shadow-[0_0_28px_rgba(209,188,255,0.4)] hover:brightness-110 active:scale-95 transition-all">
                 Inizia il tuo Progetto
-              </button>
+              </Link>
               <Link to="/chi-siamo" className="w-full sm:w-auto px-8 py-4 rounded-full border border-outline-variant text-on-surface font-label font-bold text-xs uppercase tracking-wider hover:bg-surface-container-high transition-all active:scale-95 text-center">
                 Scopri chi siamo
               </Link>

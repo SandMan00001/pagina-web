@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useSEO } from '../hooks/useSEO';
 
 export const ChiSiamo: React.FC = () => {
@@ -50,9 +51,7 @@ export const ChiSiamo: React.FC = () => {
                 Visione Digitale è uno studio digitale boutique dove l'intuizione del marketing, la tecnologia all'avanguardia e la cybersicurezza si fondono per forgiare il vostro futuro digitale.
             </p>
 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-<button className="w-full sm:w-auto px-8 py-4 bg-secondary text-on-secondary rounded-xl font-headline font-bold hover:brightness-110 transition-all shadow-lg shadow-secondary/20 hover:scale-105 active:scale-95">
-                    Parliamo
-                </button>
+<Link to="/contattaci" className="w-full sm:w-auto px-8 py-4 bg-secondary text-on-secondary rounded-xl font-headline font-bold hover:brightness-110 transition-all shadow-lg shadow-secondary/20 hover:scale-105 active:scale-95">Parliamo</Link>
 <button className="w-full sm:w-auto px-8 py-4 border border-outline-variant text-on-surface rounded-xl font-headline font-bold hover:bg-surface-bright/20 transition-all hover:scale-105 active:scale-95">
                     Scopri la nostra storia
                 </button>
@@ -236,9 +235,9 @@ export const ChiSiamo: React.FC = () => {
 <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">Pronto a costruire qualcosa di significativo?</h2>
 <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto mb-10"><span className="">Raccontaci i tuoi obiettivi e scopriamo insieme come trasformarli in una soluzione digitale efficace. Siamo pronti a dare forma alle tue idee.</span></p>
 <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-<button className="w-full sm:w-auto px-10 py-5 bg-secondary text-on-secondary rounded-2xl font-headline font-bold hover:scale-105 transition-all shadow-xl shadow-secondary/20">
+<Link to="/contattaci" className="w-full sm:w-auto px-10 py-5 bg-secondary text-on-secondary rounded-2xl font-headline font-bold hover:scale-105 transition-all shadow-xl shadow-secondary/20">
                         Contattaci
-                    </button>
+                    </Link>
 </div>
 </div>
 </div>

@@ -68,7 +68,7 @@ export const Servizi: React.FC = () => {
 <h1 className="font-headline font-bold text-4xl sm:text-5xl lg:text-6xl text-on-surface tracking-tight leading-[1.1]">Scaliamo la tua impresa sul mercato. <span className="bg-gradient-to-r from-secondary to-tertiary bg-clip-text text-transparent">Brand Identity, social autorevoli e marketing che converte.</span></h1>
 <p className="font-body text-base sm:text-lg text-on-surface-variant leading-relaxed max-w-3xl">Supportiamo aziende consolidate e brand emergenti nella costruzione di un'identità di mercato inconfondibile: strategie di posizionamento, gestione strategica dei canali social, piani editoriali e siti web progettati per generare vendite e lead qualificati. Misurabilità totale e ROI chiaro.</p>
 <div className="flex flex-wrap items-center gap-4 pt-3 w-full sm:w-auto relative z-30">
-<a className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-xs font-label font-bold uppercase tracking-wider bg-gradient-to-r from-secondary-container to-tertiary shadow-[0_0_24px_rgba(0,210,255,0.3)] hover:shadow-[0_0_36px_rgba(209,188,255,0.45)] hover:brightness-110 active:scale-[0.98] transition-all duration-300" href="#contatto-b2b">
+<a className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-xs font-label font-bold uppercase tracking-wider bg-gradient-to-r from-secondary-container to-tertiary text-black shadow-[0_0_24px_rgba(0,210,255,0.3)] hover:shadow-[0_0_36px_rgba(209,188,255,0.45)] hover:brightness-110 active:scale-[0.98] transition-all duration-300" href="#contatto-b2b">
 <span className="">Richiedi Audit di Marketing & Brand</span>
 <span className="material-symbols-outlined text-base">arrow_forward</span>
 </a>

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useSEO } from '../hooks/useSEO';
 
 export const Giovani: React.FC = () => {
@@ -60,10 +61,10 @@ export const Giovani: React.FC = () => {
   Hai tra i 18 e i 30 anni e un progetto che merita di prendere vita? <strong className="text-on-surface font-semibold">FounDreams</strong> è il punto d'incontro tra la tua determinazione e la nostra esperienza tecnica. Lavoriamo al tuo fianco per sviluppare la tua idea, trasmetterti le competenze necessarie e darti ogni strumento per guidarla con sicurezza e piena autonomia.
 </p>
 <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-<button className="open-candidatura-modal w-full sm:w-auto px-8 py-4 rounded-full font-label font-semibold text-sm uppercase tracking-wider bg-gradient-to-r from-secondary-container via-secondary to-tertiary text-on-secondary shadow-[0_0_35px_rgba(0,210,255,0.4)] hover:shadow-[0_0_50px_rgba(209,188,255,0.6)] hover:brightness-110 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2">
+<Link to="/contattaci" className="open-candidatura-modal w-full sm:w-auto px-8 py-4 rounded-full font-label font-semibold text-sm uppercase tracking-wider bg-gradient-to-r from-secondary-container via-secondary to-tertiary text-on-secondary shadow-[0_0_35px_rgba(0,210,255,0.4)] hover:shadow-[0_0_50px_rgba(209,188,255,0.6)] hover:brightness-110 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2">
 <span className="">Raccontaci la tua idea</span>
 <span className="material-symbols-outlined text-lg">arrow_forward</span>
-</button>
+</Link>
 <a className="w-full sm:w-auto px-7 py-4 rounded-full font-label font-semibold text-sm text-on-surface bg-surface-container-high/60 hover:bg-surface-container-highest border border-outline-variant/40 backdrop-blur-md transition-all duration-300 flex items-center justify-center gap-2 shadow-sm" href="#come-lavoriamo">
 <span className="material-symbols-outlined text-secondary text-lg">sync_alt</span>
 <span className="">Come lavoriamo insieme</span>
@@ -424,10 +425,10 @@ export const Giovani: React.FC = () => {
     Fissa un confronto informale e autentico con noi. Valuteremo insieme il tuo progetto con trasparenza, serietà e senza alcun impegno.
   </p>
 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-<button className="open-candidatura-modal w-full sm:w-auto px-9 py-4 rounded-full font-label font-bold text-sm uppercase tracking-wider bg-gradient-to-r from-secondary-container via-secondary to-tertiary text-on-secondary shadow-[0_0_40px_rgba(0,210,255,0.45)] hover:shadow-[0_0_60px_rgba(209,188,255,0.7)] hover:brightness-110 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-3">
+<Link to="/contattaci" className="open-candidatura-modal w-full sm:w-auto px-9 py-4 rounded-full font-label font-bold text-sm uppercase tracking-wider bg-gradient-to-r from-secondary-container via-secondary to-tertiary text-on-secondary shadow-[0_0_40px_rgba(0,210,255,0.45)] hover:shadow-[0_0_60px_rgba(209,188,255,0.7)] hover:brightness-110 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-3">
 <span className="">Raccontaci la tua idea</span>
-<span className="material-symbols-outlined text-xl">arrow_forward</span>
-</button>
+<span className="material-symbols-outlined text-lg">arrow_forward</span>
+</Link>
 </div>
 <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-on-surface-variant font-label">
 <span className="flex items-center gap-1.5">
